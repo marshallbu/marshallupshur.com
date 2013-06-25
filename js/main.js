@@ -83,5 +83,9 @@ require([
       navLinks(nav_clicked);
       return false;
     });
+
+    $('[data-spy="scroll"]').each(function () {
+      var $spy = $(this).scrollspy('refresh');
+    });
   });
 });
