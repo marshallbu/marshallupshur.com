@@ -1,0 +1,5 @@
+ java -jar compiler.jar --js=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/pdf.js --js_output_file=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/pdf.min.js --language_in=ECMASCRIPT5
+
+ java -jar compiler.jar --js=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/compatibility.js --js_output_file=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/compatibility.min.js --language_in=ECMASCRIPT5
+ 
+ java -jar compiler.jar --js=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/l10n.js --js_output_file=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/l10n.min.js --language_in=ECMASCRIPT5
