@@ -1,6 +1,6 @@
 {
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
-  "creatorBuild" : "8300",
+  "creatorBuild" : "8317",
   "files" : {
     "\/images\/glyphicons_392_twitter.png" : {
       "ignoreWasSetByUser" : 0,
@@ -47,37 +47,21 @@
       "fileType" : 64
     },
     "\/styles\/less\/ie.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
+      "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/styles\/less\/ie.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/styles\/css\/ie.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 0,
       "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/googlehostedservice.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/googlehostedservice.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/images\/pdf\/findbarButton-next-rtl.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/pdf\/findbarButton-next-rtl.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/pdf\/findbarButton-next-rtl.png",
-      "initialSize" : 371,
-      "fileType" : 8192
     },
     "\/js\/app.js" : {
       "ignoreWasSetByUser" : 0,
@@ -90,29 +74,57 @@
       "outputAbbreviatedPath" : "\/js\/app.min.js",
       "fileType" : 64
     },
-    "\/styles\/less\/custom-fonts.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/less\/custom-fonts.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/styles\/css\/custom-fonts.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/styles\/less\/main.less" : {
+    "\/images\/pdf\/findbarButton-next-rtl.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/less\/main.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/styles\/css\/main.css",
+      "inputAbbreviatedPath" : "\/images\/pdf\/findbarButton-next-rtl.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/pdf\/findbarButton-next-rtl.png",
+      "initialSize" : 371,
+      "fileType" : 8192
+    },
+    "\/googlehostedservice.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/googlehostedservice.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/styles\/less\/custom-fonts.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/styles\/less\/custom-fonts.less",
+      "outputAbbreviatedPath" : "\/styles\/css\/custom-fonts.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 0,
       "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/styles\/less\/main.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/styles\/less\/main.less",
+      "outputAbbreviatedPath" : "\/styles\/css\/main.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 0,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
     },
@@ -127,6 +139,15 @@
       "initialSize" : 211,
       "fileType" : 8192
     },
+    "\/google6951dae9a5f60b3d.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/google6951dae9a5f60b3d.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/images\/pdf\/findbarButton-next.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -137,15 +158,6 @@
       "outputAbbreviatedPath" : "\/images\/pdf\/findbarButton-next.png",
       "initialSize" : 381,
       "fileType" : 8192
-    },
-    "\/google6951dae9a5f60b3d.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/google6951dae9a5f60b3d.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/images\/content-bg.png" : {
       "ignoreWasSetByUser" : 0,
@@ -214,17 +226,6 @@
       "outputAbbreviatedPath" : "\/js\/controllers\/feedctrl.min.min.js",
       "fileType" : 64
     },
-    "\/images\/pdf\/toolbarButton-pageUp.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-pageUp.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-pageUp.png",
-      "initialSize" : 344,
-      "fileType" : 8192
-    },
     "\/images\/glyphicons-halflings.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -246,6 +247,17 @@
       "outputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-pageUp-rtl.png",
       "initialSize" : 426,
       "fileType" : 8192
+    },
+    "\/js\/controllers\/navctrl.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/controllers\/navctrl.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/controllers\/navctrl.min.js",
+      "fileType" : 64
     },
     "\/js\/controllers\/resumectrl.js" : {
       "ignoreWasSetByUser" : 0,
@@ -280,6 +292,28 @@
       "outputAbbreviatedPath" : "\/js\/routes.min.min.js",
       "fileType" : 64
     },
+    "\/images\/pdf\/toolbarButton-pageUp.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-pageUp.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-pageUp.png",
+      "initialSize" : 344,
+      "fileType" : 8192
+    },
+    "\/js\/controllers\/footerctrl.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/controllers\/footerctrl.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/controllers\/footerctrl.min.min.js",
+      "fileType" : 64
+    },
     "\/analyticstracking.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -298,6 +332,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/services.min.js",
+      "fileType" : 64
+    },
+    "\/js\/controllers\/navctrl.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/controllers\/navctrl.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/controllers\/navctrl.min.min.js",
       "fileType" : 64
     },
     "\/images\/port\/port_004.jpg" : {
@@ -334,15 +379,19 @@
       "fileType" : 64
     },
     "\/styles\/less\/mixins.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
+      "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/styles\/less\/mixins.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/styles\/css\/mixins.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 0,
       "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
     },
@@ -388,30 +437,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/styles\/less\/elements.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/less\/elements.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/styles\/css\/elements.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/images\/glyphicons-halflings-white.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/glyphicons-halflings-white.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/glyphicons-halflings-white.png",
-      "initialSize" : 8777,
-      "fileType" : 8192
-    },
     "\/styles\/css\/bootstrap-responsive.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -430,6 +455,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/bg.png",
       "initialSize" : 51784,
+      "fileType" : 8192
+    },
+    "\/images\/glyphicons-halflings-white.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/glyphicons-halflings-white.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/glyphicons-halflings-white.png",
+      "initialSize" : 8777,
       "fileType" : 8192
     },
     "\/images\/pdf\/toolbarButton-bookmark.png" : {
@@ -474,16 +510,14 @@
       "initialSize" : 201100,
       "fileType" : 4096
     },
-    "\/images\/pdf\/toolbarButton-zoomIn.png" : {
+    "\/styles\/css\/ie.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-zoomIn.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-zoomIn.png",
-      "initialSize" : 228,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/styles\/css\/ie.css",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 16
     },
     "\/js\/directives.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -496,14 +530,16 @@
       "outputAbbreviatedPath" : "\/js\/directives.min.min.js",
       "fileType" : 64
     },
-    "\/styles\/css\/ie.css" : {
+    "\/images\/pdf\/toolbarButton-zoomIn.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/css\/ie.css",
-      "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-zoomIn.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-zoomIn.png",
+      "initialSize" : 228,
+      "fileType" : 8192
     },
     "\/index.php" : {
       "ignoreWasSetByUser" : 0,
@@ -547,30 +583,12 @@
       "initialSize" : 300,
       "fileType" : 8192
     },
-    "\/styles\/css\/font-awesome.min.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/css\/font-awesome.min.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/styles\/css\/bootstrap.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/styles\/css\/bootstrap.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/styles\/css\/font-awesome-ie7.min.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/css\/font-awesome-ie7.min.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -618,17 +636,6 @@
       "initialSize" : 371,
       "fileType" : 8192
     },
-    "\/images\/port\/port_002.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/port\/port_002.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/images\/port\/port_002.jpg",
-      "initialSize" : 159607,
-      "fileType" : 4096
-    },
     "\/images\/pdf\/toolbarButton-search.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -639,6 +646,17 @@
       "outputAbbreviatedPath" : "\/images\/pdf\/toolbarButton-search.png",
       "initialSize" : 503,
       "fileType" : 8192
+    },
+    "\/images\/port\/port_002.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/port\/port_002.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/port\/port_002.jpg",
+      "initialSize" : 159607,
+      "fileType" : 4096
     },
     "\/js\/directives.js" : {
       "ignoreWasSetByUser" : 0,
@@ -715,26 +733,6 @@
       "initialSize" : 558,
       "fileType" : 8192
     },
-    "\/styles\/css\/main.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/css\/main.css",
-      "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 16
-    },
-    "\/js\/services.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/services.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/services.min.min.js",
-      "fileType" : 64
-    },
     "\/images\/t-flat.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -744,6 +742,26 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/t-flat.png",
       "initialSize" : 12302,
+      "fileType" : 8192
+    },
+    "\/styles\/css\/main.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/styles\/css\/main.css",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 16
+    },
+    "\/images\/t.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/t.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/t.png",
+      "initialSize" : 16269,
       "fileType" : 8192
     },
     "\/images\/pdf\/toolbarButton-print.png" : {
@@ -790,16 +808,16 @@
       "outputAbbreviatedPath" : "\/js\/main.min.js",
       "fileType" : 64
     },
-    "\/images\/t.png" : {
+    "\/js\/services.min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/t.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/t.png",
-      "initialSize" : 16269,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/js\/services.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/services.min.min.js",
+      "fileType" : 64
     },
     "\/js\/controllers\/footerctrl.js" : {
       "ignoreWasSetByUser" : 0,
@@ -824,15 +842,19 @@
       "fileType" : 8192
     },
     "\/styles\/less\/viewer.less" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
+      "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/styles\/less\/viewer.less",
-      "outputStyle" : 2,
-      "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/styles\/css\/viewer.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
       "strictImports" : 0,
+      "ignoreWasSetByUser" : 1,
+      "shouldRunBless" : 1,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 2,
       "fileType" : 1,
       "debugStyle" : 0
     }
@@ -855,7 +877,10 @@
     "sassAutoOutputPathStyle" : 2,
     "stylusAutoOutputPathReplace2" : "css",
     "lessAutoOutputPathStyle" : 2,
+    "lessIECompatibility" : 1,
     "genericWebpageFileExtensionsString" : "html, xhtml, htm, shtml, shtm, php, jsp, asp, aspx, erb, ctp",
+    "lessStrictUnits" : 0,
+    "lessStrictMath" : 0,
     "coffeeMinifyOutput" : 1,
     "javascriptOutputSuffix" : ".min",
     "jadeOutputStyle" : 0,
@@ -1004,6 +1029,7 @@
     "jadeCompileDebug" : 1,
     "slimRailsCompatible" : 0,
     "kitAutoOutputPathReplace2" : "",
+    "lessRelativeURLS" : 0,
     "lessDebugStyle" : 0,
     "javascriptAutoOutputPathRelativePath" : "",
     "slimAutoOutputPathStyle" : 0

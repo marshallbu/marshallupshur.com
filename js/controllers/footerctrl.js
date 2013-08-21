@@ -2,7 +2,7 @@
 
 define([
   'app'
-], function (_, _s, app) {
+], function (app) {
   'use strict';
 
   return ['$scope', '$http', '$log', 'version',

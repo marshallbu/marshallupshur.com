@@ -45,7 +45,7 @@ var FindStates = {
   FIND_PENDING: 3
 };
 
-  PDFJS.workerSrc = 'js/lib/pdf/pdf.js';
+  PDFJS.workerSrc = 'js/lib/pdf/pdf.min.js';
 
 var mozL10n = document.mozL10n || document.webL10n;
 
@@ -1686,8 +1686,8 @@ var PDFView = {
       // Make all navigation keys work on document load,
       // unless the viewer is embedded in another page.
       if (window.parent === window) {
-        PDFView.container.focus();
-        PDFView.container.blur();
+        // PDFView.container.focus();
+        // PDFView.container.blur();
       }
     });
 

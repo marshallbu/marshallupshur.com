@@ -4,7 +4,7 @@ define([
   'use strict';
 
   angular.module('myApp.services', [])
-    .value('version', '0.2.1')
+    .value('version', '0.2.2')
 
     .factory('FeedService', ['$http', function($http) {
       return {

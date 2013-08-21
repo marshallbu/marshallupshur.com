@@ -1,10 +1,3 @@
-<?php
-  // use this area for some initial PHP setup.
-  // include WordPress from my blog
-  // define('WP_USE_THEMES', false);
-  // require('/home/82397/domains/blog.marshallupshur.com/html/wp-blog-header.php');
-  // query_posts('showposts=1');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +8,13 @@
   <meta name="author" content="">
 
   <link href="styles/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
   <style type="text/css">
 
   </style>
   <link href="styles/css/bootstrap-responsive.min.css" rel="stylesheet">
   <!--[if lt IE 9]>
-    <script src="js/lib/html5shiv.js"></script>
+    <script src="assets/vendor/html5shiv/dist/html5shiv.js"></script>
   <![endif]-->
 
   <link rel="resource" type="application/l10n" href="js/lib/pdf/locale/locale.properties"/>
@@ -37,7 +30,7 @@
 <body data-spy="scroll" data-target=".navbar">
   <?php include_once "analyticstracking.php" ?>
 
-  <div id="navigation" class="navbar navbar-fixed-top navbar-inverse">
+  <div id="navigation" class="navbar navbar-fixed-top navbar-inverse" ng-controller="NavCtrl">
       <div class="navbar-inner">
           <div class="container-fluid">
 
@@ -375,6 +368,6 @@
 
 </body>
 
-<script data-main="js/main" src="js/lib/require.js"></script>
+<script data-main="js/main" src="assets/vendor/requirejs/require.js"></script>
     
 </html>

@@ -3,21 +3,13 @@ require.config({
   // baseUrl: "js/",
   paths: {
     // app: "../app",
-    jquery: [
-      '//code.jquery.com/jquery-1.10.1.min',
-      'lib/jquery-1.10.1.min'
-    ],
-    'jquery.scrollTo': 'lib/jquery.scrollTo.min',
-    angular: [
-      '//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min',
-      'lib/angular/angular.min'
-    ],
-    angularResource: 'lib/angular/angular-resource.min',
-    lodash: [
-      '//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.1/lodash.underscore.min',
-      'lib/lodash.underscore.min'
-    ],
-    'underscore.string': 'lib/underscore.string.min',
+    jquery: '../assets/vendor/jquery/jquery.min',
+    'jquery.scrollTo': '../assets/vendor/jquery.scrollTo/jquery.scrollTo.min',
+    angular: '../assets/vendor/angular/angular.min',
+    angularResource: '../assets/vendor/angular-resource/angular-resource.min',
+    'adaptive-speech': '../assets/vendor/angular-adaptive-speech/src/adaptive-speech',
+    lodash: '../assets/vendor/lodash/dist/lodash.underscore.min',
+    'underscore.string': '../assets/vendor/underscore.string/dist/underscore.string.min',
     bootstrap: 'lib/bootstrap.min',
     'pdf-compatibility': 'lib/pdf/compatibility.min',
     'pdf-l10n': 'lib/pdf/l10n.min',
@@ -65,8 +57,7 @@ require([
     // More info: https://groups.google.com/forum/#!msg/angular/yslVnZh9Yjk/MLi3VGXZLeMJ
     $html.attr('ng-app','');
 
-    // TODO: put this old stuff here for now, but need to move this to
-    // an angular controller
+    // TODO: move to a directive
     var navLinks;
 
     $('#creations-slider.carousel').carousel();

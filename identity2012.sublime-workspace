@@ -151,7 +151,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 22696,
+				"buffer_size": 22452,
 				"line_ending": "Unix"
 			}
 		},
@@ -159,7 +159,7 @@
 			"file": "styles/less/main.less",
 			"settings":
 			{
-				"buffer_size": 9551,
+				"buffer_size": 10159,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,7 +175,7 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 2394,
+				"buffer_size": 2552,
 				"line_ending": "Unix"
 			}
 		},
@@ -216,7 +216,7 @@
 			"file": "js/controllers.js",
 			"settings":
 			{
-				"buffer_size": 1715,
+				"buffer_size": 1926,
 				"line_ending": "Unix"
 			}
 		},
@@ -248,7 +248,7 @@
 			"file": "js/controllers/footerctrl.js",
 			"settings":
 			{
-				"buffer_size": 247,
+				"buffer_size": 240,
 				"line_ending": "Unix"
 			}
 		},
@@ -256,7 +256,7 @@
 			"file": "js/lib/pdf/viewer.js",
 			"settings":
 			{
-				"buffer_size": 129378,
+				"buffer_size": 122962,
 				"line_ending": "Unix"
 			}
 		},
@@ -264,7 +264,7 @@
 			"file": "js/lib/pdf/compatibility.js",
 			"settings":
 			{
-				"buffer_size": 14186,
+				"buffer_size": 14200,
 				"line_ending": "Unix"
 			}
 		}
@@ -576,7 +576,7 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -584,15 +584,15 @@
 					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 22696,
+						"buffer_size": 22452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14117,
-								14121
+								21795,
+								21821
 							]
 						],
 						"settings":
@@ -602,7 +602,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5831.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -612,15 +612,15 @@
 					"file": "styles/less/main.less",
 					"settings":
 					{
-						"buffer_size": 9551,
+						"buffer_size": 10159,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								79,
-								79
+								19,
+								0
 							]
 						],
 						"settings":
@@ -668,15 +668,15 @@
 					"file": "js/main.js",
 					"settings":
 					{
-						"buffer_size": 2394,
+						"buffer_size": 2552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1183,
-								1145
+								0,
+								2552
 							]
 						],
 						"settings":
@@ -703,8 +703,8 @@
 						"selection":
 						[
 							[
-								173,
-								173
+								0,
+								274
 							]
 						],
 						"settings":
@@ -729,8 +729,8 @@
 						"selection":
 						[
 							[
-								129,
-								129
+								0,
+								482
 							]
 						],
 						"settings":
@@ -758,8 +758,8 @@
 						"selection":
 						[
 							[
-								15,
-								15
+								0,
+								230
 							]
 						],
 						"settings":
@@ -805,15 +805,15 @@
 					"file": "js/controllers.js",
 					"settings":
 					{
-						"buffer_size": 1715,
+						"buffer_size": 1926,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1664,
-								1664
+								150,
+								166
 							]
 						],
 						"settings":
@@ -840,8 +840,8 @@
 						"selection":
 						[
 							[
-								762,
-								762
+								355,
+								366
 							]
 						],
 						"settings":
@@ -917,15 +917,15 @@
 					"file": "js/controllers/footerctrl.js",
 					"settings":
 					{
-						"buffer_size": 247,
+						"buffer_size": 240,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								213,
-								213
+								0,
+								0
 							]
 						],
 						"settings":
@@ -945,15 +945,15 @@
 					"file": "js/lib/pdf/viewer.js",
 					"settings":
 					{
-						"buffer_size": 129378,
+						"buffer_size": 122962,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								108670,
-								108686
+								1334,
+								1334
 							]
 						],
 						"settings":
@@ -963,7 +963,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 55331.0,
+						"translation.y": 195.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -973,15 +973,15 @@
 					"file": "js/lib/pdf/compatibility.js",
 					"settings":
 					{
-						"buffer_size": 14186,
+						"buffer_size": 14200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12824,
-								12824
+								0,
+								0
 							]
 						],
 						"settings":

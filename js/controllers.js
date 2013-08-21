@@ -11,6 +11,12 @@ define([
     // }])
     // More involved example where controller is required from an external file
 
+    .controller('NavCtrl', ['$scope', function($scope) {
+      require(['controllers/navctrl'], function(navctrl) {
+        angular.injector(['ng']).invoke(navctrl, this, {'$scope': $scope});
+      });
+    }])
+
     .controller('FeedCtrl', ['$scope', function($scope) {
       require(['controllers/feedctrl'], function(feedctrl) {
         // injector method takes an array of modules as the first argument

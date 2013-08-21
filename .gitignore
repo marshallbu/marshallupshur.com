@@ -1,2 +1,6 @@
 .dat1a0b.00a
 codekit-config.json
+assets/vendor/*
+google*.html
+*.sublime-project
+*.sublime-workspace
