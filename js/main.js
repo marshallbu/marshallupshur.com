@@ -15,10 +15,7 @@ require.config({
     'pdf-l10n': 'lib/pdf/l10n.min',
     'pdf': 'lib/pdf/pdf.min',
     'pdf-viewer': 'lib/pdf/viewer.min',
-    ssp: [
-      '//photos.marshallupshur.com/slideshowpro/m/embed',
-      'lib/ssp/embed'
-    ]
+    ssp: 'lib/ssp/embed'
   },
   shim: {
     'jquery.scrollTo': ['jquery'],
