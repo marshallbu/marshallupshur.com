@@ -4060,186 +4060,186 @@ window.addEventListener('click', function click(evt) {
   }
 }, false);
 
-window.addEventListener('keydown', function keydown(evt) {
-  var handled = false;
-  var cmd = (evt.ctrlKey ? 1 : 0) |
-            (evt.altKey ? 2 : 0) |
-            (evt.shiftKey ? 4 : 0) |
-            (evt.metaKey ? 8 : 0);
+// window.addEventListener('keydown', function keydown(evt) {
+//   var handled = false;
+//   var cmd = (evt.ctrlKey ? 1 : 0) |
+//             (evt.altKey ? 2 : 0) |
+//             (evt.shiftKey ? 4 : 0) |
+//             (evt.metaKey ? 8 : 0);
 
-  // First, handle the key bindings that are independent whether an input
-  // control is selected or not.
-  if (cmd === 1 || cmd === 8 || cmd === 5 || cmd === 12) {
-    // either CTRL or META key with optional SHIFT.
-    switch (evt.keyCode) {
-      case 70: // f
-        if (!PDFView.supportsIntegratedFind) {
-          PDFFindBar.toggle();
-          handled = true;
-        }
-        break;
-      case 71: // g
-        if (!PDFView.supportsIntegratedFind) {
-          PDFFindBar.dispatchEvent('again', cmd === 5 || cmd === 12);
-          handled = true;
-        }
-        break;
-      case 61: // FF/Mac '='
-      case 107: // FF '+' and '='
-      case 187: // Chrome '+'
-      case 171: // FF with German keyboard
-        PDFView.zoomIn();
-        handled = true;
-        break;
-      case 173: // FF/Mac '-'
-      case 109: // FF '-'
-      case 189: // Chrome '-'
-        PDFView.zoomOut();
-        handled = true;
-        break;
-      case 48: // '0'
-      case 96: // '0' on Numpad of Swedish keyboard
-        PDFView.parseScale(DEFAULT_SCALE, true);
-        handled = false; // keeping it unhandled (to restore page zoom to 100%)
-        break;
-    }
-  }
+//   // First, handle the key bindings that are independent whether an input
+//   // control is selected or not.
+//   if (cmd === 1 || cmd === 8 || cmd === 5 || cmd === 12) {
+//     // either CTRL or META key with optional SHIFT.
+//     switch (evt.keyCode) {
+//       case 70: // f
+//         if (!PDFView.supportsIntegratedFind) {
+//           PDFFindBar.toggle();
+//           handled = true;
+//         }
+//         break;
+//       case 71: // g
+//         if (!PDFView.supportsIntegratedFind) {
+//           PDFFindBar.dispatchEvent('again', cmd === 5 || cmd === 12);
+//           handled = true;
+//         }
+//         break;
+//       case 61: // FF/Mac '='
+//       case 107: // FF '+' and '='
+//       case 187: // Chrome '+'
+//       case 171: // FF with German keyboard
+//         PDFView.zoomIn();
+//         handled = true;
+//         break;
+//       case 173: // FF/Mac '-'
+//       case 109: // FF '-'
+//       case 189: // Chrome '-'
+//         PDFView.zoomOut();
+//         handled = true;
+//         break;
+//       case 48: // '0'
+//       case 96: // '0' on Numpad of Swedish keyboard
+//         PDFView.parseScale(DEFAULT_SCALE, true);
+//         handled = false; // keeping it unhandled (to restore page zoom to 100%)
+//         break;
+//     }
+//   }
 
-  // CTRL+ALT or Option+Command
-  if (cmd === 3 || cmd === 10) {
-    switch (evt.keyCode) {
-      case 80: // p
-        PDFView.presentationMode();
-        handled = true;
-        break;
-    }
-  }
+//   // CTRL+ALT or Option+Command
+//   if (cmd === 3 || cmd === 10) {
+//     switch (evt.keyCode) {
+//       case 80: // p
+//         PDFView.presentationMode();
+//         handled = true;
+//         break;
+//     }
+//   }
 
-  if (handled) {
-    evt.preventDefault();
-    return;
-  }
+//   if (handled) {
+//     evt.preventDefault();
+//     return;
+//   }
 
-  // Some shortcuts should not get handled if a control/input element
-  // is selected.
-  var curElement = document.activeElement || document.querySelector(':focus');
-  if (curElement && (curElement.tagName.toUpperCase() === 'INPUT' ||
-                     curElement.tagName.toUpperCase() === 'SELECT')) {
-    return;
-  }
-  var controlsElement = document.getElementById('toolbar');
-  while (curElement) {
-    if (curElement === controlsElement && !PDFView.isPresentationMode)
-      return; // ignoring if the 'toolbar' element is focused
-    curElement = curElement.parentNode;
-  }
+//   // Some shortcuts should not get handled if a control/input element
+//   // is selected.
+//   var curElement = document.activeElement || document.querySelector(':focus');
+//   if (curElement && (curElement.tagName.toUpperCase() === 'INPUT' ||
+//                      curElement.tagName.toUpperCase() === 'SELECT')) {
+//     return;
+//   }
+//   var controlsElement = document.getElementById('toolbar');
+//   while (curElement) {
+//     if (curElement === controlsElement && !PDFView.isPresentationMode)
+//       return; // ignoring if the 'toolbar' element is focused
+//     curElement = curElement.parentNode;
+//   }
 
-  if (cmd === 0) { // no control key pressed at all.
-    switch (evt.keyCode) {
-      case 38: // up arrow
-      case 33: // pg up
-      case 8: // backspace
-        if (!PDFView.isPresentationMode &&
-            PDFView.currentScaleValue !== 'page-fit') {
-          break;
-        }
-        /* in presentation mode */
-        /* falls through */
-      case 37: // left arrow
-        // horizontal scrolling using arrow keys
-        if (PDFView.isHorizontalScrollbarEnabled) {
-          break;
-        }
-        /* falls through */
-      case 75: // 'k'
-      case 80: // 'p'
-        PDFView.page--;
-        handled = true;
-        break;
-      case 27: // esc key
-        if (!PDFView.supportsIntegratedFind && PDFFindBar.opened) {
-          PDFFindBar.close();
-          handled = true;
-        }
-        break;
-      case 40: // down arrow
-      case 34: // pg down
-      case 32: // spacebar
-        if (!PDFView.isPresentationMode &&
-            PDFView.currentScaleValue !== 'page-fit') {
-          break;
-        }
-        /* falls through */
-      case 39: // right arrow
-        // horizontal scrolling using arrow keys
-        if (PDFView.isHorizontalScrollbarEnabled) {
-          break;
-        }
-        /* falls through */
-      case 74: // 'j'
-      case 78: // 'n'
-        PDFView.page++;
-        handled = true;
-        break;
+//   if (cmd === 0) { // no control key pressed at all.
+//     switch (evt.keyCode) {
+//       case 38: // up arrow
+//       case 33: // pg up
+//       case 8: // backspace
+//         if (!PDFView.isPresentationMode &&
+//             PDFView.currentScaleValue !== 'page-fit') {
+//           break;
+//         }
+//         /* in presentation mode */
+//         /* falls through */
+//       case 37: // left arrow
+//         // horizontal scrolling using arrow keys
+//         if (PDFView.isHorizontalScrollbarEnabled) {
+//           break;
+//         }
+//         /* falls through */
+//       case 75: // 'k'
+//       case 80: // 'p'
+//         PDFView.page--;
+//         handled = true;
+//         break;
+//       case 27: // esc key
+//         if (!PDFView.supportsIntegratedFind && PDFFindBar.opened) {
+//           PDFFindBar.close();
+//           handled = true;
+//         }
+//         break;
+//       case 40: // down arrow
+//       case 34: // pg down
+//       case 32: // spacebar
+//         if (!PDFView.isPresentationMode &&
+//             PDFView.currentScaleValue !== 'page-fit') {
+//           break;
+//         }
+//         /* falls through */
+//       case 39: // right arrow
+//         // horizontal scrolling using arrow keys
+//         if (PDFView.isHorizontalScrollbarEnabled) {
+//           break;
+//         }
+//         /* falls through */
+//       case 74: // 'j'
+//       case 78: // 'n'
+//         PDFView.page++;
+//         handled = true;
+//         break;
 
-      case 36: // home
-        if (PDFView.isPresentationMode) {
-          PDFView.page = 1;
-          handled = true;
-        }
-        break;
-      case 35: // end
-        if (PDFView.isPresentationMode) {
-          PDFView.page = PDFView.pdfDocument.numPages;
-          handled = true;
-        }
-        break;
+//       case 36: // home
+//         if (PDFView.isPresentationMode) {
+//           PDFView.page = 1;
+//           handled = true;
+//         }
+//         break;
+//       case 35: // end
+//         if (PDFView.isPresentationMode) {
+//           PDFView.page = PDFView.pdfDocument.numPages;
+//           handled = true;
+//         }
+//         break;
 
-      case 82: // 'r'
-        PDFView.rotatePages(90);
-        break;
-    }
-  }
+//       case 82: // 'r'
+//         PDFView.rotatePages(90);
+//         break;
+//     }
+//   }
 
-  if (cmd === 4) { // shift-key
-    switch (evt.keyCode) {
-      case 32: // spacebar
-        if (!PDFView.isPresentationMode &&
-            PDFView.currentScaleValue !== 'page-fit') {
-          break;
-        }
-        PDFView.page--;
-        handled = true;
-        break;
+//   if (cmd === 4) { // shift-key
+//     switch (evt.keyCode) {
+//       case 32: // spacebar
+//         if (!PDFView.isPresentationMode &&
+//             PDFView.currentScaleValue !== 'page-fit') {
+//           break;
+//         }
+//         PDFView.page--;
+//         handled = true;
+//         break;
 
-      case 82: // 'r'
-        PDFView.rotatePages(-90);
-        break;
-    }
-  }
+//       case 82: // 'r'
+//         PDFView.rotatePages(-90);
+//         break;
+//     }
+//   }
 
-  if (cmd === 2) { // alt-key
-    switch (evt.keyCode) {
-      case 37: // left arrow
-        if (PDFView.isPresentationMode) {
-          PDFHistory.back();
-          handled = true;
-        }
-        break;
-      case 39: // right arrow
-        if (PDFView.isPresentationMode) {
-          PDFHistory.forward();
-          handled = true;
-        }
-        break;
-    }
-  }
+//   if (cmd === 2) { // alt-key
+//     switch (evt.keyCode) {
+//       case 37: // left arrow
+//         if (PDFView.isPresentationMode) {
+//           PDFHistory.back();
+//           handled = true;
+//         }
+//         break;
+//       case 39: // right arrow
+//         if (PDFView.isPresentationMode) {
+//           PDFHistory.forward();
+//           handled = true;
+//         }
+//         break;
+//     }
+//   }
 
-  if (handled) {
-    evt.preventDefault();
-    PDFView.clearMouseScrollState();
-  }
-});
+//   if (handled) {
+//     evt.preventDefault();
+//     PDFView.clearMouseScrollState();
+//   }
+// });
 
 window.addEventListener('beforeprint', function beforePrint(evt) {
   PDFView.beforePrint();

@@ -194,7 +194,7 @@
 
     <div class="container-fluid">
       <p class="pull-left">
-        <i class="icon-html5"></i>&nbsp;<i class="icon-css3"></i><span class="site-version">version{{version}}</span>
+        <i class="icon-html5"></i>&nbsp;<i class="icon-css3"></i>&nbsp;<i class="icon-apple"></i><span class="site-version">version{{version}}</span>
       </p>
       <p class="pull-right">
         &copy;<?php echo date("Y",time()); ?> Marshall Upshur | <a href="http://mbucreations.com" tabindex="0" class="btn-link" target="_self" title="Go to mbu Creations">mbu Creations</a>
