@@ -3880,11 +3880,11 @@ function updateViewarea() {
 
   var store = PDFView.store;
   store.initializedPromise.then(function() {
-    store.set('exists', true);
-    store.set('page', pageNumber);
-    store.set('zoom', normalizedScaleValue);
-    store.set('scrollLeft', Math.round(topLeft[0]));
-    store.set('scrollTop', Math.round(topLeft[1]));
+    // store.set('exists', true);
+    // store.set('page', pageNumber);
+    // store.set('zoom', normalizedScaleValue);
+    // store.set('scrollLeft', Math.round(topLeft[0]));
+    // store.set('scrollTop', Math.round(topLeft[1]));
   });
   var href = PDFView.getAnchorUrl(pdfOpenParams);
   document.getElementById('viewBookmark').href = href;
