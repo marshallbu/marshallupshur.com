@@ -7,21 +7,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link href="styles/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-  <style type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
 
-  </style>
-  <link href="styles/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="assets/vendor/html5shiv/dist/html5shiv.js"></script>
   <![endif]-->
 
   <link rel="resource" type="application/l10n" href="js/lib/pdf/locale/locale.properties"/>
 
-  <link href="styles/css/main.css" rel="stylesheet">
-
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/css/main.css">
 
   <!-- add modernizr here until I decide to no longer support IE8 -->
   <script src="js/lib/modernizr.custom.mbu.js"></script>
@@ -30,40 +26,42 @@
 <body data-spy="scroll" data-target=".navbar">
   <?php include_once "analyticstracking.php" ?>
 
-  <div id="navigation" class="navbar navbar-fixed-top navbar-inverse" ng-controller="NavCtrl">
-      <div class="navbar-inner">
-          <div class="container-fluid">
+  <header class="navbar navbar-fixed-top navbar-inverse" role="navigation" ng-controller="NavCtrl">
+    <div class="container">
 
-              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </a>
-
-              <a class="brand hidden-phone" href="/">Marshall Upshur</a>
-              <a class="brand visible-phone" href="/">MBU</a>
-
-              <div class="nav-collapse">
-                  <ul class="nav">
-                      <li><a href="#about" tabindex="0" class="scrollto" title="About">About</a></li>
-                      <li><a href="#creations" tabindex="0" class="scrollto" title="Creations">Creations</a></li>
-                      <li><a href="#resume" tabindex="0" class="scrollto" title="Resume">Resume</a></li>
-                      <li><a href="#blog" tabindex="0" class="scrollto" title="Blog">Blog</a></li>
-                      <li><a href="#photos" tabindex="0" class="scrollto" title="Photos">Photos</a></li>
-                      <li><a href="#" onclick="$('#contact-modal').modal('toggle'); return false;" tabindex="0" title="Contact">Contact</a></li>
-                      <li class="social"><a target="_self" href="http://www.linkedin.com/in/marshallupshur" title="LinkedIn"><i class="icon-linkedin-sign"></i></a></li>
-                      <li class="social"><a target="_self" href="http://twitter.com/mbuCreations" title="Twitter"><i class="icon-twitter-sign"></i></a></li>
-                      <li class="social"><a target="_self" href="https://www.facebook.com/marshallbu" title="Facebook"><i class="icon-facebook-sign"></i></a></li>
-                      <li class="social"><a target="_self" href="https://plus.google.com/116040772010267344237" title="Google+"><i class="icon-google-plus-sign"></i></a></li>
-                      <li class="social"><a target="_self" href="https://github.com/marshallbu" title="github"><i class="icon-github-sign"></i></a></li>
-
-                  </ul>
-              </div>
-          </div>
+      <div class="navbar-header navbar-right">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mbu_main_navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand hidden-xs" href="/">Marshall Upshur</a>
+        <a class="navbar-brand visible-xs" href="/">MBU</a>
       </div>
-  </div>
 
-  <div id="page" class="container-fluid">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="mbu_main_navbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#about" tabindex="0" class="scrollto" title="About">About</a></li>
+          <li><a href="#creations" tabindex="0" class="scrollto" title="Creations">Creations</a></li>
+          <li><a href="#resume" tabindex="0" class="scrollto" title="Resume">Resume</a></li>
+          <li><a href="#blog" tabindex="0" class="scrollto" title="Blog">Blog</a></li>
+          <li><a href="#photos" tabindex="0" class="scrollto" title="Photos">Photos</a></li>
+          <li><a href="#" onclick="$('#contact-modal').modal('toggle'); return false;" tabindex="0" title="Contact">Contact</a></li>
+          <li class="social"><a target="_self" href="http://www.linkedin.com/in/marshallupshur" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+          <li class="social"><a target="_self" href="http://twitter.com/mbuCreations" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li class="social"><a target="_self" href="https://www.facebook.com/marshallbu" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li class="social"><a target="_self" href="https://plus.google.com/116040772010267344237" title="Google+"><i class="fa fa-google-plus"></i></a></li>
+          <li class="social"><a target="_self" href="https://github.com/marshallbu" title="github"><i class="fa fa-github-alt"></i></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div>
+  </header>
+
+  <div id="content">
+    <div class="container">
       <section id="about" class="hero-unit main">
           <div class="page-header">
               <h1>Marshall Upshur <small>in a nutshell</small></h1>
@@ -113,7 +111,7 @@
                   <a class="carousel-control right" href="#creations-slider" data-slide="next" title="Next Slide" tabindex="0">&rsaquo;</a>
               </div>
           </div>
-          <p style="text-align: center;"><a href="http://mbucreations.com/portfolio" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">mbu Creations portfolio</a></p>
+          <p style="text-align: center;"><a href="http://mbucreations.com/portfolio" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">view portfolio</a></p>
       </section>
 
       <section id="resume">
@@ -122,33 +120,34 @@
           </div>
           <div class="resume-view-container" ng-controller="ResumeCtrl">
             <div class="section-loader" ng-hide="showResumeContainer"></div>
-            <div id="resume-view" class="hidden-phone" ng-show="showResumeContainer" style="display: none;">
+            <div id="resume-view" class="hidden-phone" ng-show="showResumeContainer">
 
               <?php include_once "templates/resume_template.php" ?>
 
             </div> <!-- resume-view -->
           </div> <!-- resume-view-container -->
-          <p style="text-align: center;"><a href="fs/Marshall_Upshur_2013a.pdf" target="_blank" tabindex="0" class="btn btn-primary btn-large btn-link" title="Download Marshall Upshur's Resume">download PDF resume</a></p>
+          <p style="text-align: center;"><a href="fs/Marshall_Upshur_2013a.pdf" target="_blank" tabindex="0" class="btn btn-primary btn-large btn-link" title="Download Marshall Upshur's Resume">download resume</a></p>
       </section>
 
       <section id="blog">
-          <div class="page-header">
-              <h1>Blog <small>ramblings of a geek</small></h1>
-          </div>
-          <div class="blog-updates-container" ng-controller="FeedCtrl">
-            <div class="span12 section-loader" ng-hide="feeds.length > 0"></div>
-            <div class="row-fluid">
-              <div ng-repeat="feed in feeds" class="span4">
-                <div class="post">
-                  <h4 class="title">{{feed.title}}</h4>
-                  <p class="meta"><small>{{feed.publishedDateObject | date:'MM/dd/yyyy @ h:mma'}}</small></p>
-                  <p class="text">{{feed.contentSnippet}}</p>
-                  <p class="controls"><a href="{{feed.link}}" tabindex="0" class="btn btn-small btn-mbu" title="View blog post titled {{feed.title}}">View post <i class="icon-double-angle-right"></i></a></p>
-                </div>
+        <div class="page-header">
+            <h1>Blog <small>ramblings of a geek</small></h1>
+        </div>
+        <div class="blog-updates-container" ng-controller="FeedCtrl">
+          <div class="span12 section-loader" ng-hide="feeds.length > 0"></div>
+          <div class="row">
+            <div ng-repeat="feed in feeds" class="col-md-4">
+              <div class="post">
+                <h4 class="title">{{feed.title}}</h4>
+                <p class="meta"><small>{{feed.publishedDateObject | date:'MM/dd/yyyy @ h:mma'}}</small></p>
+                <p class="text">{{feed.contentSnippet}}</p>
+                <p class="controls"><a href="{{feed.link}}" tabindex="0" class="btn btn-small btn-mbu" title="View blog post titled {{feed.title}}">View post <i class="icon-double-angle-right"></i></a></p>
               </div>
             </div>
-
           </div>
+
+        </div>
+        <p style="text-align: center;"><a href="http://blog.marshallupshur.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="Blog">view blog</a></p>
       </section>
 
       <section id="photos">
@@ -160,7 +159,7 @@
                   <div id="album-7"></div>
               </div>
           </div>
-          <p style="text-align: center;"><a href="http://photos.marshallupshur.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="View more photos">view more of my photos</a></p>
+          <p style="text-align: center;"><a href="http://photos.marshallupshur.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="View more photos">view photos</a></p>
       </section>
 
       <!-- contact-modal -->
@@ -188,11 +187,12 @@
               <button class="btn btn-primary hidden">Send Message</button>
           </div>
       </div>
+    </div>
   </div>
 
   <footer ng-controller="FooterCtrl">
 
-    <div class="container-fluid">
+    <div class="container">
       <p class="pull-left">
         <i class="icon-html5"></i>&nbsp;<i class="icon-css3"></i>&nbsp;<i class="icon-apple"></i><span class="site-version">version{{version}}</span>
       </p>

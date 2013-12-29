@@ -21,7 +21,7 @@
 
 'use strict';
 
-var DEFAULT_URL = 'fs/Marshall_Upshur_2013a.pdf';
+var DEFAULT_URL = 'compressed.tracemonkey-pldi-09.pdf';
 var DEFAULT_SCALE = 'auto';
 var DEFAULT_SCALE_DELTA = 1.1;
 var UNKNOWN_SCALE = 0;
@@ -47,9 +47,8 @@ var FindStates = {
   FIND_PENDING: 3
 };
 
-  PDFJS.imageResourcesPath = 'images/pdf/';
-  // PDFJS.workerSrc = 'js/lib/pdf/pdf.worker.js';
-  PDFJS.workerSrc = 'js/lib/pdf/pdf.worker.min.js';
+PDFJS.imageResourcesPath = './images/';
+  PDFJS.workerSrc = '../build/pdf.worker.js';
 
 var mozL10n = document.mozL10n || document.webL10n;
 
@@ -1264,7 +1263,9 @@ var PDFView = {
   mouseScrollDelta: 0,
   lastScroll: 0,
   previousPageNumber: 1,
-  isViewerEmbedded: (window.parent !== window),
+  // isViewerEmbedded: (window.parent !== window),
+  // mbu: yes, my viewer is embedded
+  isViewerEmbedded: true, 
 
   // called once when the document is loaded
   initialize: function pdfViewInitialize() {
@@ -1575,13 +1576,13 @@ var PDFView = {
 
   setTitleUsingUrl: function pdfViewSetTitleUsingUrl(url) {
     this.url = url;
-    // try {
-    //   this.setTitle(decodeURIComponent(getFileName(url)) || url);
-    // } catch (e) {
-    //   // decodeURIComponent may throw URIError,
-    //   // fall back to using the unprocessed url in that case
-    //   this.setTitle(url);
-    // }
+    try {
+      this.setTitle(decodeURIComponent(getFileName(url)) || url);
+    } catch (e) {
+      // decodeURIComponent may throw URIError,
+      // fall back to using the unprocessed url in that case
+      this.setTitle(url);
+    }
   },
 
   setTitle: function pdfViewSetTitle(title) {
@@ -1975,7 +1976,7 @@ var PDFView = {
       // Make all navigation keys work on document load,
       // unless the viewer is embedded in a web page.
       if (!self.isViewerEmbedded) {
-        // self.container.focus();
+        self.container.focus();
       }
     });
 
@@ -3617,7 +3618,9 @@ var DocumentOutlineView = function documentOutlineView(outline) {
   }
 };
 
-window.webViewerLoad = function() {
+// document.addEventListener('DOMContentLoaded', function webViewerLoad(evt) {
+// mbu: create a function that can be called elsewhere
+window.webViewerLoad = function webViewerLoad() {
   PDFView.initialize();
 
   var params = PDFView.parseQueryString(document.location.search.substring(1));
@@ -3642,6 +3645,8 @@ window.webViewerLoad = function() {
   // Special debugging flags in the hash section of the URL.
   var hash = document.location.hash.substring(1);
   var hashParams = PDFView.parseQueryString(hash);
+  // mbu: override these setting
+  hashParams['disableHistory'] = true;
 
   if ('disableWorker' in hashParams) {
     PDFJS.disableWorker = (hashParams['disableWorker'] === 'true');
@@ -3825,6 +3830,7 @@ window.webViewerLoad = function() {
 
 
   PDFView.open(file, 0);
+// }, true);
 }; // webViewerLoad (new declaration)
 
 function updateViewarea() {

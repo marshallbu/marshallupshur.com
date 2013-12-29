@@ -1,9 +1,4 @@
-/*---------------------------------------------------
-    LESS Elements 0.9
-  ---------------------------------------------------
-    A set of useful LESS mixins
-    More info at: http://lesselements.com
-  ---------------------------------------------------*/
+@import "../../assets/vendor/animate.css/animate.css";
 @font-face {
   font-family: 'CenturyGothicStd';
   src: url('centurygothicstd.eot');
@@ -230,7 +225,6 @@ html[dir='rtl'] #sidebarContent {
   left: 0;
   right: 0;
   /*z-index: 9999;*/
-
   cursor: default;
 }
 #toolbarContainer {
@@ -241,7 +235,6 @@ html[dir='rtl'] #sidebarContent {
   height: 32px;
   background-color: #424242;
   /* fallback */
-
   background-image: url(../../images/pdf/texture.png), linear-gradient(rgba(77, 77, 77, 0.99), rgba(64, 64, 64, 0.95));
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -251,7 +244,6 @@ html[dir='rtl'] #sidebarContent {
   height: 32px;
   background-color: #474747;
   /* fallback */
-
   background-image: url(../../images/pdf/texture.png), linear-gradient(rgba(82, 82, 82, 0.99), rgba(69, 69, 69, 0.95));
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.08), inset 0 1px 1px rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.1);
 }
@@ -570,7 +562,6 @@ html[dir='rtl'] .splitToolbarButtonSeparator {
   -moz-user-select: none;
   -ms-user-select: none;
   /* Opera does not support user-select, use <... unselectable="on"> instead */
-
   cursor: default;
   -webkit-transition-property: background-color, border-color, box-shadow;
   -webkit-transition-duration: 150ms;
@@ -664,7 +655,6 @@ html[dir='rtl'] .dropdownToolbarButton {
   -webkit-appearance: none;
   -moz-appearance: none;
   /* in the future this might matter, see bugzilla bug #649849 */
-
   min-width: 140px;
   font-size: 12px;
   color: #f2f2f2;
@@ -673,7 +663,6 @@ html[dir='rtl'] .dropdownToolbarButton {
   border: none;
   background: rgba(0, 0, 0, 0);
   /* Opera does not support 'transparent' <select> background */
-
 }
 .dropdownToolbarButton > select > option {
   background: #3d3d3d;
@@ -726,7 +715,6 @@ html[dir='rtl'] #findNext {
   /* All matching images have a size of 16x16
    * (except for the print button: 18x16)
    * All relevant containers have a size of 32x25 */
-
   position: absolute;
   top: 4px;
   left: 7px;
@@ -1181,7 +1169,7 @@ canvas {
   background-color: rgba(255, 255, 255, 0.6);
   color: black;
 }
-@page  {
+@page {
   margin: 0;
 }
 #printContainer {
@@ -1304,6 +1292,9 @@ body {
   margin: 0;
   height: 100%;
 }
+.btn {
+  border-radius: 0;
+}
 .btn-link {
   color: #ff8000;
 }
@@ -1319,61 +1310,49 @@ a.brand {
   background: url("../../images/section_loader.gif") center center no-repeat;
   height: 150px;
 }
-.navbar.navbar-fixed-top .navbar-inner {
+header.navbar {
   border: 0;
   background: url("../../images/content-bg.png") repeat rgba(0, 0, 0, 0.45);
   -webkit-box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.35);
   -moz-box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.35);
   box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.35);
 }
-.navbar.navbar-fixed-top .navbar-inner .container-fluid {
-  margin: 0 auto;
-}
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .nav li > a:focus,
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .nav li > a:hover {
-  color: #FFFFFF;
-  background-image: url('../../images/light.png');
-  background-position: bottom center;
-  background-repeat: no-repeat;
-}
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .nav li.active > a,
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .nav li.active > a:hover,
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .nav li.active > a:focus {
-  color: #FFFFFF;
-  background-image: url('../../images/light.png');
-  background-position: bottom center;
-  background-repeat: no-repeat;
-}
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .nav li.active > a {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .collapse.in .nav > li > a:focus,
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .collapse.in .nav > li > a:hover,
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .collapse.in .nav > .active > a,
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .collapse.in .nav > .active > a:hover,
-.navbar.navbar-fixed-top .navbar-inner .container-fluid .collapse.in .nav > .active > a:focus {
-  background-image: none;
-}
-.navbar.navbar-fixed-top .navbar-inner .container-fluid a.brand {
-  float: right;
+header.navbar div.navbar-header a.navbar-brand {
   color: #ff8000;
   font-weight: 400;
 }
-.navbar.navbar-fixed-top .navbar-inner .container-fluid li.social {
-  font-size: 1.500em;
+header.navbar div.navbar-collapse ul.navbar-nav li > a:focus,
+header.navbar div.navbar-collapse ul.navbar-nav li > a:hover {
+  color: #FFFFFF;
+  background-image: url('../../images/light.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
-.navbar.navbar-fixed-top .navbar-inner .container-fluid li.social a {
-  padding: 8px 10px 9px;
+header.navbar div.navbar-collapse ul.navbar-nav li.active > a,
+header.navbar div.navbar-collapse ul.navbar-nav li.active > a:hover,
+header.navbar div.navbar-collapse ul.navbar-nav li.active > a:focus {
+  color: #FFFFFF;
+  background-image: url('../../images/light.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
-.navbar.navbar-fixed-top .navbar-inner .container-fluid li.social a:hover {
+header.navbar div.navbar-collapse ul.navbar-nav li.active > a {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+header.navbar div.navbar-collapse ul.navbar-nav li.social a:hover {
   color: #ff8000;
 }
-.navbar.navbar-fixed-top .navbar-inner .container-fluid li.divider-vertical {
-  margin: 0;
-}
-div#page.container-fluid,
-footer div.container-fluid {
-  margin: 0 auto;
+header.navbar div.navbar-collapse.in .nav > li > a:focus,
+header.navbar div.navbar-collapse.collapsing .nav > li > a:focus,
+header.navbar div.navbar-collapse.in .nav > li > a:hover,
+header.navbar div.navbar-collapse.collapsing .nav > li > a:hover,
+header.navbar div.navbar-collapse.in .nav > .active > a,
+header.navbar div.navbar-collapse.collapsing .nav > .active > a,
+header.navbar div.navbar-collapse.in .nav > .active > a:hover,
+header.navbar div.navbar-collapse.collapsing .nav > .active > a:hover,
+header.navbar div.navbar-collapse.in .nav > .active > a:focus,
+header.navbar div.navbar-collapse.collapsing .nav > .active > a:focus {
+  background-image: none !important;
 }
 section {
   padding-top: 30px;
@@ -1526,9 +1505,6 @@ div#contact-modal .modal-header .close {
 div#contact-modal .modal-footer {
   border-top: 1px solid #464646;
   background-color: transparent;
-  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 .btn-mbu,
 .btn-mbu:hover {

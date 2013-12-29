@@ -2,9 +2,8 @@
 
 define([
   'lodash',
-  'underscore.string',
   'app'
-], function (_, _s, app) {
+], function (_, app) {
   'use strict';
 
   return ['$scope', '$log',
