@@ -123,8 +123,8 @@
               <h2>Resume <small>a summary of experience</small></h1>
           </div>
           <div class="resume-view-container" ng-controller="ResumeCtrl">
-            <div class="section-loader" ng-hide="showResumeContainer"></div>
-            <div id="resume-view" class="hidden-xs" ng-show="showResumeContainer">
+            <div class="section-loader" ng-show="showResumeContainer == false"></div>
+            <div id="resume-view" class="hidden-xs" ng-show="showResumeContainer == true" ng-cloak>
 
               <?php include_once "templates/resume_template.php" ?>
 
@@ -140,7 +140,7 @@
         <div class="blog-updates-container" ng-controller="FeedCtrl">
           <div class="span12 section-loader" ng-hide="feeds.length > 0"></div>
           <div class="row">
-            <div ng-repeat="feed in feeds" class="col-md-4">
+            <div ng-repeat="feed in feeds" class="col-md-4" ng-cloak>
               <div class="post">
                 <h4 class="title">{{feed.title}}</h4>
                 <p class="meta"><small>{{feed.publishedDateObject | date:'MM/dd/yyyy @ h:mma'}}</small></p>

@@ -11,6 +11,7 @@ define([
 
   return ['$scope', 'CONFIG', '$http', '$log', 
     function ($scope, CONFIG, $http, $log) {
+      $scope.showResumeContainer = false;
 
       // override some PDFJS variables defined in worker so I won't have
       // to change viewer.js as much in the future
