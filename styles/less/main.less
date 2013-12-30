@@ -213,7 +213,14 @@ section#creations {
       }
 
       .carousel-control {
-        top: 50%;
+
+        i {
+          position: absolute;
+          top: 50%;
+          z-index: 5;
+          display: inline-block;
+        }
+        
       }
     }
   }
@@ -411,18 +418,37 @@ div#tux-egg {
     width: auto;
   }
 
+  div.post {
+    margin-bottom: 20px;
+  }
+
   section.jumbotron.main {
     h1 {
 
+      small {
+        display: block;
+      }
     }
     p.portrait {
+      float: none !important;
+      margin-right: auto;
+      margin-left: auto;
       width: 240px;
       height: 240px;
     }
   }
+
+  section#creations h2,
+  section#resume h2,
+  section#blog h2,
+  section#photos h2 {
+    small {
+      display: block;
+    }
+  }
 }
 
-@media (max-width: @screen-xs-max) {  
+@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {  
   section.jumbotron.main {
     // padding-top: 0px;
   }

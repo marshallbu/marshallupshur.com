@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Marshall Upshur - Hi!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -86,7 +86,7 @@
         </div>
         <p class="lead match-view">Along with some of the cool stuff I work on at work, I do projects on the side to keep my healthy appetite for latest technology and trends up to date.  Check some of these out below and by going to my portfolio.</p>
         <div class="creations-slider-container">
-          <div id="creations-slider" class="carousel slide">
+          <div id="creations-slider" class="carousel slide" data-ride="carousel">
             <!-- Carousel items -->
             <div class="carousel-inner">
               <?php
@@ -107,8 +107,12 @@
               ?>
             </div>
             <!-- Carousel nav -->
-            <a class="carousel-control left" href="#creations-slider" data-slide="prev" title="Previous Slide" tabindex="0">&lsaquo;</a>
-            <a class="carousel-control right" href="#creations-slider" data-slide="next" title="Next Slide" tabindex="0">&rsaquo;</a>
+            <a class="carousel-control left" href="#creations-slider" data-slide="prev" title="Previous Slide" tabindex="0">
+              <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="carousel-control right" href="#creations-slider" data-slide="next" title="Next Slide" tabindex="0">
+              <i class="fa fa-chevron-right"></i>
+            </a>
           </div>
         </div>
         <p style="text-align: center;"><a href="http://mbucreations.com/portfolio" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">view portfolio</a></p>
