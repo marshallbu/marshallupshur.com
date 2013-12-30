@@ -10,13 +10,13 @@ require.config({
     angularResource:      '../assets/vendor/angular-resource/angular-resource',
     angularRoute:         '../assets/vendor/angular-route/angular-route',
     angularSanitize:      '../assets/vendor/angular-sanitize/angular-sanitize',
-    'adaptive-speech':    '../assets/vendor/angular-adaptive-speech/src/adaptive-speech',
+    angularAdaptiveSpeech:'../assets/vendor/angular-adaptive-speech/angular-adaptive-speech.min',
     lodash:               '../assets/vendor/lodash/dist/lodash.underscore.min',
     bootstrap:            '../assets/vendor/bootstrap/dist/js/bootstrap.min',
-    'pdf-compatibility':  'lib/pdf/compatibility',
-    'pdf-l10n':           'lib/pdf/l10n',
-    'pdf':                'lib/pdf/pdf',
-    'pdf-viewer':         'lib/pdf/viewer',
+    'pdf-compatibility':  'lib/pdf/compatibility.min',
+    'pdf-l10n':           'lib/pdf/l10n.min',
+    'pdf':                'lib/pdf/pdf.min',
+    'pdf-viewer':         'lib/pdf/viewer.min',
     ssp:                  'lib/ssp/embed'
   },
   shim: {
@@ -27,6 +27,7 @@ require.config({
     angularResource: ['angular'],
     angularRoute: ['angular'],
     angularSanitize: ['angular'],
+    angularAdaptiveSpeech: ['angular'],
     lodash: {
       exports: '_'
     },
@@ -46,9 +47,10 @@ require([
   'angularResource',
   'angularRoute',
   'angularSanitize',
+  'angularAdaptiveSpeech',
   'app',
   'routes'
-], function ($, scrollTo, bootstrap, angular, angularResource, angularRoute, angularSanitize, app, routes) {
+], function ($, scrollTo, bootstrap, angular, angularResource, angularRoute, angularSanitize, angularAdaptiveSpeech, app, routes) {
   'use strict';
 
   var $html = angular.element(document.getElementsByTagName('html')[0]);

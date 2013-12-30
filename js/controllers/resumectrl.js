@@ -17,8 +17,7 @@ define([
       window.DEFAULT_URL = 'fs/Marshall_Upshur_2013b_web.pdf';
       window.SCALE_SELECT_CONTAINER_PADDING = 40;
       PDFJS.imageResourcesPath = 'images/pdf/';
-      PDFJS.workerSrc = 'js/lib/pdf/pdf.worker.js';
-
+      PDFJS.workerSrc = 'js/lib/pdf/pdf.worker.min.js';
       
       webViewerLoad();
 

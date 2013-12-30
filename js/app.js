@@ -17,6 +17,7 @@ define([
       'myApp.controllers',
       'myApp.filters',
       'myApp.services',
-      'myApp.directives'
+      'myApp.directives',
+      'adaptive.speech'
     ]);
 });

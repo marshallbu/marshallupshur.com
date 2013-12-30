@@ -1,7 +1,12 @@
- java -jar compiler.jar --js=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/pdf.js --js_output_file=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/pdf.min.js --language_in=ECMASCRIPT5
+ java -jar compiler.jar --js=/Users/marshallbu/Projects/js_projects/identity/js/pdf/pdf.js --js_output_file=/Users/marshallbu/Projects/js_projects/identity/js/pdf/pdf.min.js --language_in=ECMASCRIPT5
 
- java -jar compiler.jar --js=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/compatibility.js --js_output_file=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/compatibility.min.js --language_in=ECMASCRIPT5
+ java -jar compiler.jar --js=/Users/marshallbu/Projects/js_projects/identity/js/pdf/compatibility.js --js_output_file=/Users/marshallbu/Projects/js_projects/identity/js/pdf/compatibility.min.js --language_in=ECMASCRIPT5
  
- java -jar compiler.jar --js=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/l10n.js --js_output_file=/Volumes/mbu\ Creations/domains/dev100.marshallupshur.com/html/js/pdf/l10n.min.js --language_in=ECMASCRIPT5
+ java -jar compiler.jar --js=/Users/marshallbu/Projects/js_projects/identity/js/pdf/l10n.js --js_output_file=/Users/marshallbu/Projects/js_projects/identity/js/pdf/l10n.min.js --language_in=ECMASCRIPT5
 
-java -jar ~/Downloads/yuicompressor-2.4.8.jar --nomunge -o viewer.min.js viewer.js
+
+yuicompressor --nomunge -o js/lib/pdf/compatibility.min.js js/lib/pdf/compatibility.js
+yuicompressor --nomunge -o js/lib/pdf/l10n.min.js js/lib/pdf/l10n.js
+yuicompressor --nomunge -o js/lib/pdf/pdf.min.js js/lib/pdf/pdf.js
+yuicompressor --nomunge -o js/lib/pdf/pdf.worker.min.js js/lib/pdf/pdf.worker.js
+yuicompressor --nomunge -o js/lib/pdf/viewer.min.js js/lib/pdf/viewer.js
