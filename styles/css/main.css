@@ -1450,7 +1450,7 @@ section#resume .resume-view-container #resume-view {
   overflow: hidden;
   position: relative;
 }
-section#blog h1 {
+section#blog h2 {
   text-shadow: 0em 0em 0.071em rgba(0, 0, 0, 0.75);
 }
 section#blog .blog-updates-container .post {
@@ -1474,7 +1474,7 @@ section#blog .blog-updates-container .post .controls {
   margin: 0;
   text-align: right;
 }
-section#photos h1 {
+section#photos h2 {
   text-shadow: 0em 0em 0.071em rgba(0, 0, 0, 0.75);
 }
 section#photos .photos-player-container .photos-player {
@@ -1515,7 +1515,7 @@ hr.footer {
 }
 div#contact-modal div.modal-dialog div.modal-content {
   top: 200px;
-  background: url("../../images/content-bg.png") repeat rgba(0, 0, 0, 0.65);
+  background: url("../../images/content-bg.png") repeat rgba(28, 28, 28, 0.65);
 }
 div#contact-modal div.modal-dialog div.modal-content .modal-header {
   border-bottom: none;

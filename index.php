@@ -131,7 +131,7 @@
 
       <section id="blog">
         <div class="page-header">
-            <h1>Blog <small>ramblings of a geek</small></h1>
+            <h2>Blog <small>ramblings of a geek</small></h1>
         </div>
         <div class="blog-updates-container" ng-controller="FeedCtrl">
           <div class="span12 section-loader" ng-hide="feeds.length > 0"></div>
@@ -152,7 +152,7 @@
 
       <section id="photos">
           <div class="page-header">
-              <h1>Photos <small>some of the world through my eyes</small></h1>
+              <h2>Photos <small>some of the world through my eyes</small></h1>
           </div>
           <div class="photos-player-container" ng-controller="PhotosCtrl">
               <div class="photos-player">
