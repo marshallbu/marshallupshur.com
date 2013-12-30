@@ -753,6 +753,10 @@ html[dir='rtl'] .toolbarButton:first-child {
   min-width: 30px;
 }
 
+#sidebarToggle.toolbarButton {
+  display: none;
+}
+
 .toolbarButton#sidebarToggle::before {
   display: inline-block;
   content: url(../../images/pdf/toolbarButton-sidebarToggle.png);
@@ -841,9 +845,17 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   left: 6px;
 }
 
+#openFile.toolbarButton {
+  display: none;
+}
+
 .toolbarButton.openFile::before {
   display: inline-block;
   content: url(../../images/pdf/toolbarButton-openFile.png);
+}
+
+#download.toolbarButton {
+  display: none;
 }
 
 .toolbarButton.download::before {
@@ -857,6 +869,10 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   box-sizing: border-box;
   margin-top: 3px;
   padding-top: 4px;
+}
+
+#viewBookmark.toolbarButton {
+  display: none;
 }
 
 #viewBookmark[href='#'] {
@@ -910,6 +926,10 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   margin: 8px 0px;
 }
 
+#pageNumber.toolbarField {
+  display: none;
+}
+
 .toolbarField.pageNumber {
   min-width: 16px;
   text-align: right;
@@ -930,6 +950,13 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
 .toolbarField:focus {
   background-color: hsla(0,0%,100%,.15);
   border-color: hsla(204,100%,65%,.8) hsla(204,100%,65%,.85) hsla(204,100%,65%,.9);
+}
+
+#pageNumberLabel.toolbarLabel {
+  display: none;
+}
+#numPages.toolbarLabel {
+  display: none;
 }
 
 .toolbarLabel {

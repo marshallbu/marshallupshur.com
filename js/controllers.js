@@ -27,9 +27,16 @@ define([
       });
     }])
 
-    .controller('ResumeCtrl', ['$scope', function($scope) {
+    .controller('ResumeCtrl', [
+      '$scope', 
+      'CONFIG', 
+      '$injector', 
+      function($scope, CONFIG, $injector) {
       require(['controllers/resumectrl'], function(resumectrl) {
-        angular.injector(['ng', 'myApp.services']).invoke(resumectrl, this, {'$scope': $scope});
+        $injector.invoke(resumectrl, this, {
+          '$scope': $scope,
+          'CONFIG': CONFIG
+        });
       });
     }])
 

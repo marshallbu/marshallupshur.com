@@ -1,6 +1,7 @@
 /*global define: false */
 define([
   'angular',
+  'config',
   'filters',
   'services',
   'directives',
@@ -9,6 +10,7 @@ define([
     'use strict';
 
     return angular.module('myApp', [
+      'myApp.config',
       'ngRoute',
       'ngResource',
       'ngSanitize',

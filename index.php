@@ -36,8 +36,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand hidden-xs" href="/">Marshall Upshur</a>
-        <a class="navbar-brand visible-xs" href="/">MBU</a>
+        <a class="navbar-brand hidden-xs hidden-sm" href="/">Marshall Upshur</a>
+        <a class="navbar-brand visible-xs visible-sm" href="/">mbu</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,7 +62,7 @@
 
   <div id="content">
     <div class="container">
-      <section id="about" class="hero-unit main">
+      <section id="about" class="jumbotron main">
           <div class="page-header">
               <h1>Marshall Upshur <small>in a nutshell</small></h1>
           </div>
@@ -81,46 +81,46 @@
       </section>
 
       <section id="creations">
-          <div class="page-header">
-              <h1>Creations <small>think it. dream it. create it.</small></h1>
+        <div class="page-header">
+          <h2>Creations <small>think it. dream it. create it.</small></h1>
+        </div>
+        <p class="lead match-view">Along with some of the cool stuff I work on at work, I do projects on the side to keep my healthy appetite for latest technology and trends up to date.  Check some of these out below and by going to my portfolio.</p>
+        <div class="creations-slider-container">
+          <div id="creations-slider" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <?php
+                $baseDir = "./";
+                $dir = "images/port/";
+                $portsDir = scandir($baseDir.$dir);
+                $first = true;
+                foreach ($portsDir as $key => $value) {
+                  if (!in_array($value,array(".",".."))) {
+                    if ($first) {
+                      echo "<div class=\"item active\"><img alt=\"\" src=\"$dir$value\"></div>";
+                      $first = false;
+                    } else {
+                      echo "<div class=\"item\"><img alt=\"\" src=\"$dir$value\"></div>";
+                    }
+                  }
+                }
+              ?>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#creations-slider" data-slide="prev" title="Previous Slide" tabindex="0">&lsaquo;</a>
+            <a class="carousel-control right" href="#creations-slider" data-slide="next" title="Next Slide" tabindex="0">&rsaquo;</a>
           </div>
-          <p class="lead match-view">Along with some of the cool stuff I work on at work, I do projects on the side to keep my healthy appetite for latest technology and trends up to date.  Check some of these out below and by going to my portfolio.</p>
-          <div class="creations-slider-container">
-              <div id="creations-slider" class="carousel slide">
-                  <!-- Carousel items -->
-                  <div class="carousel-inner">
-                      <?php
-                          $baseDir = "./";
-                          $dir = "images/port/";
-                          $portsDir = scandir($baseDir.$dir);
-                          $first = true;
-                          foreach ($portsDir as $key => $value) {
-                              if (!in_array($value,array(".",".."))) {
-                                  if ($first) {
-                                      echo "<div class=\"item active\"><img alt=\"\" src=\"$dir$value\"></div>";
-                                      $first = false;
-                                  } else {
-                                      echo "<div class=\"item\"><img alt=\"\" src=\"$dir$value\"></div>";
-                                  }
-                              }
-                          }
-                      ?>
-                  </div>
-                  <!-- Carousel nav -->
-                  <a class="carousel-control left" href="#creations-slider" data-slide="prev" title="Previous Slide" tabindex="0">&lsaquo;</a>
-                  <a class="carousel-control right" href="#creations-slider" data-slide="next" title="Next Slide" tabindex="0">&rsaquo;</a>
-              </div>
-          </div>
-          <p style="text-align: center;"><a href="http://mbucreations.com/portfolio" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">view portfolio</a></p>
+        </div>
+        <p style="text-align: center;"><a href="http://mbucreations.com/portfolio" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">view portfolio</a></p>
       </section>
 
       <section id="resume">
           <div class="page-header">
-              <h1>Resume <small>a summary of experience</small></h1>
+              <h2>Resume <small>a summary of experience</small></h1>
           </div>
           <div class="resume-view-container" ng-controller="ResumeCtrl">
             <div class="section-loader" ng-hide="showResumeContainer"></div>
-            <div id="resume-view" class="hidden-phone" ng-show="showResumeContainer">
+            <div id="resume-view" class="hidden-xs" ng-show="showResumeContainer">
 
               <?php include_once "templates/resume_template.php" ?>
 
@@ -163,30 +163,39 @@
       </section>
 
       <!-- contact-modal -->
-      <div id="contact-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
-          <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h3 id="contact-modal-label">Contact Me!</h3>
-          </div>
-          <div class="modal-body">
+      <div id="contact-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="contact-modal-label">Contact Me!</h3>
+            </div>
+
+            <div class="modal-body">
               <p style="text-align: center;">Form still under construction.<br/>Just send an email to <strong><a href="mailto:me@marshallupshur.com?subject=Hi Marshall!" class="">me@marshallupshur.com</a></strong> for now!</p>
               <p class="hidden">Message <strong><a href="mailto:me@marshallupshur.com?subject=Hi Marshall!" class="">me@marshallupshur.com</a></strong> using the form below.</p>
               <p class="hidden">
-                  <label for="name">Name:</label>
-                  <input id="name" name="name" type="text" required>
+                <label for="name">Name:</label>
+                <input id="name" name="name" type="text" required>
 
-                  <label for="email">Email:</label>
-                  <input id="email" name="email" type="email" required>
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" required>
 
-                  <label for="message">Message:</label>
-                  <textarea rows="3" id="message" name="message" required></textarea>
+                <label for="message">Message:</label>
+                <textarea rows="3" id="message" name="message" required></textarea>
               </p>
-          </div>
-          <div class="modal-footer">
-              <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-              <button class="btn btn-primary hidden">Send Message</button>
-          </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-mbu" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-primary hidden">Send Message</button>
+            </div>
+
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
       </div>
+
     </div>
   </div>
 
@@ -194,7 +203,7 @@
 
     <div class="container">
       <p class="pull-left">
-        <i class="icon-html5"></i>&nbsp;<i class="icon-css3"></i>&nbsp;<i class="icon-apple"></i><span class="site-version">version{{version}}</span>
+        <i class="fa fa-html5"></i>&nbsp;<i class="fa fa-css3"></i>&nbsp;<i class="fa fa-apple"></i><span class="site-version">version{{version}}</span>
       </p>
       <p class="pull-right">
         &copy;<?php echo date("Y",time()); ?> Marshall Upshur | <a href="http://mbucreations.com" tabindex="0" class="btn-link" target="_self" title="Go to mbu Creations">mbu Creations</a>

@@ -695,6 +695,9 @@ html[dir='rtl'] .toolbarButton:first-child {
   -moz-box-flex: 1;
   min-width: 30px;
 }
+#sidebarToggle.toolbarButton {
+  display: none;
+}
 .toolbarButton#sidebarToggle::before {
   display: inline-block;
   content: url(../../images/pdf/toolbarButton-sidebarToggle.png);
@@ -768,9 +771,15 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   content: url(../../images/pdf/toolbarButton-print.png);
   left: 6px;
 }
+#openFile.toolbarButton {
+  display: none;
+}
 .toolbarButton.openFile::before {
   display: inline-block;
   content: url(../../images/pdf/toolbarButton-openFile.png);
+}
+#download.toolbarButton {
+  display: none;
 }
 .toolbarButton.download::before {
   display: inline-block;
@@ -782,6 +791,9 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   box-sizing: border-box;
   margin-top: 3px;
   padding-top: 4px;
+}
+#viewBookmark.toolbarButton {
+  display: none;
 }
 #viewBookmark[href='#'] {
   opacity: .5;
@@ -825,6 +837,9 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   display: inline-block;
   margin: 8px 0px;
 }
+#pageNumber.toolbarField {
+  display: none;
+}
 .toolbarField.pageNumber {
   min-width: 16px;
   text-align: right;
@@ -842,6 +857,12 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
 .toolbarField:focus {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(77, 184, 255, 0.8) rgba(77, 184, 255, 0.85) rgba(77, 184, 255, 0.9);
+}
+#pageNumberLabel.toolbarLabel {
+  display: none;
+}
+#numPages.toolbarLabel {
+  display: none;
 }
 .toolbarLabel {
   min-width: 16px;
@@ -1301,7 +1322,7 @@ body {
 .btn-link:hover {
   color: #cf6800;
 }
-.hero-unit h1,
+.jumbotron h1,
 .page-header h1,
 a.brand {
   font-family: CenturyGothicStd-Bold;
@@ -1339,6 +1360,10 @@ header.navbar div.navbar-collapse ul.navbar-nav li.active > a:focus {
 header.navbar div.navbar-collapse ul.navbar-nav li.active > a {
   background-color: rgba(0, 0, 0, 0.25);
 }
+header.navbar div.navbar-collapse ul.navbar-nav li.social a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 header.navbar div.navbar-collapse ul.navbar-nav li.social a:hover {
   color: #ff8000;
 }
@@ -1358,23 +1383,26 @@ section {
   padding-top: 30px;
 }
 .page-header {
+  margin: 20px 0 20px;
   border-bottom: 1px solid #464646;
 }
-section.hero-unit.main {
+section.jumbotron.main {
   background-color: transparent;
   padding-top: 60px;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 30px;
+  padding-bottom: 0;
   color: #e2e2e2;
+  font-size: 18px;
 }
-section.hero-unit.main .page-header {
-  border-bottom: none;
-}
-section.hero-unit.main .page-header h1 {
+section.jumbotron.main h1 {
+  font-size: 60px;
   text-shadow: 0em 0em 0.071em rgba(0, 0, 0, 0.75);
 }
-section.hero-unit.main p.portrait {
+section.jumbotron.main p {
+  line-height: 1.6;
+}
+section.jumbotron.main p.portrait {
   background: #000;
   width: 320px;
   height: 320px;
@@ -1384,7 +1412,7 @@ section.hero-unit.main p.portrait {
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   margin-left: 10px;
 }
-section#creations h1 {
+section#creations h2 {
   text-shadow: 0em 0em 0.071em rgba(0, 0, 0, 0.75);
 }
 section#creations .creations-slider-container #creations-slider {
@@ -1404,7 +1432,7 @@ section#creations .creations-slider-container #creations-slider {
 section#creations .creations-slider-container #creations-slider .carousel-control {
   top: 50%;
 }
-section#resume h1 {
+section#resume h2 {
   text-shadow: 0em 0em 0.071em rgba(0, 0, 0, 0.75);
 }
 section#resume .resume-view-container #resume-view {
@@ -1485,25 +1513,22 @@ hr.footer {
   color: #FFFFFF;
   height: 4px;
 }
-div#contact-modal {
-  background-color: #222222;
-  background-image: url('../../images/bg.png');
-  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.85);
-  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.85);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.85);
+div#contact-modal div.modal-dialog div.modal-content {
+  top: 200px;
+  background: url("../../images/content-bg.png") repeat rgba(0, 0, 0, 0.65);
 }
-div#contact-modal .modal-header {
-  border-bottom: 1px dashed #464646;
+div#contact-modal div.modal-dialog div.modal-content .modal-header {
+  border-bottom: none;
 }
-div#contact-modal .modal-header h3 {
+div#contact-modal div.modal-dialog div.modal-content .modal-header h3 {
   text-shadow: 0em 0em 0.071em rgba(0, 0, 0, 0.5);
 }
-div#contact-modal .modal-header .close {
+div#contact-modal div.modal-dialog div.modal-content .modal-header .close {
   color: #fff;
   text-shadow: 0 1px 0 #464646;
 }
-div#contact-modal .modal-footer {
-  border-top: 1px solid #464646;
+div#contact-modal div.modal-dialog div.modal-content .modal-footer {
+  border-top: none;
   background-color: transparent;
 }
 .btn-mbu,
@@ -1546,47 +1571,23 @@ div#tux-egg img {
   -ms-transform: rotate(20deg);
   transform: rotate(20deg);
 }
-/* Large desktop */
-@media (min-width: 1200px) {
-  body {
-    padding-bottom: 40px;
-  }
-  .container-fluid {
-    max-width: 1150px;
-  }
-}
-@media (min-width: 980px) and (max-width: 1199px) {
-  body {
-    padding-bottom: 40px;
-  }
-  .container-fluid {
-    max-width: 980px;
-  }
+@media (max-width: 480px) {
   section#photos .photos-player-container .photos-player,
   section#creations .creations-slider-container #creations-slider,
   section#resume .resume-view-container #resume-view {
-    width: 912px;
-    height: 513px;
+    width: 280px;
+    height: 150px;
   }
   p.match-view {
-    width: 912px;
+    width: auto;
+  }
+  section.jumbotron.main p.portrait {
+    width: 240px;
+    height: 240px;
   }
 }
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-  section#photos .photos-player-container .photos-player,
-  section#creations .creations-slider-container #creations-slider,
-  section#resume .resume-view-container #resume-view {
-    width: 720px;
-    height: 405px;
-  }
-  p.match-view {
-    width: 720px;
-  }
-}
-/* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  section.hero-unit.main {
+  section.jumbotron.main {
     padding-top: 0px;
   }
   section#photos .photos-player-container .photos-player,
@@ -1598,7 +1599,7 @@ div#tux-egg img {
   p.match-view {
     width: 432px;
   }
-  section.hero-unit.main p.portrait {
+  section.jumbotron.main p.portrait {
     float: none;
     margin-right: auto;
     margin-left: auto;
@@ -1617,19 +1618,31 @@ div#tux-egg img {
     margin-right: -20px;
   }
 }
-/* Landscape phones and down */
-@media (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section#photos .photos-player-container .photos-player,
   section#creations .creations-slider-container #creations-slider,
   section#resume .resume-view-container #resume-view {
-    width: 280px;
-    height: 150px;
+    width: 720px;
+    height: 405px;
+  }
+  div.post {
+    margin-bottom: 20px;
   }
   p.match-view {
-    width: auto;
+    width: 720px;
   }
-  section.hero-unit.main p.portrait {
-    width: 240px;
-    height: 240px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    padding-bottom: 40px;
+  }
+  section#photos .photos-player-container .photos-player,
+  section#creations .creations-slider-container #creations-slider,
+  section#resume .resume-view-container #resume-view {
+    width: 912px;
+    height: 513px;
+  }
+  p.match-view {
+    width: 912px;
   }
 }

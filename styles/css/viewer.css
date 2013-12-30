@@ -210,7 +210,6 @@ html[dir='rtl'] #sidebarContent {
   left: 0;
   right: 0;
   /*z-index: 9999;*/
-
   cursor: default;
 }
 #toolbarContainer {
@@ -221,7 +220,6 @@ html[dir='rtl'] #sidebarContent {
   height: 32px;
   background-color: #424242;
   /* fallback */
-
   background-image: url(../../images/pdf/texture.png), linear-gradient(rgba(77, 77, 77, 0.99), rgba(64, 64, 64, 0.95));
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -231,7 +229,6 @@ html[dir='rtl'] #sidebarContent {
   height: 32px;
   background-color: #474747;
   /* fallback */
-
   background-image: url(../../images/pdf/texture.png), linear-gradient(rgba(82, 82, 82, 0.99), rgba(69, 69, 69, 0.95));
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.08), inset 0 1px 1px rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.05), 0 1px 0 rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.1);
 }
@@ -550,7 +547,6 @@ html[dir='rtl'] .splitToolbarButtonSeparator {
   -moz-user-select: none;
   -ms-user-select: none;
   /* Opera does not support user-select, use <... unselectable="on"> instead */
-
   cursor: default;
   -webkit-transition-property: background-color, border-color, box-shadow;
   -webkit-transition-duration: 150ms;
@@ -644,7 +640,6 @@ html[dir='rtl'] .dropdownToolbarButton {
   -webkit-appearance: none;
   -moz-appearance: none;
   /* in the future this might matter, see bugzilla bug #649849 */
-
   min-width: 140px;
   font-size: 12px;
   color: #f2f2f2;
@@ -653,7 +648,6 @@ html[dir='rtl'] .dropdownToolbarButton {
   border: none;
   background: rgba(0, 0, 0, 0);
   /* Opera does not support 'transparent' <select> background */
-
 }
 .dropdownToolbarButton > select > option {
   background: #3d3d3d;
@@ -686,6 +680,9 @@ html[dir='rtl'] .toolbarButton:first-child {
   -moz-box-flex: 1;
   min-width: 30px;
 }
+#sidebarToggle.toolbarButton {
+  display: none;
+}
 .toolbarButton#sidebarToggle::before {
   display: inline-block;
   content: url(../../images/pdf/toolbarButton-sidebarToggle.png);
@@ -706,7 +703,6 @@ html[dir='rtl'] #findNext {
   /* All matching images have a size of 16x16
    * (except for the print button: 18x16)
    * All relevant containers have a size of 32x25 */
-
   position: absolute;
   top: 4px;
   left: 7px;
@@ -760,9 +756,15 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   content: url(../../images/pdf/toolbarButton-print.png);
   left: 6px;
 }
+#openFile.toolbarButton {
+  display: none;
+}
 .toolbarButton.openFile::before {
   display: inline-block;
   content: url(../../images/pdf/toolbarButton-openFile.png);
+}
+#download.toolbarButton {
+  display: none;
 }
 .toolbarButton.download::before {
   display: inline-block;
@@ -774,6 +776,9 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   box-sizing: border-box;
   margin-top: 3px;
   padding-top: 4px;
+}
+#viewBookmark.toolbarButton {
+  display: none;
 }
 #viewBookmark[href='#'] {
   opacity: .5;
@@ -817,6 +822,9 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   display: inline-block;
   margin: 8px 0px;
 }
+#pageNumber.toolbarField {
+  display: none;
+}
 .toolbarField.pageNumber {
   min-width: 16px;
   text-align: right;
@@ -834,6 +842,12 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
 .toolbarField:focus {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(77, 184, 255, 0.8) rgba(77, 184, 255, 0.85) rgba(77, 184, 255, 0.9);
+}
+#pageNumberLabel.toolbarLabel {
+  display: none;
+}
+#numPages.toolbarLabel {
+  display: none;
 }
 .toolbarLabel {
   min-width: 16px;
@@ -1161,7 +1175,7 @@ canvas {
   background-color: rgba(255, 255, 255, 0.6);
   color: black;
 }
-@page  {
+@page {
   margin: 0;
 }
 #printContainer {
