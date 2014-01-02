@@ -13,8 +13,8 @@
     "jquery": "~2.0.3",
     "jquery.scrollTo": "~1.4.7",
     "lodash": "~2.4.1",
-    "angular": "~1.2.7-build.2029+sha.80e7a45",
-    "angular-resource": "~1.2.7-build.2029+sha.80e7a45",
+    "angular": "~1.2.7",
+    "angular-resource": "~1.2.7",
     "angular-adaptive-speech": "latest",
     "font-awesome": "~4.0.3",
     "html5shiv": "~3.7.0",
@@ -25,8 +25,5 @@
     "angular-route": "~1.2.6",
     "angular-sanitize": "~1.2.6",
     "jquery-ui": "~1.10.3"
-  },
-  "resolutions": {
-    "angular": "~1.x"
   }
 }

@@ -118,11 +118,11 @@
         <p style="text-align: center;"><a href="http://mbucreations.com/portfolio" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">view portfolio</a></p>
       </section>
 
-      <section id="resume">
+      <section id="resume" ng-controller="ResumeCtrl">
           <div class="page-header">
               <h2>Resume <small>a summary of experience</small></h1>
           </div>
-          <div class="resume-view-container" ng-controller="ResumeCtrl">
+          <div class="resume-view-container">
             <div class="section-loader" ng-show="showResumeContainer == false"></div>
             <div id="resume-view" class="hidden-xs" ng-show="showResumeContainer == true" ng-cloak>
 
@@ -130,7 +130,7 @@
 
             </div> <!-- resume-view -->
           </div> <!-- resume-view-container -->
-          <p style="text-align: center;"><a href="fs/Marshall_Upshur_2013a.pdf" target="_blank" tabindex="0" class="btn btn-primary btn-large btn-link" title="Download Marshall Upshur's Resume">download resume</a></p>
+          <p style="text-align: center;"><a href="{{resumeUrl}}" target="_blank" tabindex="0" class="btn btn-primary btn-large btn-link" title="Download Marshall Upshur's Resume">download resume</a></p>
       </section>
 
       <section id="blog">
@@ -218,6 +218,8 @@
   <div id="tux-egg" data-direction="left" data-stop="75" data-start="-150" style="display:none;">
       <img src="/images/t.png" />
   </div>
+
+
 
 </body>
 

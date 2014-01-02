@@ -50,5 +50,18 @@ define([
       require(['controllers/footerctrl'], function(footerctrl) {
         angular.injector(['ng', 'myApp.services']).invoke(footerctrl, this, {'$scope': $scope});
       });
+    }])
+
+    .controller('NikeCtrl', [
+      '$scope', 
+      'CONFIG', 
+      '$injector', 
+      function($scope, CONFIG, $injector) {
+      require(['controllers/nikectrl'], function(nikectrl) {
+        $injector.invoke(nikectrl, this, {
+          '$scope': $scope,
+          'CONFIG': CONFIG
+        });
+      });
     }]);
 });

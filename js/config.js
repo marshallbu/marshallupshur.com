@@ -11,7 +11,11 @@ define([
   var configData = {
     'CONFIG': {
       'RESUME_URL': 'fs/Marshall_Upshur_2013b.pdf',
-      'RESUME_WEB_URL': 'fs/Marshall_Upshur_2013b_web.pdf'
+      'RESUME_WEB_URL': 'fs/Marshall_Upshur_2013b_web.pdf',
+      'NIKE_API': {
+        'ACCESS_TOKEN': '26ee305127cbb4ddbf72c51a31f7dac',
+        'ENDPOINT_BASE_URL': 'https://api.nike.com/me/sport'
+      }
     }
   };
 

@@ -23,6 +23,7 @@ define([
       webViewerLoad();
 
       $scope.showResumeContainer = true;
+      $scope.resumeUrl = CONFIG.RESUME_URL;
       $scope.$apply();
   }];
 });
