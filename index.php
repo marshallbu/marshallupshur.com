@@ -9,18 +9,16 @@
 
   <link rel="shortcut icon" href="favicon.ico">
 
-  <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="assets/vendor/html5shiv/dist/html5shiv.js"></script>
   <![endif]-->
 
-  <link rel="resource" type="application/l10n" href="js/lib/pdf/locale/locale.properties"/>
+  <link rel="resource" type="application/l10n" href="app/js/lib/pdf/locale/locale.properties"/>
 
-  <link rel="stylesheet" href="styles/css/main.css">
+  <link rel="stylesheet" href="app/styles/css/main.css">
 
   <!-- add modernizr here until I decide to no longer support IE8 -->
-  <script src="js/lib/modernizr.custom.mbu.js"></script>
+  <script src="app/js/lib/modernizr.custom.mbu.js"></script>
 </head>
     
 <body data-spy="scroll" data-target=".navbar">
@@ -91,8 +89,8 @@
             <div class="carousel-inner">
               <?php
                 $baseDir = "./";
-                $dir = "images/port/";
-                $portsDir = scandir($baseDir.$dir);
+                $dir = "app/img/port/";
+                $portsDir = scandir($baseDir.$dir, SCANDIR_SORT_DESCENDING);
                 $first = true;
                 foreach ($portsDir as $key => $value) {
                   if (!in_array($value,array(".",".."))) {
@@ -126,7 +124,7 @@
             <div class="section-loader" ng-show="showResumeContainer == false"></div>
             <div id="resume-view" class="hidden-xs" ng-show="showResumeContainer == true" ng-cloak>
 
-              <?php include_once "templates/resume_template.php" ?>
+              <?php include_once "app/partials/resume_template.html" ?>
 
             </div> <!-- resume-view -->
           </div> <!-- resume-view-container -->
@@ -216,13 +214,12 @@
   </footer>
 
   <div id="tux-egg" data-direction="left" data-stop="75" data-start="-150" style="display:none;">
-      <img src="/images/t.png" />
+      <img src="app/img/t.png" />
   </div>
 
 
 
 </body>
 
-<script data-main="js/main" src="assets/vendor/requirejs/require.js"></script>
-    
+<script data-main="app/js/main.min" src="assets/vendor/requirejs/require.js"></script>
 </html>
