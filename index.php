@@ -1,3 +1,36 @@
+<?php
+/**
+ * Some setup stuff to go back to the future of awesome
+ */
+
+try {
+  require 'config/Config.php';
+  $appConfig = new Config();
+  $config = $appConfig->getConfig();
+
+  if (isset($config['CONFIG']['APP_VERSION'])) {
+    $version = $config['CONFIG']['APP_VERSION'];
+  } else { 
+    $version = '';
+  }
+
+  if (isset($config['CONFIG']['APP_ENVIRONMENT'])) {
+    $environment = $config['CONFIG']['APP_ENVIRONMENT'];
+  } else {
+    $environment = '';
+  }
+
+} catch (Exception $e) {
+  $version = '';
+  $environment = '';
+}
+
+$dataMain = 'app/js/main';
+if (!empty($environment) && $environment != 'development') {
+  $dataMain = $dataMain . '.min';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +43,15 @@
   <link rel="shortcut icon" href="favicon.ico">
 
   <!--[if lt IE 9]>
-    <script src="assets/vendor/html5shiv/dist/html5shiv.js"></script>
+    <script src="assets/vendor/html5shiv/dist/html5shiv.js?v<?=$version?>"></script>
   <![endif]-->
 
-  <link rel="resource" type="application/l10n" href="app/js/lib/pdf/locale/locale.properties"/>
+  <link rel="resource" type="application/l10n" href="app/js/lib/pdf/locale/locale.properties?v<?=$version?>"/>
 
-  <link rel="stylesheet" href="app/styles/css/main.css">
+  <link rel="stylesheet" href="app/styles/css/main.css?v<?=$version?>">
 
   <!-- add modernizr here until I decide to no longer support IE8 -->
-  <script src="app/js/lib/modernizr.custom.mbu.js"></script>
+  <script src="app/js/lib/modernizr.custom.mbu.js?v<?=$version?>"></script>
 </head>
     
 <body data-spy="scroll" data-target=".navbar">
@@ -221,5 +254,10 @@
 
 </body>
 
-<script data-main="app/js/main.min" src="assets/vendor/requirejs/require.js"></script>
+<script type="text/javascript">
+    var require = {
+        urlArgs : "v<?=$version?>"
+    };
+</script>
+<script data-main="<?=$dataMain?>" src="assets/vendor/requirejs/require.js?v<?=$version?>"></script>
 </html>

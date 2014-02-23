@@ -1,23 +1,24 @@
 /*global define: false */
 define([
+  'json!../../config/config.default.json',
+  'json!../../config/config.local.json.php',
   'angular'
-], function (angular) {
+], function (projectConfig, projectLocalConfig, angular) {
   'use strict';
 
   /**
    * Global config object
    * @type {Object}
    */
-  var configData = {
-    'CONFIG': {
-      'RESUME_URL': 'app/fs/Marshall_Upshur_2013b.pdf',
-      'RESUME_WEB_URL': 'app/fs/Marshall_Upshur_2013b_web.pdf',
-      'NIKE_API': {
-        'ACCESS_TOKEN': '26ee305127cbb4ddbf72c51a31f7dac',
-        'ENDPOINT_BASE_URL': 'https://api.nike.com/me/sport'
-      }
-    }
-  };
+  var configData = {};
+
+  // let's merge any project config options into this config
+  _.merge(configData, _.isObject(projectConfig) ? projectConfig : {});
+  // console.log("merged config: ", configData);
+
+  // check for a local config and merge that
+  _.merge(configData, _.isObject(projectLocalConfig) ? projectLocalConfig : {});
+  // console.log("merged local config: ", configData);
 
   /**
    * Angular module namespace

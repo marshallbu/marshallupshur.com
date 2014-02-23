@@ -1,6 +1,8 @@
 /*global require: false */
 require.config({
   paths: {
+    text:                 '../../assets/vendor/requirejs-text/text',
+    json:                 '../../assets/vendor/requirejs-plugins/src/json',
     jquery:               '../../assets/vendor/jquery/dist/jquery.min',
     jqueryui:             '../../assets/vendor/jquery-ui/ui/minified/jquery-ui.min',
     jqueryScrollTo:       '../../assets/vendor/jquery.scrollTo/jquery.scrollTo.min',
@@ -8,8 +10,9 @@ require.config({
     angularResource:      '../../assets/vendor/angular-resource/angular-resource.min',
     angularRoute:         '../../assets/vendor/angular-route/angular-route.min',
     angularSanitize:      '../../assets/vendor/angular-sanitize/angular-sanitize.min',
+    angularTranslate:     '../../assets/vendor/angular-translate/angular-translate.min',
     angularAdaptiveSpeech:'../../assets/vendor/angular-adaptive-speech/angular-adaptive-speech.min',
-    lodash:               '../../assets/vendor/lodash/dist/lodash.underscore.min',
+    lodash:               '../../assets/vendor/lodash/dist/lodash.min',
     bootstrap:            '../../assets/vendor/bootstrap/dist/js/bootstrap.min',
     pdfCompatibility:     'lib/pdf/compatibility',
     pdfl10n:              'lib/pdf/l10n',
@@ -25,6 +28,7 @@ require.config({
     angularResource: ['angular'],
     angularRoute: ['angular'],
     angularSanitize: ['angular'],
+    angularTranslate: ['angular'],
     angularAdaptiveSpeech: ['angular'],
     lodash: {
       exports: '_'
@@ -40,15 +44,32 @@ require.config({
 require([
   'jquery',
   'jqueryScrollTo',
+  'lodash',
   'bootstrap',
   'angular',
   'angularResource',
   'angularRoute',
   'angularSanitize',
+  'angularTranslate',
   'angularAdaptiveSpeech',
   'app',
-  'routes'
-], function ($, scrollTo, bootstrap, angular, angularResource, angularRoute, angularSanitize, angularAdaptiveSpeech, app, routes) {
+  'routes',
+  'translate'
+], function (
+    $, 
+    scrollTo, 
+    _,
+    bootstrap, 
+    angular, 
+    angularResource, 
+    angularRoute, 
+    angularSanitize, 
+    angularTranslate,
+    angularAdaptiveSpeech, 
+    app, 
+    routes,
+    translate
+  ) {
   'use strict';
 
   var $html = angular.element(document.getElementsByTagName('html')[0]);

@@ -1,6 +1,6 @@
 {
-  "name": "mbu identity",
-  "version": "0.3.2",
+  "name": "mbu-identity",
+  "version": "0.4.1",
   "main": "main.js",
   "ignore": [
     "**/.*",
@@ -24,6 +24,9 @@
     "lesshat": "~2.0.13",
     "angular-route": "~1.2.6",
     "angular-sanitize": "~1.2.6",
-    "jquery-ui": "~1.10.3"
+    "jquery-ui": "~1.10.3",
+    "requirejs-text": "~2.0.10",
+    "requirejs-plugins": "~1.0.2",
+    "angular-translate": "~2.0.0"
   }
 }
