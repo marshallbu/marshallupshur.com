@@ -5,3 +5,5 @@ google*.html
 *.sublime-project
 *.sublime-workspace
 /config/*.local.json
+
+/config.codekit

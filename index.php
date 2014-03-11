@@ -146,7 +146,7 @@ if (!empty($environment) && $environment != 'development') {
             </a>
           </div>
         </div>
-        <p style="text-align: center;"><a href="http://mbucreations.com/portfolio" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">view portfolio</a></p>
+        <p style="text-align: center;"><a href="http://www.mbucreations.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">view portfolio</a></p>
       </section>
 
       <section id="resume" ng-controller="ResumeCtrl">
