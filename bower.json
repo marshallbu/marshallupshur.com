@@ -1,6 +1,6 @@
 {
   "name": "mbu-identity",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "main": "main.js",
   "ignore": [
     "**/.*",
@@ -16,17 +16,15 @@
     "angular": "~1.2.7",
     "angular-resource": "~1.2.7",
     "angular-adaptive-speech": "latest",
-    "font-awesome": "~4.0.3",
+    "font-awesome": "~4.1.0",
     "html5shiv": "~3.7.0",
-    "requirejs": "~2.1.9",
-    "bootstrap": "~3.1.0",
-    "animate.css": "~3.1.0",
-    "lesshat": "~2.0.13",
+    "bootstrap": "~3.2.0",
+    "animate.css": "~3.2.0",
+    "lesshat": "~3.0.2",
     "angular-route": "~1.2.6",
     "angular-sanitize": "~1.2.6",
-    "jquery-ui": "~1.10.3",
-    "requirejs-text": "~2.0.10",
-    "requirejs-plugins": "~1.0.2",
-    "angular-translate": "~2.0.0"
+    "jquery-ui": "~1.11.0",
+    "angular-translate": "~2.2.0",
+    "pdfjs": "~1.0.277"
   }
 }
