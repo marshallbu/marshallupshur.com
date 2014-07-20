@@ -8,7 +8,7 @@
      */
     var servicesModule = angular.module('myApp.services', [/*'myApp.config',*/ 'ngResource']);
 
-    servicesModule.value('version', '0.4.0');
+    servicesModule.value('version', '0.0.0');
 
     servicesModule.factory('FeedService', ['$http', function($http) {
         var service = {};

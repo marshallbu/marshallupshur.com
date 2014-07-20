@@ -93,61 +93,8 @@ if (!empty($environment) && $environment != 'development') {
 
   <div id="content">
     <div class="container">
-      <section id="about" class="jumbotron main">
-          <div class="page-header">
-              <h1>Marshall Upshur <small>in a nutshell</small></h1>
-          </div>
-          <p class="portrait pull-right">
 
-          </p>
-          <p><span id="hello-world">Hello world!</span> My name's Marshall and I'm a progressive web technologist, focused on creating beautiful, easy to use goal oriented web applications using cutting edge technologies best suited for the job. I have a people-based personality, which allows me to foster positive working relationships and collaborations with my peers, increase the overall productivity of my working environment, and encourage cross-team collaboration in an effort to maximize workload output.</p>
 
-          <p>Combining the forces of education obtained at Georgia Institute of Technology and Southern Polytechnic University with over 10 years of experience gained from employment both in the higher education and consumer sectors, I have gained a broad range of knowledge over the years on both the front and back end of the web. I'm self-sufficient, highly capable of attacking technical problems at all levels, while also being a great team player and people person.</p>
-
-          <p class="hidden">Marshall has the advantage of a brilliant arsenal of knowledge and skill aided by his own creativity and unique eye. He is always on the side of cutting edge looking for the next and newest media and technological advances. On a personal note, Marshall is not all keyboards and CPUs. His creativity manifests itself in his sense of style along his choice in companions of the pet variety. Marshall owns two Boston Terriers, Tuxedo and Cognac, and a ball python named Akasha. This motley crew makes for fun times outside of the office and helps fuel his artistic side. This love for family and great care for his pets helps people connect with him and not just see him as a technological robot with amazing computer capabilities.</p>
-
-          <p>Find out more about me, stuff I've worked (and am currently working) on, and some of my hobbies below.</p>
-
-          <p>Thanks for visiting!</p>
-      </section>
-
-      <section id="creations">
-        <div class="page-header">
-          <h2>Creations <small>think it. dream it. create it.</small></h1>
-        </div>
-        <p class="lead match-view">Along with some of the cool stuff I work on at work, I do projects on the side to keep my healthy appetite for latest technology and trends up to date.  Check some of these out below and by going to my portfolio.</p>
-        <div class="creations-slider-container">
-          <div id="creations-slider" class="carousel slide" data-ride="carousel">
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-              <?php
-                $baseDir = "./";
-                $dir = "app/img/port/";
-                $portsDir = scandir($baseDir.$dir, SCANDIR_SORT_DESCENDING);
-                $first = true;
-                foreach ($portsDir as $key => $value) {
-                  if (!in_array($value,array(".",".."))) {
-                    if ($first) {
-                      echo "<div class=\"item active\"><img alt=\"\" src=\"$dir$value\"></div>";
-                      $first = false;
-                    } else {
-                      echo "<div class=\"item\"><img alt=\"\" src=\"$dir$value\"></div>";
-                    }
-                  }
-                }
-              ?>
-            </div>
-            <!-- Carousel nav -->
-            <a class="carousel-control left" href="#creations-slider" data-slide="prev" title="Previous Slide" tabindex="0">
-              <i class="fa fa-chevron-left"></i>
-            </a>
-            <a class="carousel-control right" href="#creations-slider" data-slide="next" title="Next Slide" tabindex="0">
-              <i class="fa fa-chevron-right"></i>
-            </a>
-          </div>
-        </div>
-        <p style="text-align: center;"><a href="http://www.mbucreations.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="mbu Creations Portfolio">view portfolio</a></p>
-      </section>
 
       <section id="resume" ng-controller="ResumeCtrl">
           <div class="page-header">
@@ -164,26 +111,7 @@ if (!empty($environment) && $environment != 'development') {
           <p style="text-align: center;"><a href="{{resumeUrl}}" target="_blank" tabindex="0" class="btn btn-primary btn-large btn-link" title="Download Marshall Upshur's Resume">download resume</a></p>
       </section>
 
-      <section id="blog">
-        <div class="page-header">
-            <h2>Blog <small>ramblings of a geek</small></h1>
-        </div>
-        <div class="blog-updates-container" ng-controller="FeedCtrl">
-          <div class="span12 section-loader" ng-hide="feeds.length > 0"></div>
-          <div class="row">
-            <div ng-repeat="feed in feeds" class="col-md-4" ng-cloak>
-              <div class="post">
-                <h4 class="title">{{feed.title}}</h4>
-                <p class="meta"><small>{{feed.publishedDateObject | date:'MM/dd/yyyy @ h:mma'}}</small></p>
-                <p class="text">{{feed.contentSnippet}}</p>
-                <p class="controls"><a href="{{feed.link}}" tabindex="0" class="btn btn-small btn-mbu" title="View blog post titled {{feed.title}}">View post <i class="icon-double-angle-right"></i></a></p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <p style="text-align: center;"><a href="http://blog.marshallupshur.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="Blog">view blog</a></p>
-      </section>
+      
 
       <section id="photos">
           <div class="page-header">

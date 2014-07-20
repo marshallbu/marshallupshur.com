@@ -10,7 +10,8 @@ module.exports = {
             styles: './app/styles/',
             fonts: './app/fonts/',
             config: './config/',
-            images: './app/images/'
+            images: './app/images/',
+            partials: './app/partials/'
         },
         glob: {
             scripts: [
@@ -31,6 +32,7 @@ module.exports = {
             ],
             json: ['./app/json/**/*.json'],
             html: ['./app/*.html', './app/*.php'],
+            partials: ['./app/partials/*.html'],
             sprite: './app/images/sprite/*.{png,jpg}',
             extras: ['./app/*.*', '!app/*.html'],
             projectJSON: ['./*.json', '!./codekit-config.json']
@@ -57,7 +59,8 @@ module.exports = {
             scripts: buildRootDir + 'minjs/',
             json: buildRootDir + 'json/',
             config: buildRootDir + 'config/',
-            images: buildRootDir + 'images/'
+            images: buildRootDir + 'images/',
+            partials: buildRootDir + 'partials/'
         },
         file: {
             app: 'app.min.js',

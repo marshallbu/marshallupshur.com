@@ -1,6 +1,6 @@
 /*global define: false */
 
-(function (_, app) {
+(function () {
     'use strict';
 
     var NavCtrl = ['$scope', '$log',
@@ -9,7 +9,9 @@
 
 
 
+
             // $scope.$apply();
+            $log.info('NavCtrl initialized');
         }
     ];
 
@@ -17,6 +19,4 @@
 
     return NavCtrl;
 })(
-    require('lodash'),
-    require('../app')
 );

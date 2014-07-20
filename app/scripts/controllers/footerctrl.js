@@ -1,6 +1,6 @@
 /*global define: false */
 
-(function (app) {
+(function () {
     'use strict';
 
     var FooterCtrl = ['$scope', '$http', '$log', 'version',
@@ -8,6 +8,8 @@
             $scope.version = version;
 
             // $scope.$apply();
+
+            $log.info('FooterCtrl initialized');
         }
     ];
 
@@ -15,5 +17,4 @@
 
     return FooterCtrl;
 })(
-    require('./../app')
 );
