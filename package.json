@@ -53,9 +53,17 @@
     },
     "dependencies": {},
     "browser": {
-        "jquery": "./bower_modules/jquery/dist/jquery.min.js",
-        "lodash": "./bower_modules/lodash/dist/lodash.min.js",
-        "angular": "./bower_modules/angular/angular.min.js"
+        "jquery"               : "./bower_modules/jquery/dist/jquery.min.js",
+        "jqueryui"             : "./bower_modules/jquery-ui/ui/minified/jquery-ui.min.js",
+        "scrollTo"             : "./bower_modules/jquery.scrollTo/jquery.scrollTo.min.js",
+        "lodash"               : "./bower_modules/lodash/dist/lodash.min.js",
+        "bootstrap"            : "./bower_modules/bootstrap/dist/js/bootstrap.min.js",
+        "angular"              : "./bower_modules/angular/angular.min.js",
+        "angularResource"      : "./bower_modules/angular-resource/angular-resource.min.js",
+        "angularRoute"         : "./bower_modules/angular-route/angular-route.min.js",
+        "angularSanitize"      : "./bower_modules/angular-sanitize/angular-sanitize.min.js",
+        "angularTranslate"     : "./bower_modules/angular-translate/angular-translate.min.js",
+        "angularAdaptiveSpeech": "./bower_modules/angular-adaptive-speech/angular-adaptive-speech.min.js"
     },
     "browserify": {
         "transform": [

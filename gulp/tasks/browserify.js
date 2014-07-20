@@ -7,9 +7,9 @@ var gulp = require('gulp'),
     config = require('./../utils/config');
 
 gulp.task('browserify', ['browserify-libs'], function () {
-    // return browserify(config.src.file.app)
-    //         .external(Object.keys(shims))
-    //         .bundle({ debug: true })
-    //         .pipe(source(config.build.file.app))
-    //         .pipe(gulp.dest(config.build.dir.scripts));
+    return browserify(config.src.file.app)
+            .external(Object.keys(shims))
+            .bundle({ debug: true })
+            .pipe(source(config.build.file.app))
+            .pipe(gulp.dest(config.build.dir.scripts));
 });

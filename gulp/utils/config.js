@@ -20,8 +20,7 @@ module.exports = {
             ],
             styles: [
                 './app/styles/less/main.less',
-                // '!./app/styles/**/*.less',
-                '!./app/styles/base/_sprite.less'
+                // '!./app/styles/**/*.less'
             ],
             images: [
                 './app/images/**/*'
