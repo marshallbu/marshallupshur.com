@@ -32,7 +32,7 @@ module.exports = {
             ],
             json: ['./app/json/**/*.json'],
             html: ['./app/*.html', './app/*.php'],
-            partials: ['./app/partials/*.html'],
+            partials: ['./app/partials/**/*.html'],
             sprite: './app/images/sprite/*.{png,jpg}',
             extras: ['./app/*.*', '!app/*.html'],
             projectJSON: ['./*.json', '!./codekit-config.json']

@@ -3,7 +3,7 @@
     angular, 
     NavCtrl, 
     FeedCtrl, 
-    // ResumeCtrl, 
+    ResumeCtrl, 
     PhotosCtrl, 
     FooterCtrl 
     // NikeCtrl
@@ -24,14 +24,13 @@
         angular.injector(['ng', 'myApp.services']).invoke(FeedCtrl, this, {'$scope': $scope});
     }])
 
-    // .controller('ResumeCtrl', ['$scope', 'CONFIG', function($scope, CONFIG) {
+    .controller('ResumeCtrl', ['$scope', function($scope) {
         
-    //     angular.injector.invoke(ResumeCtrl, this, {
-    //         '$scope': $scope,
-    //         'CONFIG': CONFIG
-    //     });
+        angular.injector(['ng', 'myApp.services']).invoke(ResumeCtrl, this, {
+            '$scope': $scope,
+        });
 
-    // }])
+    }])
 
     .controller('PhotosCtrl', ['$scope', function($scope) {
         angular.injector(['ng', 'myApp.services']).invoke(PhotosCtrl, this, {'$scope': $scope});
@@ -54,7 +53,7 @@
     require('angular'),
     require('./controllers/navctrl'),
     require('./controllers/feedctrl'),
-    // require('./controllers/resumectrl'),
+    require('./controllers/resumectrl'),
     require('./controllers/photosctrl'),
     require('./controllers/footerctrl')
     // require('./controllers/nikectrl')

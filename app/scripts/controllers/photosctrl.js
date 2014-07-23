@@ -1,6 +1,6 @@
 /*global define: false */
 
-(function (app, ssp) {
+(function (app) {
   'use strict';
 
     var PhotosCtrl = ['$scope', '$http', '$log', 'FeedService',
@@ -39,6 +39,5 @@
     return PhotosCtrl;
 
 })(
-    require('./../app'),
-    require('./../lib/ssp/embed')
+    require('./../app')
 );

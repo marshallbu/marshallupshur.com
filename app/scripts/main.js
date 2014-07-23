@@ -1,20 +1,15 @@
 /*global require: false */
-// require.config({
-//   paths: {
-//     pdfCompatibility:     'lib/pdf/compatibility',
-//     pdfl10n:              'lib/pdf/l10n',
-//     pdf:                  'lib/pdf/pdf',
-//     pdfViewer:            'lib/pdf/viewer',
-//     ssp:                  'lib/ssp/embed'
-//   },
-//   shim: {
 
-//     // pdfCompatibility: ['jquery'],
+// "pdfCompatibility": "lib/pdf/compatibility",
+// "pdfl10n":              "lib/pdf/l10n",
+// "pdf":                  "lib/pdf/pdf",
+// "pdfViewer":            "lib/pdf/viewer",
+// "ssp":                  "lib/ssp/embed"
+
+//     pdfCompatibility: ['jquery'],
 //     pdfl10n: ['pdfCompatibility'],
 //     pdf: ['pdfl10n'],
 //     pdfViewer: ['pdf']
-//   }
-// });
 
 window.name = "NG_DEFER_BOOTSTRAP!";
 
