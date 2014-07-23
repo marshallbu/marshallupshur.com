@@ -96,20 +96,7 @@ if (!empty($environment) && $environment != 'development') {
 
 
 
-      <section id="resume" ng-controller="ResumeCtrl">
-          <div class="page-header">
-              <h2>Resume <small>a summary of experience</small></h1>
-          </div>
-          <div class="resume-view-container">
-            <div class="section-loader" ng-show="showResumeContainer == false"></div>
-            <div id="resume-view" class="hidden-xs" ng-show="showResumeContainer == true" ng-cloak>
-
-              <?php include_once "app/partials/resume_template.html" ?>
-
-            </div> <!-- resume-view -->
-          </div> <!-- resume-view-container -->
-          <p style="text-align: center;"><a href="{{resumeUrl}}" target="_blank" tabindex="0" class="btn btn-primary btn-large btn-link" title="Download Marshall Upshur's Resume">download resume</a></p>
-      </section>
+      
 
       
 

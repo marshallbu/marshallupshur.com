@@ -75,6 +75,10 @@ h1 small {
   // color: @mbuBlue;
 }
 
+.btn-link:hover, .btn-link:focus, a:hover, a:focus {
+  text-decoration: none;
+}
+
 .jumbotron h1, .page-header h1, a.brand {
   font-family: CenturyGothicStd-Bold;
 }
@@ -157,12 +161,21 @@ div#content.container, footer.container {
 }
 
 section {
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 .page-header {
   margin: 20px 0 20px;
   border-bottom: 1px solid #464646;
+  position: relative;
+}
+
+.btn.launch {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 10px;
+
 }
 
 section.jumbotron.main {

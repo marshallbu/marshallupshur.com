@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     moment = require('moment'),
     config = require('./../utils/config');
 
-gulp.task('html', ['partial-compile'], function() {
+gulp.task('process-html', ['partial-compile'], function() {
     return gulp
         .src(config.src.glob.html)
         .pipe(plugins.preprocess({
