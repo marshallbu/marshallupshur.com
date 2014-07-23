@@ -113,17 +113,7 @@ if (!empty($environment) && $environment != 'development') {
 
       
 
-      <section id="photos">
-          <div class="page-header">
-              <h2>Photos <small>some of the world through my eyes</small></h1>
-          </div>
-          <div class="photos-player-container" ng-controller="PhotosCtrl">
-              <div class="photos-player">
-                  <div id="album-7"></div>
-              </div>
-          </div>
-          <p style="text-align: center;"><a href="http://photos.marshallupshur.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link" title="View more photos">view photos</a></p>
-      </section>
+      
 
       <!-- contact-modal -->
       <div id="contact-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">

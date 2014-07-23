@@ -23,7 +23,8 @@
                 $scope.$apply();
             });
       
-        // $scope.$apply();
+            // $scope.$apply();
+            $log.info('FeedCtrl initialized');
         }
     ];
 

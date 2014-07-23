@@ -3,37 +3,34 @@
 (function (app, ssp) {
   'use strict';
 
-    var PhotosCtrl = ['$scope', '$http', '$log',
-        function ($scope, $http, $log) {
+    var PhotosCtrl = ['$scope', '$http', '$log', 'FeedService',
+        function ($scope, $http, $log, Feed) {
+            $scope.photos = [];
 
-            $scope.myssp = new SlideShowPro({
-            attributes: {
-              id: "album-7",
-              width: "100%",
-              height: "100%"
-            },
-            mobile: {
-              auto: false,
-              poster: "vignette"
-            },
-            params: {
-              bgcolor: "#000000",
-              allowfullscreen: true
-            },
-            flashvars: {
-              xmlFilePath: "http://photos.marshallupshur.com/slideshowpro/images.php?album=7",
-              navAppearance: "Hidden",
-              navLinkAppearance: "Numbers",
-              feedbackPreloaderAppearance: "Bar",
-              feedbackTimerAppearance: "Hidden",
-              contentScale: "Crop to Fit All",
-              transitionLength: 1,
-              panZoom: "On",
-              contentOrder: "Random"
-            }
+            Feed.parseFeed('http://testphotos.marshallupshur.com/feed/albums/1/recent.rss', 5).then(function (res) {
+                var entries = res.data.responseData.feed.entries;
+                $scope.photos = _.map(entries, function(entry) {
+                    var contents = entry.mediaGroups[0].contents[0];
+                    var pubDate = new Date(entry.publishedDate);
+
+                    return {
+                        src: contents.url.replace('medium_large', 'huge'),
+                        alt: contents.title,
+                        desc: contents.description,
+                        date: pubDate
+                    };
+                });
+
+                $scope.$apply();
             });
 
-            $scope.$apply();
+
+            $scope.$on('startCarousel', function(ngRepeatFinishedEvent) {
+              $log.log('after loading photos');
+
+              $('#photos-slider').carousel();
+            });
+
         }
     ];
 

@@ -1,10 +1,11 @@
 node_modules
+/config/*.local.json
+*.sublime-project
+build
+build/*
 bower_modules
+/config.codekit
 assets/*
 codekit-config.json
-google*.html
-*.sublime-project
 *.sublime-workspace
-/config/*.local.json
-
-/config.codekit
+google*.html

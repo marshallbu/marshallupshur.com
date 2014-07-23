@@ -59,7 +59,7 @@
     "jqueryui": "./bower_modules/jquery-ui/ui/minified/jquery-ui.min.js",
     "scrollTo": "./bower_modules/jquery.scrollTo/jquery.scrollTo.min.js",
     "lodash": "./bower_modules/lodash/dist/lodash.min.js",
-    "bootstrap": "./bower_modules/bootstrap/dist/js/bootstrap.min.js",
+    "bootstrap": "./bower_modules/bootstrap/dist/js/bootstrap.js",
     "angular": "./bower_modules/angular/angular.min.js",
     "angularResource": "./bower_modules/angular-resource/angular-resource.min.js",
     "angularRoute": "./bower_modules/angular-route/angular-route.min.js",

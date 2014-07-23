@@ -39,7 +39,7 @@ window.name = "NG_DEFER_BOOTSTRAP!";
         // TODO: move to a directive
         var navLinks;
 
-        $('#creations-slider.carousel').carousel();
+        $('#creations-slider').carousel();
 
         navLinks = function(clicked) {
             var itemId;
