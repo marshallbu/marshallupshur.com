@@ -7,7 +7,8 @@ var lodash = require('lodash'),
     angularRoute = require('angularRoute'),
     angularSanitize = require('angularSanitize'),
     angularTranslate = require('angularTranslate'),
-    angularAdaptiveSpeech = require('angularAdaptiveSpeech');
+    angularAdaptiveSpeech = require('angularAdaptiveSpeech'),
+    viewer = require('viewer');
 
 // lodash.noConflict();
 // jquery.noConflict(true);

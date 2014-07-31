@@ -8,3 +8,4 @@ assets/*
 codekit-config.json
 *.sublime-workspace
 google*.html
+dist

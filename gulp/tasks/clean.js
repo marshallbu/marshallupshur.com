@@ -5,6 +5,6 @@ var gulp = require('gulp'),
 gulp.task('clean', function (callback) {
 
     return gulp
-        .src(config.buildRoot, {read: false})
-        .pipe(plugins.rimraf());    
+        .src(config.distRoot, {read: false})
+        .pipe(plugins.rimraf());
 });

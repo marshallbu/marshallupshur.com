@@ -4,10 +4,13 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     config = require('./../utils/config');
 
-gulp.task('browserify-libs', function () {
-    return browserify('./gulp/utils/libs.js')
+gulp.task('browserify:libs', function () {
+    return browserify({
+            entries: './gulp/utils/libs.js',
+            debug: true
+        })
         .require(Object.keys(shims))
-        .bundle({ debug: true })
-        .pipe(source(config.build.file.libs))
-        .pipe(gulp.dest(config.build.dir.scripts));
+        .bundle()
+        .pipe(source(config.dist.file.libs))
+        .pipe(gulp.dest(config.dist.dir.scripts));
 });

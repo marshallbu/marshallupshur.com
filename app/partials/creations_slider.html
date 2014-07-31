@@ -6,7 +6,7 @@
 
 <!-- Wrapper for slides -->
 <div class="carousel-inner">
-    <% _.forEach(creations, function(url, index) { %><div class="item <% if (index === 0) { %>active<% } %>"><img alt="" src="<%= url %>"></div>
+    <% _.forEach(creations, function(url, index) { %><div class="item <% if (index === 0) { %>active<% } %>"><img class="img-responsive" alt="" src="<%= url %>"></div>
     <% }); %>
 </div>
 

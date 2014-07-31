@@ -1,6 +1,6 @@
 // Paths relative to 'gulpfile.js'
 var sourceRootDir = './app/';
-var buildRootDir = './build/';
+var distRootDir = './dist/';
 
 module.exports = {
     sourceRoot: sourceRootDir,
@@ -50,17 +50,17 @@ module.exports = {
         }
     },
     vendorRoot: './bower_modules/',
-    buildRoot: buildRootDir,
-    build: {
+    distRoot: distRootDir,
+    dist: {
         dir: {
-            root: buildRootDir,
-            styles: buildRootDir + 'mincss/',
-            font: buildRootDir + 'fonts/',
-            scripts: buildRootDir + 'minjs/',
-            json: buildRootDir + 'json/',
-            config: buildRootDir + 'config/',
-            images: buildRootDir + 'images/',
-            partials: buildRootDir + 'partials/'
+            root: distRootDir,
+            styles: distRootDir + 'mincss/',
+            font: distRootDir + 'fonts/',
+            scripts: distRootDir + 'minjs/',
+            json: distRootDir + 'json/',
+            config: distRootDir + 'config/',
+            images: distRootDir + 'images/',
+            partials: distRootDir + 'partials/'
         },
         file: {
             app: 'app.min.js',

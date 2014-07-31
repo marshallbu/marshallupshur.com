@@ -1,6 +1,6 @@
 {
   "name": "mbu-identity",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "main": "main.js",
   "ignore": [
     "**/.*",
@@ -25,6 +25,7 @@
     "angular-sanitize": "~1.2.6",
     "jquery-ui": "~1.11.0",
     "angular-translate": "~2.2.0",
-    "pdfjs": "~1.0.277"
+    "pdfjs": "~1.0.277",
+    "viewer": "~0.5.5"
   }
 }

@@ -10,5 +10,5 @@ gulp.task('less', function () {
             paths: [ path.join(__dirname) ]
         }))
         .pipe(plugins.sourcemaps.write('./'))
-        .pipe(gulp.dest(config.build.dir.styles));
+        .pipe(gulp.dest(config.dist.dir.styles));
 });

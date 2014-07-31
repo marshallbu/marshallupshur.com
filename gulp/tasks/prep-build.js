@@ -6,8 +6,8 @@ var gulp = require('gulp'),
 
 gulp.task('prep-build', function (callback) {
 
-    Object.keys(config.build.dir).forEach(function(key){
-        var dir = config.build.dir[key];
+    Object.keys(config.dist.dir).forEach(function(key){
+        var dir = config.dist.dir[key];
 
         mkdirp(dir, function (mkdirErr) {
             if (mkdirErr) {

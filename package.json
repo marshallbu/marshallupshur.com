@@ -1,6 +1,6 @@
 {
   "name": "identity",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
@@ -17,31 +17,34 @@
   },
   "homepage": "https://github.com/marshallbu/marshallupshur.com",
   "devDependencies": {
-    "browserify": "^4.2.0",
+    "browserify": "^4.2.3",
     "browserify-shim": "^3.6.0",
     "gulp": "^3.8.5",
     "gulp-bower": "0.0.6",
     "gulp-browserify": "^0.5.0",
     "gulp-bump": "^0.1.10",
-    "gulp-changed": "^0.4.0",
-    "gulp-file-include": "^0.3.2",
+    "gulp-changed": "^0.4.1",
+    "gulp-debug": "^1.0.0",
+    "gulp-file-include": "^0.4.0",
     "gulp-filesize": "0.0.6",
     "gulp-flatten": "0.0.2",
+    "gulp-if": "^1.2.4",
     "gulp-ignore": "^1.1.0",
     "gulp-imagemin": "^0.6.1",
-    "gulp-jshint": "^1.6.3",
+    "gulp-jshint": "^1.8.2",
     "gulp-less": "^1.2.4",
     "gulp-load-plugins": "^0.5.3",
     "gulp-minify-css": "^0.3.6",
     "gulp-minify-html": "^0.1.4",
     "gulp-notify": "^1.4.0",
     "gulp-preprocess": "^1.1.1",
-    "gulp-rev": "^0.4.2",
+    "gulp-print": "^1.1.0",
+    "gulp-rev": "^1.0.0",
     "gulp-rimraf": "^0.1.0",
     "gulp-sourcemaps": "^1.1.0",
-    "gulp-template": "^0.1.1",
+    "gulp-template": "^1.0.0",
     "gulp-uglify": "^0.3.1",
-    "gulp-util": "^2.2.19",
+    "gulp-util": "^3.0.0",
     "imagemin-pngcrush": "^0.1.0",
     "lodash": "^2.4.1",
     "mkdirp": "^0.5.0",
@@ -51,7 +54,7 @@
     "run-sequence": "^0.3.6",
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^0.10.2",
-    "yargs": "^1.2.6"
+    "yargs": "^1.3.1"
   },
   "dependencies": {},
   "browser": {
@@ -65,7 +68,8 @@
     "angularRoute": "./bower_modules/angular-route/angular-route.min.js",
     "angularSanitize": "./bower_modules/angular-sanitize/angular-sanitize.min.js",
     "angularTranslate": "./bower_modules/angular-translate/angular-translate.min.js",
-    "angularAdaptiveSpeech": "./bower_modules/angular-adaptive-speech/angular-adaptive-speech.min.js"
+    "angularAdaptiveSpeech": "./bower_modules/angular-adaptive-speech/angular-adaptive-speech.min.js",
+    "viewer": "./bower_modules/viewer/dist/crocodoc.viewer.min.js"
   },
   "browserify": {
     "transform": [

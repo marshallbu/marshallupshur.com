@@ -1,10 +1,10 @@
-@import "custom-bootstrap";
+@import "../../../bower_modules/bootstrap/less/bootstrap";
 @import "../../../bower_modules/font-awesome/less/font-awesome";
 @import "../../../bower_modules/lesshat/build/lesshat";
-// @import "../../../bower_modules/animate.css/animate.min.css";
+@import (less) "../../../bower_modules/animate.css/animate.min.css";
 @import "mixins";
 @import "custom-fonts";
-// @import "viewer";
+@import (less) "../../../bower_modules/viewer/dist/crocodoc.viewer.min.css";
 
 @bkgColor: #222;
 @textColor: #E2E2E2;
@@ -42,10 +42,10 @@
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
 
-/* 
- * Allow angular.js to be loaded in body, hiding cloaked elements until 
- * templates compile.  The !important is important given that there may be 
- * other selectors that are more specific or come later and might alter display.  
+/*
+ * Allow angular.js to be loaded in body, hiding cloaked elements until
+ * templates compile.  The !important is important given that there may be
+ * other selectors that are more specific or come later and might alter display.
  */
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
  display: none !important;
@@ -117,7 +117,7 @@ header.navbar {
       li.active > a,
       li.active > a:hover,
       li.active > a:focus {
-        color: #FFFFFF; 
+        color: #FFFFFF;
         background-image: url('@{imgBaseURL}light.png');
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -138,7 +138,7 @@ header.navbar {
           }
         }
       }
-      
+
     }
 
     // remove background when in collapse
@@ -151,7 +151,7 @@ header.navbar {
         background-image: none !important;
       }
     }
-    
+
   }
 }
 
@@ -186,7 +186,7 @@ section.jumbotron.main {
   padding-bottom: 0;
   color: @textColor;
   // font-size: 18px;
-  
+
   h1 {
     // font-size: 60px;
     .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
@@ -216,7 +216,7 @@ section#creations {
   }
 
   .creations-slider-container {
-    
+
 
     #creations-slider {
       width: 960px;
@@ -244,7 +244,7 @@ section#creations {
           z-index: 5;
           display: inline-block;
         }
-        
+
       }
     }
   }
@@ -348,7 +348,7 @@ section#photos {
           z-index: 5;
           display: inline-block;
         }
-        
+
       }
     }
 
@@ -356,13 +356,14 @@ section#photos {
 }
 
 p.match-view {
-  width: 940px;
+  // width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
 
 footer {
   color: @mbuOrange;
+  margin-top: 50px;
   padding: 35px 0 36px;
   border-top: 1px solid #111;
   background: url("@{imgBaseURL}content-bg.png") repeat transparent;
@@ -413,31 +414,31 @@ div#contact-modal {
 
 }
 
-.btn-mbu, 
-.btn-mbu:hover { 
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); 
-  color: #ffffff; 
-} 
-.btn-mbu { 
-  background-color: #FF8000; 
-  background-image: -moz-linear-gradient(top, #FF8000, #CF6800); 
-  background-image: -ms-linear-gradient(top, #FF8000, #CF6800); 
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF8000), to(#CF6800)); 
-  background-image: -webkit-linear-gradient(top, #FF8000, #CF6800); 
-  background-image: -o-linear-gradient(top, #FF8000, #CF6800); 
-  background-image: linear-gradient(top, #FF8000, #CF6800); 
-  background-repeat: repeat-x; 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8000', endColorstr='#CF6800', GradientType=0); 
-  border-color: #CF6800 #CF6800 #CF6800; 
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); 
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); 
-} 
-.btn-mbu:hover, 
-.btn-mbu:active, 
-.btn-mbu.active, 
-.btn-mbu.disabled, 
-.btn-mbu[disabled] { 
-  background-color: #CF6800; 
+.btn-mbu,
+.btn-mbu:hover {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+.btn-mbu {
+  background-color: #FF8000;
+  background-image: -moz-linear-gradient(top, #FF8000, #CF6800);
+  background-image: -ms-linear-gradient(top, #FF8000, #CF6800);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF8000), to(#CF6800));
+  background-image: -webkit-linear-gradient(top, #FF8000, #CF6800);
+  background-image: -o-linear-gradient(top, #FF8000, #CF6800);
+  background-image: linear-gradient(top, #FF8000, #CF6800);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8000', endColorstr='#CF6800', GradientType=0);
+  border-color: #CF6800 #CF6800 #CF6800;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-mbu:hover,
+.btn-mbu:active,
+.btn-mbu.active,
+.btn-mbu.disabled,
+.btn-mbu[disabled] {
+  background-color: #CF6800;
 }
 
 .carousel-indicators {
@@ -485,7 +486,7 @@ div#tux-egg {
 }
 
 
-@media (max-width: @screen-xs-min) {  
+@media (max-width: @screen-xs-min) {
   section#photos .photos-slider-container #photos-slider,
   section#creations .creations-slider-container #creations-slider,
   section#resume .resume-view-container #resume-view {
@@ -527,7 +528,7 @@ div#tux-egg {
   }
 }
 
-@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {  
+@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
   section.jumbotron.main {
     // padding-top: 0px;
   }
@@ -551,7 +552,7 @@ div#tux-egg {
       }
     }
 
-    p.portrait {  
+    p.portrait {
       float: none !important;
       margin-right: auto;
       margin-left: auto;
@@ -575,7 +576,7 @@ div#tux-egg {
   }
 }
 
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
   section#photos .photos-slider-container #photos-slider,
   section#creations .creations-slider-container #creations-slider,
   section#resume .resume-view-container #resume-view {
@@ -595,7 +596,7 @@ div#tux-egg {
       }
     }
 
-    p.portrait {  
+    p.portrait {
 
     }
 
@@ -606,7 +607,7 @@ div#tux-egg {
   }
 }
 
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { 
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
   body {
     // padding-top: 60px;
     padding-bottom: 40px;
@@ -624,10 +625,6 @@ div#tux-egg {
   }
 }
 
-@media (min-width: @screen-lg-min) {  
+@media (min-width: @screen-lg-min) {
 
 }
-
-
-
-

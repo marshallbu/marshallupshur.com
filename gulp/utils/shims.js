@@ -1,27 +1,27 @@
 module.exports = {
     jquery: { exports: '$' },
-    scrollTo: { 
-        // exports: null, 
+    scrollTo: {
+        // exports: null,
         depends: { 'jquery': '$' }
     },
     lodash: { exports: '_' },
-    bootstrap: { 
-        depends: { 'jquery': '$' } 
+    bootstrap: {
+        depends: { 'jquery': '$' }
     },
     angular: { exports: 'angular' },
-    angularResource: { 
+    angularResource: {
         exports: null,
         depends: { 'angular': null }
     },
-    angularRoute: { 
+    angularRoute: {
         exports: null,
         depends: { 'angular': 'angular' }
     },
-    angularSanitize: { 
+    angularSanitize: {
         exports: null,
         depends: { 'angular': null }
     },
-    angularTranslate: { 
+    angularTranslate: {
         exports: null,
         depends: { 'angular': null }
     },
@@ -29,4 +29,7 @@ module.exports = {
         exports: null,
         depends: { 'angular': null }
     },
+    viewer: {
+        depends: { 'jquery': '$' }
+    }
 };

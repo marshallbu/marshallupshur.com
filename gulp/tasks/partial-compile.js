@@ -14,10 +14,10 @@ gulp.task('partial-compile', function(callback) {
 
     gulp.src(config.src.dir.partials + 'creations_slider.html')
         .pipe(plugins.template({ creations: creationPaths }))
-        .pipe(gulp.dest(config.build.dir.partials));
+        .pipe(gulp.dest(config.dist.dir.partials));
 
     return gulp.src(config.src.dir.partials + 'resume_template.html')
         .pipe(plugins.template({}))
-        .pipe(gulp.dest(config.build.dir.partials));
+        .pipe(gulp.dest(config.dist.dir.partials));
 
 });
