@@ -28,6 +28,8 @@ var PhotosCtrl = ['$scope', '$http', '$log', 'FeedService',
           $('#photos-slider').carousel();
         });
 
+
+        $log.info('PhotosCtrl initialized');
     }
 ];
 
