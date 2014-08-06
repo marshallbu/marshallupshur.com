@@ -13,11 +13,15 @@ gulp.task('partial-compile', function(callback) {
         .map(function(name) { return 'images/port/' + name; });
 
     gulp.src(config.src.dir.partials + 'creations_slider.html')
-        .pipe(plugins.template({ creations: creationPaths }))
+        .pipe(plugins.template({
+            creations: creationPaths
+        }))
         .pipe(gulp.dest(config.dist.dir.partials));
 
     return gulp.src(config.src.dir.partials + 'resume_template.html')
-        .pipe(plugins.template({}))
+        .pipe(plugins.template({
+            downloadUrl: config.dist.file.resume
+        }))
         .pipe(gulp.dest(config.dist.dir.partials));
 
 });

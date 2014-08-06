@@ -7,6 +7,10 @@ var gulp = require('gulp'),
 gulp.task('browserify:libs', function () {
     return browserify({
             entries: './gulp/utils/libs.js',
+            paths: [
+                './node_modules',
+                config.src.dir.scripts
+            ],
             debug: true
         })
         .require(Object.keys(shims))

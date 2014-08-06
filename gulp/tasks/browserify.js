@@ -8,6 +8,10 @@ var gulp = require('gulp'),
 gulp.task('browserify', ['browserify:libs'], function () {
     return browserify({
             entries: config.src.file.app,
+            paths: [
+                './node_modules',
+                config.src.dir.scripts
+            ],
             debug: true
         })
         .external(Object.keys(shims))

@@ -11,7 +11,8 @@ module.exports = {
             fonts: './app/fonts/',
             config: './config/',
             images: './app/images/',
-            partials: './app/partials/'
+            partials: './app/partials/',
+            downloads: './app/downloads/'
         },
         glob: {
             scripts: [
@@ -35,6 +36,7 @@ module.exports = {
             partials: ['./app/partials/**/*.html'],
             sprite: './app/images/sprite/*.{png,jpg}',
             extras: ['./app/*.*', '!app/*.html'],
+            downloads: ['./app/downloads/*.*'],
             projectJSON: ['./*.json', '!./codekit-config.json']
         },
         file: {
@@ -60,11 +62,13 @@ module.exports = {
             json: distRootDir + 'json/',
             config: distRootDir + 'config/',
             images: distRootDir + 'images/',
-            partials: distRootDir + 'partials/'
+            partials: distRootDir + 'partials/',
+            downloads: distRootDir + 'downloads/'
         },
         file: {
             app: 'app.min.js',
-            libs: 'libs.min.js'
+            libs: 'libs.min.js',
+            resume: 'downloads/Marshall_Upshur_2014a.pdf'
         }
     },
 

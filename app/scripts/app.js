@@ -1,35 +1,25 @@
-/*global define: false */
+var angular = require('angular'),
+    routes = require('routes'),
+    translate = require('translate'),
+    filters = require('filters'),
+    services = require('services'),
+    directives = require('directives'),
+    controllers = require('controllers');
 
-(function (angular, routes, translate) {
-  'use strict';
+// Declare app level module
+var app = angular.module('myApp', [
+        // 'myApp.config',
+        'ngRoute',
+        'ngResource',
+        'ngSanitize',
+        'pascalprecht.translate',
+        'myApp.filters',
+        'myApp.services',
+        'myApp.directives',
+        'myApp.controllers'
+        // 'adaptive.speech'
+    ])
+    .config(routes)
+    .config(translate);
 
-  // Declare app level module
-  var app = angular.module('myApp', [
-      // 'myApp.config',
-      'ngRoute',
-      'ngResource',
-      'ngSanitize',
-      'pascalprecht.translate',
-      'myApp.filters',
-      'myApp.services',
-      'myApp.directives',
-      'myApp.controllers'
-      // 'adaptive.speech'
-  ])
-  .config(routes)
-  .config(translate);
-
-  module.exports = app;
-
-  return app;
-
-}(
-    require('angular'),
-    require('./routes'),
-    require('./translate'),
-    // require('./config'),
-    require('./filters'),
-    require('./services'),
-    require('./directives'),
-    require('./controllers')
-));
+module.exports = app;

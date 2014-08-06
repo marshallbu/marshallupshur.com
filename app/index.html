@@ -15,15 +15,15 @@
     <link rel="author" href="humans.txt" />
 
     <!--[if lt IE 9]>
-        <script src="assets/vendor/html5shiv/dist/html5shiv.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
     <![endif]-->
 
     <link rel="stylesheet" href="mincss/main.css?v<!-- @echo APP_VERSION -->">
 
 </head>
-  
+
 <body data-spy="scroll" data-target=".navbar">
-    
+
     <header class="navbar navbar-fixed-top navbar-inverse" role="navigation" ng-controller="NavCtrl">
         <div class="container">
 
@@ -97,7 +97,7 @@
             <section id="resume" ng-controller="ResumeCtrl">
                 <div class="page-header">
                     <h2>Resume <small>a summary of experience</small></h1>
-                    <a href="{{resumeUrl}}" target="_blank" tabindex="0" class="btn btn-primary btn-large btn-link launch" title="Download Marshall Upshur's Resume">download resume <i class="fa fa-caret-square-o-right"></i></a>
+                    <a href="downloads/Marshall_Upshur_2014a.pdf" target="_blank" tabindex="0" class="btn btn-primary btn-large btn-link launch" title="Download Marshall Upshur's Resume">download resume <i class="fa fa-caret-square-o-right"></i></a>
                     <div class="clearfix"></div>
                 </div>
                 <div class="resume-view-container">
@@ -133,7 +133,7 @@
             <section id="photos">
                 <div class="page-header">
                     <h2 class="">Photos <small>the world through my eyes</small></h1>
-                    <a href="http://testphotos.marshallupshur.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link launch" title="View more photos">photos <i class="fa fa-caret-square-o-right"></i></a>
+                    <a href="http://photos.marshallupshur.com" target="_self" tabindex="0" class="btn btn-primary btn-large btn-link launch" title="View more photos">photos <i class="fa fa-caret-square-o-right"></i></a>
                     <div class="clearfix"></div>
                 </div>
                 <div class="photos-slider-container" ng-controller="PhotosCtrl">
@@ -209,7 +209,7 @@
             </p>
         </div>
     </footer>
-    
+
     <script src="minjs/libs.min.js?v<!-- @echo APP_VERSION -->"></script>
     <script src="minjs/app.min.js?v<!-- @echo APP_VERSION -->"></script>
 </body>

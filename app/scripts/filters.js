@@ -1,13 +1,12 @@
-(function (angular, services) {
-    'use strict';
+var angular = require('angular'),
+    services = require('services');
 
-    return angular.module('myApp.filters', ['myApp.services'])
-        .filter('interpolate', ['version', function(version) {
-            return function(text) {
-                return String(text).replace(/\%VERSION\%/mg, version);
-            };
-        }]);
-})(
-    require('angular'),
-    require('./services')
-);
+var filters = angular.module('myApp.filters', ['myApp.services']);
+
+filters.filter('interpolate', ['version', function(version) {
+    return function(text) {
+        return String(text).replace(/\%VERSION\%/mg, version);
+    };
+}]);
+
+module.exports = filters;
