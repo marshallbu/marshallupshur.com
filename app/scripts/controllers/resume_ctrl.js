@@ -1,6 +1,4 @@
 var app = require('app'),
-    // have to pass jQuery here b/c of contributed box brilliance
-    // (although I understand the need to)
     viewer = require('viewer')($);
 
 var ResumeCtrl = ['$scope', '$http', '$log',

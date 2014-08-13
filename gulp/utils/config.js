@@ -41,7 +41,7 @@ module.exports = {
         },
         file: {
             app: './app/scripts/main.js',
-            lib: './gulp/utils/lib.js',
+            lib: './app/scripts/libs/libs.js',
             testConfig: './test/config/karma.config.js',
             text: [
                 './app/.htaccess',
@@ -68,6 +68,7 @@ module.exports = {
         file: {
             app: 'app.min.js',
             libs: 'libs.min.js',
+            bundle: '[name].min.js',
             resume: 'downloads/Marshall_Upshur_2014a.pdf'
         }
     },

@@ -34,5 +34,3 @@ var PhotosCtrl = ['$scope', '$http', '$log', 'FeedService',
 ];
 
 module.exports = PhotosCtrl;
-
-return PhotosCtrl;

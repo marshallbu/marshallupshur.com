@@ -9,14 +9,14 @@ gulp.task('bump', function () {
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('bump-minor', function () {
+gulp.task('bump:minor', function () {
     return gulp
         .src(config.src.glob.projectJSON)
         .pipe(plugins.bump({type:'minor'}))
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('bump-major', function () {
+gulp.task('bump:major', function () {
     return gulp
         .src(config.src.glob.projectJSON)
         .pipe(plugins.bump({type:'major'}))

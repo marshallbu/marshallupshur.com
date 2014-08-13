@@ -12,5 +12,3 @@ var NavCtrl = ['$scope', '$log',
 ];
 
 module.exports = NavCtrl;
-
-return NavCtrl;
