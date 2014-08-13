@@ -12,7 +12,6 @@ gulp.task("webpack:build", function(callback) {
         plugins.util.log("[webpack:build]", stats.toString({
             colors: true
         }));
-        // callback();
     };
 
     if (isProduction) {
@@ -27,6 +26,4 @@ gulp.task("webpack:build", function(callback) {
     return gulp.src(config.src.file.app)
         .pipe(plugins.webpack(myConfig, null, webpackCallback))
         .pipe(gulp.dest(config.dist.dir.scripts));
-
-    // webpack(myConfig, webpackCallback);
 });

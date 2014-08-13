@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     config = require('./../utils/config');
 
 gulp.task('compile-html', ['process-html'], function() {
-    gulp.src(config.distRoot + 'index.html')
+    return gulp.src(config.distRoot + 'index.html')
         .pipe(plugins.fileInclude({
           prefix: '@@',
           basepath: '@file'
