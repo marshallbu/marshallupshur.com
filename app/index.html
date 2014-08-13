@@ -123,7 +123,7 @@
                             <div class="post">
                                 <h4 class="title">{{feed.title}}</h4>
                                 <p class="meta"><small>{{feed.publishedDateObject | date:'MM/dd/yyyy @ h:mma'}}</small></p>
-                                <p class="text">{{feed.contentSnippet}}</p>
+                                <p class="text" ng-bind-html="feed.contentSnippet"></p>
                                 <p class="controls"><a href="{{feed.link}}" tabindex="0" class="btn btn-small btn-mbu" title="View blog post titled {{feed.title}}">View post <i class="icon-double-angle-right"></i></a></p>
                             </div>
                         </div>
