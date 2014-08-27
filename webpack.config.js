@@ -1,7 +1,7 @@
 var webpack = require('webpack'),
     isProduction = process.env.NODE_ENV === 'production',
     path = require("path"),
-    config = require('./gulp/utils/config.js');
+    config = require('./gulp_tasks/utils/config.js');
 
 module.exports = {
     debug: true,
