@@ -16,10 +16,18 @@ var app = angular.module('myApp', [
         'myApp.filters',
         'myApp.services',
         'myApp.directives',
-        'myApp.controllers'
+        'myApp.controllers',
+        'uiGmapgoogle-maps'
         // 'adaptive.speech'
     ])
     .config(routes)
-    .config(translate);
+    .config(translate)
+    .config(function(uiGmapGoogleMapApiProvider) {
+      uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyD1QWpO55KK2zhjKZ2gA9vnBie6GZvrqRE',
+        v: '3.18',
+        libraries: 'weather, geometry, visualization'
+      });
+    });
 
 module.exports = app;

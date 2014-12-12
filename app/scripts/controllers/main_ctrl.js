@@ -1,11 +1,9 @@
-var MainCtrl = ['$scope', '$log',
-    function ($scope, $log) {
+var MainCtrl = ['$rootScope', '$scope', '$log',
+  function ($rootScope, $scope, $log) {
 
 
-
-
-        $log.info('MainCtrl initialized');
-    }
+    $log.info('MainCtrl initialized');
+  }
 ];
 
 module.exports = MainCtrl;

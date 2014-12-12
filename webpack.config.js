@@ -37,6 +37,8 @@ module.exports = {
             angularResource: 'angular-resource/angular-resource.min',
             angularRoute: 'angular-route/angular-route.min',
             angularSanitize: 'angular-sanitize/angular-sanitize.min',
+            angularTranslate: 'angular-translate/angular-translate.min',
+            angularGoogleMaps: 'angular-google-maps/dist/angular-google-maps.min',
             viewer: "viewer/dist/crocodoc.viewer"
 		    }
     },

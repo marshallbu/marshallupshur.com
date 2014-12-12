@@ -4,7 +4,8 @@ var angular = require('angular'),
     FeedCtrl = require('./controllers/feed_ctrl'),
     ResumeCtrl = require('./controllers/resume_ctrl'),
     PhotosCtrl = require('./controllers/photos_ctrl'),
-    FooterCtrl = require('./controllers/footer_ctrl');
+    FooterCtrl = require('./controllers/footer_ctrl'),
+    ContactModalCtrl = require('./controllers/contact_modal_ctrl');
 
 var controllers = angular.module('myApp.controllers', ['myApp.services']);
 
@@ -38,6 +39,10 @@ controllers.controller('PhotosCtrl', ['$scope', function($scope) {
 
 controllers.controller('FooterCtrl', ['$scope', function($scope) {
     angular.injector(['ng', 'myApp.services']).invoke(FooterCtrl, this, {'$scope': $scope});
+}]);
+
+controllers.controller('ContactModalCtrl', ['$scope', function($scope) {
+    angular.injector(['ng', 'myApp.services']).invoke(ContactModalCtrl, this, {'$scope': $scope});
 }]);
 
 // controllers.controller('NikeCtrl', ['$scope', 'CONFIG', function($scope, CONFIG) {

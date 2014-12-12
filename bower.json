@@ -26,6 +26,7 @@
     "viewer": "~0.10.3",
     "pdfjs-dist": "~1.0.962",
     "modernizr": "~2.8.3",
-    "gsap": "~1.15.0"
+    "gsap": "~1.15.0",
+    "angular-google-maps": "~2.0.11"
   }
 }

@@ -73,7 +73,8 @@
     "angularRoute": "./bower_modules/angular-route/angular-route.min.js",
     "angularSanitize": "./bower_modules/angular-sanitize/angular-sanitize.min.js",
     "angularTranslate": "./bower_modules/angular-translate/angular-translate.min.js",
-    "angularAdaptiveSpeech": "./bower_modules/angular-adaptive-speech/angular-adaptive-speech.min.js",
+    "angularTranslate": "./bower_modules/angular-translate/angular-translate.min",
+    "angularGoogleMaps": "./bower_modules/angular-google-maps/dist/angular-google-maps.min",
     "viewer": "./bower_modules/viewer/dist/crocodoc.viewer.js"
   }
 }

@@ -174,7 +174,7 @@
             </section>
 
             <!-- contact-modal -->
-            <div id="contact-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+            <div id="contact-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true" ng-controller="ContactModalCtrl">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
@@ -184,6 +184,10 @@
                   </div>
 
                   <div class="modal-body">
+                    <div class="contact-map">
+                      <ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options" ng-if="modalLoaded"></ui-gmap-google-map>
+                    </div>
+
                     <p style="text-align: center;">Form still under construction.<br/>Just send an email to <strong><a href="mailto:me@marshallupshur.com?subject=Hi Marshall!" class="">me@marshallupshur.com</a></strong> for now!</p>
                     <p class="hidden">Message <strong><a href="mailto:me@marshallupshur.com?subject=Hi Marshall!" class="">me@marshallupshur.com</a></strong> using the form below.</p>
                     <p class="hidden">

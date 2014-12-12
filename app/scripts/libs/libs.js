@@ -8,6 +8,7 @@ var lodash = require('lodash'),
     angularRoute = require('angularRoute'),
     angularSanitize = require('angularSanitize'),
     angularTranslate = require('angularTranslate'),
+    angularGoogleMaps = require('angularGoogleMaps'),
     tweenLite = require('gsap/src/minified/TweenLite.min.js'),
     easePack = require('gsap/src/minified/easing/EasePack.min.js'),
     viewer = require('viewer');
