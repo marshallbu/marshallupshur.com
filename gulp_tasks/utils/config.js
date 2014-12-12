@@ -24,6 +24,9 @@ module.exports = {
                 './app/styles/less/main.less',
                 // '!./app/styles/**/*.less'
             ],
+            watchstyles: [
+                './app/styles/**/*.less'
+            ],
             images: [
                 './app/images/**/*'
             ],

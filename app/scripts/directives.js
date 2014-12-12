@@ -1,5 +1,6 @@
 var angular = require('angular'),
-    services = require('services');
+    services = require('services'),
+    dynamicHeader = require('directives/dynamicHeader');
 
 var directives = angular.module('myApp.directives', ['myApp.services']);
 
@@ -8,6 +9,8 @@ directives.directive('appVersion', ['version', function(version) {
         elm.text(version);
     };
 }]);
+
+directives.directive('dynamicHeader', dynamicHeader);
 
 /**
  * Directive to help emit when an ngRepeat directive is complete, allowing

@@ -22,9 +22,10 @@
     "lesshat": "~3.0.2",
     "angular-route": "~1.3.5",
     "angular-sanitize": "~1.3.5",
-    "jquery-ui": "~1.11.0",
     "angular-translate": "~2.4.2",
     "viewer": "~0.10.3",
-    "pdfjs-dist": "~1.0.962"
+    "pdfjs-dist": "~1.0.962",
+    "modernizr": "~2.8.3",
+    "gsap": "~1.15.0"
   }
 }

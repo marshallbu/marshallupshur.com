@@ -79,7 +79,7 @@ h1 small {
   text-decoration: none;
 }
 
-.jumbotron h1, .page-header h1, a.brand {
+.jumbotron h1, .page-header h1, a.navbar-brand {
   font-family: CenturyGothicStd-Bold;
 }
 
@@ -88,16 +88,23 @@ h1 small {
   height: 150px;
 }
 
+/**
+ * Header/Nav
+ */
 header.navbar {
   border: 0;
-  background: url("@{imgBaseURL}content-bg.png") repeat rgba(0,0,0,.45);
-  .box-shadow(2px 2px 10px rgba(17,17,17,0.35));
+  /* height: 80px; */
+  background: rgba(0, 0, 0, 0.65);
+
+  div.container-fluid {
+    height: 100%;
+  }
 
   div.navbar-header {
 
     a.navbar-brand {
+      font-family: CenturyGothicStd-Bold;
       color: @mbuOrange;
-      font-weight: 400;
     }
 
   }
@@ -155,6 +162,51 @@ header.navbar {
   }
 }
 
+/**
+ * Dynamic Header
+ */
+div#dynamic-header {
+  position: relative;
+  width: 100%;
+  background-image: url('http://static.tumblr.com/1ccbc9v/ng3ncd339/cd-intro-bg.jpg');
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+
+  .main-title {
+    background: none transparent;
+    position: absolute;
+    width: 90%;
+    max-width: 1170px;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-family: CenturyGothicStd-Bold;
+    font-weight: 300;
+    text-align: center;
+    color: rgb(255,255,255);
+    letter-spacing: .05em;
+    /* line-height: 1.5em; */
+    /* .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.45)) */;
+
+    p {
+
+    }
+  }
+
+}
+
+/**
+ * Content
+ */
 div#content.container, footer.container {
   // margin: 0 auto;
 

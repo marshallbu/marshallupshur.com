@@ -23,24 +23,15 @@
     @@include('./partials/analytics.html')
 </head>
 
-<body data-spy="scroll" data-target=".navbar">
+<body data-spy="scroll" data-target=".navbar" ng-controller="MainCtrl">
 
     <header class="navbar navbar-fixed-top navbar-inverse" role="navigation" ng-controller="NavCtrl">
-        <div class="container">
-
-            <div class="navbar-header navbar-right">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mbu_main_navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand hidden-xs hidden-sm" href="/">Marshall Upshur</a>
-                <a class="navbar-brand visible-xs visible-sm" href="/">mbu</a>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Marshall Upshur</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="mbu_main_navbar">
+            <!-- <div class="collapse navbar-collapse" id="mbu_main_navbar">
                 <ul class="nav navbar-nav">
                     <li><a href="#about" tabindex="0" class="scrollto" title="About">About</a></li>
                     <li><a href="#creations" tabindex="0" class="scrollto" title="Creations">Creations</a></li>
@@ -55,10 +46,18 @@
                     <li class="social"><a target="_self" href="https://github.com/marshallbu" title="github"><i class="fa fa-github-alt"></i></a></li>
                     <li class="social"><a target="_self" href="https://bitbucket.org/marshallbu" title="bitbucket"><i class="fa fa-bitbucket"></i></a></li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>--><!-- /.navbar-collapse -->
 
         </div>
     </header>
+
+    <div id="dynamic-header" dynamic-header ng-cloak>
+      <canvas id="dynamic-header-canvas"></canvas>
+      <div class="jumbotron main-title">
+        <h1>Marshall Upshur</h1>
+        <p>Software Engineer</p>
+      </div>
+    </div>
 
     <div id="content">
         <div class="container">

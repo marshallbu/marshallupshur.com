@@ -9,13 +9,13 @@ module.exports = {
     entry: {
         app: config.src.file.app,
         libs: config.src.file.lib,
-	},
-    output: {
-		path: path.join(__dirname, config.distRoot),
-		publicPath: config.distRoot,
-		filename: config.dist.file.bundle,
-		chunkFilename: '[chunkhash].js'
-	},
+	  },
+      output: {
+  		path: path.join(__dirname, config.distRoot),
+  		publicPath: config.distRoot,
+  		filename: config.dist.file.bundle,
+  		chunkFilename: '[chunkhash].js'
+  	},
     module: {
         preLoaders: [
             { test: /\.js$/, loader: "source-map" }
@@ -30,7 +30,7 @@ module.exports = {
         modulesDirectories: ['app/scripts', 'node_modules', 'bower_modules'],
         // packageAlias: false,
         alias: {
-			jquery: 'jquery/dist/jquery.min',
+			      jquery: 'jquery/dist/jquery.min',
             lodash: 'lodash/dist/lodash.min',
             bootstrap: 'bootstrap/dist/js/bootstrap.min',
             angular: 'angular/angular.min',
@@ -38,7 +38,7 @@ module.exports = {
             angularRoute: 'angular-route/angular-route.min',
             angularSanitize: 'angular-sanitize/angular-sanitize.min',
             viewer: "viewer/dist/crocodoc.viewer"
-		}
+		    }
     },
     externals: [
     ],
@@ -47,10 +47,10 @@ module.exports = {
         new webpack.DefinePlugin({
             PRODUCTION: !!isProduction
         }),
-		new webpack.ProvidePlugin({
+		    new webpack.ProvidePlugin({
             $: 'jquery',
-			jQuery: 'jquery',
-		}),
+			      jQuery: 'jquery',
+		    }),
         new webpack.optimize.DedupePlugin()
 
 	]

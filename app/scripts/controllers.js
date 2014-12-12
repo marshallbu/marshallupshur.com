@@ -1,12 +1,16 @@
 var angular = require('angular'),
+    MainCtrl = require('./controllers/main_ctrl'),
     NavCtrl = require('./controllers/nav_ctrl'),
     FeedCtrl = require('./controllers/feed_ctrl'),
     ResumeCtrl = require('./controllers/resume_ctrl'),
     PhotosCtrl = require('./controllers/photos_ctrl'),
     FooterCtrl = require('./controllers/footer_ctrl');
-    // NikeCtrl = require('./controllers/nike_ctrl')
 
 var controllers = angular.module('myApp.controllers', ['myApp.services']);
+
+controllers.controller('MainCtrl', ['$scope', function($scope) {
+    angular.injector(['ng']).invoke(MainCtrl, this, {'$scope': $scope});
+}]);
 
 controllers.controller('NavCtrl', ['$scope', function($scope) {
     // injector method takes an array of modules as the first argument
