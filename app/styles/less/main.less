@@ -12,6 +12,7 @@
 @mbuOrangeDark: #cf6800;
 @mbuBlue: #006ed9;
 @imgBaseURL: "../images/";
+@sectionHeaderFont: CenturyGothicStd;
 
 // Extra small screen / phone
 // Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
@@ -79,10 +80,6 @@ h1 small {
   text-decoration: none;
 }
 
-.jumbotron h1, .page-header h1, a.navbar-brand {
-  font-family: CenturyGothicStd-Bold;
-}
-
 .section-loader {
   background: url("@{imgBaseURL}section_loader.gif") center center no-repeat;
   height: 150px;
@@ -93,7 +90,6 @@ h1 small {
  */
 header.navbar {
   border: 0;
-  /* height: 80px; */
   background: rgba(0, 0, 0, 0.65);
 
   div.container-fluid {
@@ -103,7 +99,7 @@ header.navbar {
   div.navbar-header {
 
     a.navbar-brand {
-      font-family: CenturyGothicStd-Bold;
+      font-family: CenturyGothicStd;
       color: @mbuOrange;
     }
 
@@ -168,6 +164,7 @@ header.navbar {
 div#dynamic-header {
   position: relative;
   width: 100%;
+  height: 100%;
   background-image: url('http://static.tumblr.com/1ccbc9v/ng3ncd339/cd-intro-bg.jpg');
   overflow: hidden;
   background-size: cover;
@@ -177,7 +174,8 @@ div#dynamic-header {
   .main-title {
     background: none transparent;
     position: absolute;
-    width: 90%;
+    width: 100%;
+    padding: 30px 10px;
     max-width: 1170px;
     left: 50%;
     top: 50%;
@@ -189,7 +187,7 @@ div#dynamic-header {
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     color: white;
-    font-family: CenturyGothicStd-Bold;
+    font-family: CenturyGothicStd;
     font-weight: 300;
     text-align: center;
     color: rgb(255,255,255);
@@ -222,6 +220,7 @@ section {
   position: relative;
 }
 
+
 .btn.launch {
   position: absolute;
   right: 0;
@@ -240,6 +239,7 @@ section.jumbotron.main {
   // font-size: 18px;
 
   h1 {
+    font-family: @sectionHeaderFont;
     // font-size: 60px;
     .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
 
@@ -264,6 +264,7 @@ section.jumbotron.main {
 
 section#creations {
   h2 {
+    font-family: @sectionHeaderFont;
     .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
   }
 
@@ -304,6 +305,7 @@ section#creations {
 
 section#resume {
   h2 {
+    font-family: @sectionHeaderFont;
     .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
   }
 
@@ -326,6 +328,7 @@ section#resume {
 
 section#blog {
   h2 {
+    font-family: @sectionHeaderFont;
     .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
   }
 
@@ -363,6 +366,7 @@ section#blog {
 
 section#photos {
   h2 {
+    font-family: @sectionHeaderFont;
     .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
   }
 
@@ -660,11 +664,6 @@ div#tux-egg {
 }
 
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-  body {
-    // padding-top: 60px;
-    padding-bottom: 40px;
-  }
-
   section#photos .photos-slider-container #photos-slider,
   section#creations .creations-slider-container #creations-slider,
   section#resume .resume-view-container #resume-view {

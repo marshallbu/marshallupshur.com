@@ -5,9 +5,6 @@ function initHeader() {
   height = window.innerHeight;
   target = { x: width/2, y: height/2 };
 
-  dynHeader = document.getElementById('dynamic-header');
-  dynHeader.style.height = height + 'px';
-
   canvas = document.getElementById('dynamic-header-canvas');
   canvas.width = width;
   canvas.height = height;
@@ -195,7 +192,6 @@ function scrollCheck() {
 function resize() {
   width = window.innerWidth;
   height = window.innerHeight;
-  dynHeader.style.height = height + 'px';
   canvas.width = width;
   canvas.height = height;
 }
