@@ -6,8 +6,8 @@
 @import "custom-fonts";
 @import (less) "../../../bower_modules/viewer/dist/crocodoc.viewer.min.css";
 
-@bkgColor: #222;
-@textColor: #E2E2E2;
+@bkgColor: #fff;
+@textColor: #111;
 @mbuOrange: #ff8000;
 @mbuOrangeDark: #cf6800;
 @mbuBlue: #006ed9;
@@ -53,13 +53,17 @@
 }
 
 * { outline: none; }
-html { height: 100%; }
+html {
+  height: 100%;
+  min-height:100%;
+}
 
 body {
   color: @textColor;
-  background: url('@{imgBaseURL}bg.png') @bkgColor;
+  background: url('@{imgBaseURL}texture.png') @bkgColor;
   margin: 0;
   height: 100%;
+  min-height:100%;
 }
 
 .btn {
@@ -90,7 +94,7 @@ h1 small {
  */
 header.navbar {
   border: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.75);
 
   div.container-fluid {
     height: 100%;
@@ -108,10 +112,13 @@ header.navbar {
   div.navbar-collapse {
 
     ul.navbar-nav {
+      li > a {
+        color: #dedede;
+      }
 
       li > a:focus,
       li > a:hover {
-        color: #FFFFFF;
+        color: #fff;
         background-image: url('@{imgBaseURL}light.png');
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -120,7 +127,7 @@ header.navbar {
       li.active > a,
       li.active > a:hover,
       li.active > a:focus {
-        color: #FFFFFF;
+        color: #fff;
         background-image: url('@{imgBaseURL}light.png');
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -216,12 +223,13 @@ section {
 
 .page-header {
   margin: 20px 0 20px;
-  border-bottom: 1px solid #464646;
   position: relative;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 
 .btn.launch {
+  font-family: @sectionHeaderFont;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -231,7 +239,7 @@ section {
 
 section.jumbotron.main {
   background-color:transparent;
-  padding-top: 60px;
+  padding-top: 30px;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -240,15 +248,15 @@ section.jumbotron.main {
 
   h1 {
     font-family: @sectionHeaderFont;
-    // font-size: 60px;
-    .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
 
     small {
-      // font-size: 40.5%;
+      color: #222;
     }
   }
 
   p {
+    font-size: 1.286em;
+    font-weight: normal;
     // line-height: 1.6;
 
     &.portrait {
@@ -265,7 +273,10 @@ section.jumbotron.main {
 section#creations {
   h2 {
     font-family: @sectionHeaderFont;
-    .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
+
+    small {
+      color: #222;
+    }
   }
 
   .creations-slider-container {
@@ -306,7 +317,10 @@ section#creations {
 section#resume {
   h2 {
     font-family: @sectionHeaderFont;
-    .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
+
+    small {
+      color: #222;
+    }
   }
 
   .resume-view-container {
@@ -329,12 +343,16 @@ section#resume {
 section#blog {
   h2 {
     font-family: @sectionHeaderFont;
-    .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
+
+    small {
+      color: #222;
+    }
   }
 
   .blog-updates-container {
 
     .post {
+      color: #fff;
       background: url("@{imgBaseURL}texture.png") repeat scroll 0 0 #111;
       padding: 10px;
       border: 1px solid #111;
@@ -367,7 +385,10 @@ section#blog {
 section#photos {
   h2 {
     font-family: @sectionHeaderFont;
-    .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.75));
+
+    small {
+      color: #222;
+    }
   }
 
   .photos-slider-container {
