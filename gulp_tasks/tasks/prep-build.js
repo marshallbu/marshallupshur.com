@@ -5,17 +5,16 @@ var gulp = require('gulp'),
     config = require('./../utils/config');
 
 gulp.task('prep-build', function (callback) {
+  Object.keys(config.dist.dir).forEach(function(key){
+    var dir = config.dist.dir[key];
 
-    Object.keys(config.dist.dir).forEach(function(key){
-        var dir = config.dist.dir[key];
-
-        mkdirp(dir, function (mkdirErr) {
-            if (mkdirErr) {
-                log.error('Cannot create directory:', plugins.util.colors.magenta(dir), plugins.util.colors.red(mkdirErr));
-                throw mkdirErr;
-            }
-        });
+    mkdirp(dir, function (mkdirErr) {
+      if (mkdirErr) {
+        log.error('Cannot create directory:', plugins.util.colors.magenta(dir), plugins.util.colors.red(mkdirErr));
+        throw mkdirErr;
+      }
     });
+  });
 
-    callback();
+  callback();
 });

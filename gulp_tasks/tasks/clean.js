@@ -4,5 +4,5 @@ var gulp = require('gulp'),
     config = require('./../utils/config');
 
 gulp.task('clean', function (callback) {
-    del([config.distRoot], callback);
+  del([config.distRoot], callback);
 });

@@ -4,8 +4,8 @@ var gulp = require('gulp'),
     config = require('./../utils/config');
 
 gulp.task('downloads', function() {
-    return gulp
-        .src(config.src.glob.downloads)
-        .pipe(plugins.changed(config.dist.dir.downloads))
-        .pipe(gulp.dest(config.dist.dir.downloads));
+  return gulp
+    .src(config.src.glob.downloads)
+    .pipe(plugins.changed(config.dist.dir.downloads))
+    .pipe(gulp.dest(config.dist.dir.downloads));
 });

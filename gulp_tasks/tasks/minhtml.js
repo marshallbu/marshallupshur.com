@@ -4,9 +4,9 @@ var gulp = require('gulp'),
     config = require('./../utils/config');
 
 gulp.task('minhtml', ['compile-html'], function() {
-    var opts = {comments:true,spare:true};
+  var opts = {comments:true,spare:true};
 
-    return gulp.src(config.distRoot + '*.html')
-        // .pipe(plugins.if(isProduction, plugins.minifyHtml(opts)))
-        .pipe(gulp.dest(config.distRoot));
+  return gulp.src(config.distRoot + '*.html')
+    // .pipe(plugins.if(isProduction, plugins.minifyHtml(opts)))
+    .pipe(gulp.dest(config.distRoot));
 });

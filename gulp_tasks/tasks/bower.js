@@ -3,8 +3,8 @@ var gulp = require('gulp'),
     config = require('./../utils/config');
 
 gulp.task('bower', function() {
-    return plugins.bower({
-            directory: config.vendorRoot,
-        });
-        // .pipe(gulp.dest(config.sourceRootDir + 'vendor/'));
+  return plugins.bower({
+    directory: config.vendorRoot,
+  });
+  // .pipe(gulp.dest(config.sourceRootDir + 'vendor/'));
 });

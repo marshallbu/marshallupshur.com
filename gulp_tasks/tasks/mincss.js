@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     config = require('./../utils/config');
 
 gulp.task('mincss', ['less'], function() {
-    return gulp.src(config.dist.dir.styles + '*.css')
-        .pipe(plugins.if(isProduction, plugins.minifyCss()))
-        .pipe(gulp.dest(config.dist.dir.styles));
+  return gulp.src(config.dist.dir.styles + '*.css')
+    .pipe(plugins.if(isProduction, plugins.minifyCss()))
+    .pipe(gulp.dest(config.dist.dir.styles));
 });

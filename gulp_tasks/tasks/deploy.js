@@ -11,10 +11,10 @@ if (fs.existsSync(file)) {
 }
 
 gulp.task('deploy', function () {
-    return gulp.src(config.distRoot + '**/*')
-        .pipe(plugins.sftp({
-            host: 'mbucreations.com',
-            auth: 'privateKeyEncrypted',
-            remotePath: path[argv.target]
-        }));
+  return gulp.src(config.distRoot + '**/*')
+    .pipe(plugins.sftp({
+      host: 'mbucreations.com',
+      auth: 'privateKeyEncrypted',
+      remotePath: path[argv.target]
+    }));
 });
