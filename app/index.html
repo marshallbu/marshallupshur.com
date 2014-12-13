@@ -43,8 +43,8 @@
                     <li><a href="#creations" tabindex="0" class="scrollto" title="Creations">Creations</a></li>
                     <li><a href="#resume" tabindex="0" class="scrollto" title="Resume">Resume</a></li>
                     <li><a href="#blog" tabindex="0" class="scrollto" title="Blog">Blog</a></li>
-                    <li><a href="#photos" tabindex="0" class="scrollto" title="Photos">Photos</a></li>
-                    <li class="social"><a href="#" data-toggle="modal" data-target="#contact-modal" tabindex="0" title="Contact"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="#photos" tabindex="0" class="scrollto" title="Photos"><i class="fa fa-camera-retro"></i></a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#contact-modal" tabindex="0" title="Contact"><i class="fa fa-envelope"></i></a></li>
                     <li class="social"><a target="_self" href="https://github.com/marshallbu" title="github"><i class="fa fa-github-alt"></i></a></li>
                     <li class="social"><a target="_self" href="http://www.linkedin.com/in/marshallupshur" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
                     <li class="social"><a target="_self" href="http://twitter.com/mbuCreations" title="Twitter"><i class="fa fa-twitter"></i></a></li>
@@ -175,42 +175,7 @@
             </section>
 
             <!-- contact-modal -->
-            <div id="contact-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true" ng-controller="ContactModalCtrl">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      <h3 id="contact-modal-label">Contact Me!</h3>
-                  </div>
-
-                  <div class="modal-body">
-                    <div class="contact-map">
-                      <ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options" ng-if="modalLoaded"></ui-gmap-google-map>
-                    </div>
-
-                    <p style="text-align: center;">Form still under construction.<br/>Just send an email to <strong><a href="mailto:me@marshallupshur.com?subject=Hi Marshall!" class="">me@marshallupshur.com</a></strong> for now!</p>
-                    <p class="hidden">Message <strong><a href="mailto:me@marshallupshur.com?subject=Hi Marshall!" class="">me@marshallupshur.com</a></strong> using the form below.</p>
-                    <p class="hidden">
-                      <label for="name">Name:</label>
-                      <input id="name" name="name" type="text" required>
-
-                      <label for="email">Email:</label>
-                      <input id="email" name="email" type="email" required>
-
-                      <label for="message">Message:</label>
-                      <textarea rows="3" id="message" name="message" required></textarea>
-                    </p>
-                  </div>
-
-                  <div class="modal-footer">
-                      <button class="btn btn-mbu" data-dismiss="modal" aria-hidden="true">Close</button>
-                      <button class="btn btn-primary hidden">Send Message</button>
-                  </div>
-
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div><!-- /#contact-modal -->
+            @@include('./partials/contact_modal_template.html')
 
         </div>
     </div>

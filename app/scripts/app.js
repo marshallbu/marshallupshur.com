@@ -26,7 +26,7 @@ var app = angular.module('myApp', [
       uiGmapGoogleMapApiProvider.configure({
         key: 'AIzaSyD1QWpO55KK2zhjKZ2gA9vnBie6GZvrqRE',
         v: '3.18',
-        libraries: 'weather, geometry, visualization'
+        libraries: 'geometry,visualization,drawing'
       });
     });
 

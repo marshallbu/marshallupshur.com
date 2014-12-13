@@ -41,8 +41,11 @@ controllers.controller('FooterCtrl', ['$scope', function($scope) {
     angular.injector(['ng', 'myApp.services']).invoke(FooterCtrl, this, {'$scope': $scope});
 }]);
 
-controllers.controller('ContactModalCtrl', ['$scope', function($scope) {
-    angular.injector(['ng', 'myApp.services']).invoke(ContactModalCtrl, this, {'$scope': $scope});
+controllers.controller('ContactModalCtrl', ['$scope', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi) {
+    angular.injector(['ng', 'myApp.services']).invoke(ContactModalCtrl, this, {
+        '$scope': $scope,
+        'uiGmapGoogleMapApi': uiGmapGoogleMapApi
+    });
 }]);
 
 // controllers.controller('NikeCtrl', ['$scope', 'CONFIG', function($scope, CONFIG) {

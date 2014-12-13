@@ -1,6 +1,6 @@
 {
   "name": "identity",
-  "version": "0.9.0",
+  "version": "0.9.3",
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
@@ -72,7 +72,6 @@
     "angularResource": "./bower_modules/angular-resource/angular-resource.min.js",
     "angularRoute": "./bower_modules/angular-route/angular-route.min.js",
     "angularSanitize": "./bower_modules/angular-sanitize/angular-sanitize.min.js",
-    "angularTranslate": "./bower_modules/angular-translate/angular-translate.min.js",
     "angularTranslate": "./bower_modules/angular-translate/angular-translate.min",
     "angularGoogleMaps": "./bower_modules/angular-google-maps/dist/angular-google-maps.min",
     "viewer": "./bower_modules/viewer/dist/crocodoc.viewer.js"
