@@ -3,6 +3,7 @@ var app = require('app');
 var PhotosCtrl = ['$scope', '$http', '$log', 'FeedService',
     function ($scope, $http, $log, Feed) {
         $scope.photos = [];
+        $scope.showPhotosContainer = false;
 
         Feed.parseFeed('http://testphotos.marshallupshur.com/feed/albums/1/recent.rss', 5).then(function (res) {
             var entries = res.data.responseData.feed.entries;
@@ -17,6 +18,8 @@ var PhotosCtrl = ['$scope', '$http', '$log', 'FeedService',
                     date: pubDate
                 };
             });
+
+            $scope.showPhotosContainer = true;
 
             $scope.$apply();
         });
