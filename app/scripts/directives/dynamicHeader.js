@@ -1,22 +1,30 @@
-var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+var width, height, largeHeader, canvas, context, points, target, animateHeader = true;
 
 function initHeader() {
   width = window.innerWidth;
   height = window.innerHeight;
   target = { x: width/2, y: height/2 };
 
+  dynHeader = document.getElementById('dynamic-header');
+  // dynHeader.style.height = height + 'px';
+
   canvas = document.getElementById('dynamic-header-canvas');
   canvas.width = width;
   canvas.height = height;
-  ctx = canvas.getContext('2d');
+  context = canvas.getContext('2d');
 
   // create points
   points = [];
   for (var x = 0; x < width; x = x + width/20) {
     for (var y = 0; y < height; y = y + height/20) {
-      var px = x + Math.random()*width/20;
-      var py = y + Math.random()*height/20;
-      var p = {x: px, originX: px, y: py, originY: py };
+      var px = x + Math.random() * width/20;
+      var py = y + Math.random() * height/20;
+      var p = {
+          x: px,
+          originX: px,
+          y: py,
+          originY: py
+      };
       points.push(p);
     }
   }
@@ -63,7 +71,7 @@ function initHeader() {
  */
 function animate() {
   if (animateHeader) {
-    ctx.clearRect(0,0,width,height);
+    context.clearRect(0,0,width,height);
     for (var i in points) {
       // detect points in range
       if (Math.abs(getDistance(target, points[i])) < 4000) {
@@ -106,11 +114,11 @@ function shiftPoint(p) {
 function drawLines(p) {
   if (!p.active) return;
   for (var i in p.closest) {
-    ctx.beginPath();
-    ctx.moveTo(p.x, p.y);
-    ctx.lineTo(p.closest[i].x, p.closest[i].y);
-    ctx.strokeStyle = 'rgba(156,217,249,' + p.active + ')';
-    ctx.stroke();
+    context.beginPath();
+    context.moveTo(p.x, p.y);
+    context.lineTo(p.closest[i].x, p.closest[i].y);
+    context.strokeStyle = 'rgba(156,217,249,' + p.active + ')';
+    context.stroke();
   }
 }
 
@@ -132,10 +140,10 @@ function Circle(pos,rad,color) {
 
   self.draw = function() {
     if (!self.active) return;
-    ctx.beginPath();
-    ctx.arc(self.pos.x, self.pos.y, self.radius, 0, 2 * Math.PI, false);
-    ctx.fillStyle = 'rgba(156,217,249,' + self.active + ')';
-    ctx.fill();
+    context.beginPath();
+    context.arc(self.pos.x, self.pos.y, self.radius, 0, 2 * Math.PI, false);
+    context.fillStyle = 'rgba(156,217,249,' + self.active + ')';
+    context.fill();
   };
 }
 
@@ -192,6 +200,7 @@ function scrollCheck() {
 function resize() {
   width = window.innerWidth;
   height = window.innerHeight;
+  // dynHeader.style.height = height + 'px';
   canvas.width = width;
   canvas.height = height;
 }

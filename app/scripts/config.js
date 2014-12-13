@@ -1,3 +1,6 @@
+var angular = require('angular'),
+    projectConfig = require('../../gulp_tasks/utils/config');
+
 /*global define: false */
 define([
   'json!../../config/config.default.json',
@@ -30,7 +33,7 @@ define([
    * create a constant value in the module name space for each config option
    */
   angular.forEach(configData, function(value, key){
-    config.constant(key, value);
+  config.constant(key, value);
   });
 
 });

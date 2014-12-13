@@ -8,15 +8,15 @@ var servicesModule = angular.module('myApp.services', [/*'myApp.config',*/ 'ngRe
 servicesModule.value('version', '0.0.0');
 
 servicesModule.factory('FeedService', ['$http', function($http) {
-    var service = {};
+  var service = {};
 
-    service.parseFeed = function parseFeed(url, count) {
-        var numberOfFeeds = count || 6;
-        return $http.jsonp('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' +
-            numberOfFeeds + '&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
-    };
+  service.parseFeed = function parseFeed(url, count) {
+    var numberOfFeeds = count || 6;
+    return $http.jsonp('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' +
+        numberOfFeeds + '&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
+  };
 
-    return service;
+  return service;
 }]);
 
 module.exports = servicesModule;

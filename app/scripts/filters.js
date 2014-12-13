@@ -4,9 +4,9 @@ var angular = require('angular'),
 var filters = angular.module('myApp.filters', ['myApp.services']);
 
 filters.filter('interpolate', ['version', function(version) {
-    return function(text) {
-        return String(text).replace(/\%VERSION\%/mg, version);
-    };
+  return function(text) {
+    return String(text).replace(/\%VERSION\%/mg, version);
+  };
 }]);
 
 module.exports = filters;

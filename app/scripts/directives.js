@@ -5,11 +5,15 @@ var angular = require('angular'),
 var directives = angular.module('myApp.directives', ['myApp.services']);
 
 directives.directive('appVersion', ['version', function(version) {
-    return function(scope, elm, attrs) {
-        elm.text(version);
-    };
+  return function(scope, elm, attrs) {
+    elm.text(version);
+  };
 }]);
 
+/**
+ * controls the dynamic header coolness
+ *
+ */
 directives.directive('dynamicHeader', dynamicHeader);
 
 /**
