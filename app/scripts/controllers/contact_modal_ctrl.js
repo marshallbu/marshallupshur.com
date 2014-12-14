@@ -5,10 +5,10 @@ function ($rootScope, $scope, $window, $http, $log, uiGmapGoogleMapApi) {
 
   $scope.map = {
     center: {
-      latitude: 45.5225351,
-      longitude: -122.6785405
+      latitude: 45.5223848,
+      longitude: -122.6764805
     },
-    zoom: 14,
+    zoom: 15,
     options: {
       backgroundColor: '#ffffff',
       draggable: false,
@@ -21,8 +21,8 @@ function ($rootScope, $scope, $window, $http, $log, uiGmapGoogleMapApi) {
   $scope.marker = {
     id: 0,
     coords: {
-      latitude: 45.5225351,
-      longitude: -122.6785405
+      latitude: 45.5223848,
+      longitude: -122.6764805
     }
   };
 

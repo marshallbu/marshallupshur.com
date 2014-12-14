@@ -67,7 +67,7 @@ body {
 }
 
 .btn {
-  border-radius: 0;
+  /* border-radius: 0; */
 }
 .btn-link {
   color: @mbuOrange;
@@ -577,14 +577,14 @@ div#contact-modal {
 }
 .btn-mbu {
   background-color: #FF8000;
-  background-image: -moz-linear-gradient(top, #FF8000, #CF6800);
+  /* background-image: -moz-linear-gradient(top, #FF8000, #CF6800);
   background-image: -ms-linear-gradient(top, #FF8000, #CF6800);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF8000), to(#CF6800));
   background-image: -webkit-linear-gradient(top, #FF8000, #CF6800);
   background-image: -o-linear-gradient(top, #FF8000, #CF6800);
-  background-image: linear-gradient(top, #FF8000, #CF6800);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8000', endColorstr='#CF6800', GradientType=0);
+  background-image: linear-gradient(top, #FF8000, #CF6800); */
+  /* background-repeat: repeat-x; */
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8000', endColorstr='#CF6800', GradientType=0); */
   border-color: #CF6800 #CF6800 #CF6800;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -641,13 +641,7 @@ div#tux-egg {
   }
 }
 
-
-@media (max-width: @screen-xs-min) {
-
-  div.post {
-    margin-bottom: 20px;
-  }
-
+@media (max-width: @screen-xs-max) {
   section.jumbotron.main {
     h1 {
 
@@ -655,12 +649,12 @@ div#tux-egg {
         display: block;
       }
     }
+
     div.portrait {
       float: none !important;
       margin-right: auto;
       margin-left: auto;
       margin-bottom: 10px;
-      width: 240px;
     }
   }
 
@@ -673,30 +667,6 @@ div#tux-egg {
     }
   }
 
-  footer {
-    p.pull-right {
-      float: left !important;
-    }
-  }
-}
-
-@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
-  section.jumbotron.main {
-    h1 {
-
-      small {
-      }
-    }
-
-    div.portrait {
-      float: none !important;
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: 10px;
-    }
-
-  }
-
   div.post {
     margin-bottom: 20px;
   }
@@ -706,6 +676,15 @@ div#tux-egg {
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
+
+    p {
+      text-align: right;
+      display: block;
+
+      &.pull-right, &.pull-left {
+        float: none !important;
+      }
+    }
   }
   hr.footer {
     margin-left: -20px;

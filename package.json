@@ -1,6 +1,6 @@
 {
   "name": "identity",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
