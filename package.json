@@ -4,7 +4,7 @@
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
-    "test": "gulp unit-test"
+    "test": "node ./node_modules/gulp/bin/gulp.js unit-test"
   },
   "repository": {
     "type": "git",
