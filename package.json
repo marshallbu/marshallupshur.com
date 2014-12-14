@@ -4,7 +4,7 @@
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp unit-test"
   },
   "repository": {
     "type": "git",
