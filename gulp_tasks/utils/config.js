@@ -12,7 +12,8 @@ module.exports = {
       config: './config/',
       images: './app/images/',
       partials: './app/partials/',
-      downloads: './app/downloads/'
+      downloads: './app/downloads/',
+      sqzr: './app/sqzr/'
     },
     glob: {
       scripts: [
@@ -40,6 +41,7 @@ module.exports = {
       sprite: './app/images/sprite/*.{png,jpg}',
       extras: ['./app/*.*', '!app/*.html'],
       downloads: ['./app/downloads/*.*'],
+      sqzr: ['./app/sqzr/**/*'],
       projectJSON: ['./*.json', '!./codekit-config.json']
     },
     file: {
@@ -66,7 +68,8 @@ module.exports = {
       config: distRootDir + 'config/',
       images: distRootDir + 'images/',
       partials: distRootDir + 'partials/',
-      downloads: distRootDir + 'downloads/'
+      downloads: distRootDir + 'downloads/',
+      sqzr: distRootDir + 'sqzr/'
     },
     file: {
       app: 'app.min.js',
