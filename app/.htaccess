@@ -3,23 +3,6 @@ AddOutputFilterByType DEFLATE text/css application/x-javascript
 AddOutputFilterByType DEFLATE text/css text/html text/plain text/xml text/javascript
 AddOutputFilterByType DEFLATE application/javascript application/xml
 
-#############################################################################################################
-# Internal squeezr rewrite rules
-#
-# You shouldn't need to change anything here (but the RewriteBase directory in case you don't apply the
-# default setup for squeezr).
-#
-# @package		squeezr
-# @author		Joschi Kuphal <joschi@kuphal.net>
-# @copyright	Copyright © 2014 Joschi Kuphal <joschi@kuphal.net>, http://jkphl.is
-# @link			http://squeezr.it
-# @github		https://github.com/jkphl/squeezr
-# @twitter		@squeezr
-# @license		https://github.com/jkphl/squeezr/blob/master/LICENSE.txt MIT License
-# @since		1.0b
-# @version		1.0b
-#############################################################################################################
-
 # URL rewriting (required for squeezr to work)
 <IfModule mod_rewrite.c>
 
