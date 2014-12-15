@@ -52,6 +52,12 @@
   display: none !important;
 }
 
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
 * { outline: none; }
 html {
   height: 100%;
@@ -189,7 +195,7 @@ div#dynamic-header {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url('http://static.tumblr.com/1ccbc9v/ng3ncd339/cd-intro-bg.jpg');
+  background-image: url('@{imgBaseURL}cd-intro-bg.jpg');
   overflow: hidden;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -672,10 +678,6 @@ div#tux-egg {
   }
 
   footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
 
     p {
       text-align: right;
@@ -686,10 +688,7 @@ div#tux-egg {
       }
     }
   }
-  hr.footer {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
+
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
