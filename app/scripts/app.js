@@ -1,6 +1,6 @@
 var angular = require('angular'),
     routes = require('routes'),
-    translate = require('translate'),
+    // translate = require('translate'),
     filters = require('filters'),
     services = require('services'),
     directives = require('directives'),
@@ -12,7 +12,7 @@ var app = angular.module('myApp', [
   'ngRoute',
   'ngResource',
   'ngSanitize',
-  'pascalprecht.translate',
+  // 'pascalprecht.translate',
   'myApp.filters',
   'myApp.services',
   'myApp.directives',
@@ -21,7 +21,7 @@ var app = angular.module('myApp', [
   // 'adaptive.speech'
 ])
 .config(routes)
-.config(translate)
+// .config(translate)
 .config(function(uiGmapGoogleMapApiProvider) {
   uiGmapGoogleMapApiProvider.configure({
     key: 'AIzaSyD1QWpO55KK2zhjKZ2gA9vnBie6GZvrqRE',
