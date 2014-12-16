@@ -5,6 +5,7 @@ var FooterCtrl = ['$scope', '$http', '$log', 'version',
 
     // $scope.$apply();
     $log.info('FooterCtrl initialized');
+    $log.debug('Sniffing around? Email me(at)marshallupshur.com if you find any foobars!');
   }
 ];
 

@@ -13,22 +13,38 @@ function initHeader() {
   canvas.height = height;
   context = canvas.getContext('2d');
 
-  // create points
+  // generate our points
+  generatePoints();
+
+  // visually connect points
+  linkPoints();
+}
+
+/**
+ * generate an array of random points within the display boundaries
+ */
+function generatePoints() {
   points = [];
   for (var x = 0; x < width; x = x + width/20) {
     for (var y = 0; y < height; y = y + height/20) {
       var px = x + Math.random() * width/20;
       var py = y + Math.random() * height/20;
       var p = {
-          x: px,
-          originX: px,
-          y: py,
-          originY: py
+        x: px,
+        originX: px,
+        y: py,
+        originY: py
       };
       points.push(p);
     }
   }
+}
 
+/**
+ * thinking of our display as a "graph", create edges and vertices on points,
+ * with each vertex connecting to it's 5 nearest neighbors
+ */
+function linkPoints() {
   // for each point find the 5 closest points
   for(var i = 0; i < points.length; i++) {
     var closest = [];
@@ -95,6 +111,10 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
+/**
+ * shift points to random locations using a tween
+ * @param {object} p   a point
+ */
 function shiftPoint(p) {
   TweenLite.to(p, 1+1*Math.random(), {
       x: p.originX-50+Math.random()*100,
@@ -108,8 +128,8 @@ function shiftPoint(p) {
 }
 
 /**
- * [drawLines description]
- * @param {[type]} p [description]
+ * draw line between point and closest neighbors
+ * @param {Object} p   a point
  */
 function drawLines(p) {
   if (!p.active) return;
@@ -184,7 +204,7 @@ function mouseMove(e) {
 }
 
 /**
- * callback for scroll event
+ * callback for scroll event, turning off header animation if it is not in view
  */
 function scrollCheck() {
   if (document.body.scrollTop > height) {
