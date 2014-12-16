@@ -7,7 +7,7 @@
 @import (less) "../../../bower_modules/viewer/dist/crocodoc.viewer.min.css";
 
 @bkgColor: #fff;
-@textColor: #111;
+@textColor: #313131;
 @mbuOrange: #ff8000;
 @mbuOrangeDark: #cf6800;
 @mbuBlue: #006ed9;
@@ -66,10 +66,11 @@ html {
 
 body {
   color: @textColor;
-  background: url('@{imgBaseURL}texture.png') @bkgColor;
+  background: url('@{imgBaseURL}grey.png') @bkgColor;
   margin: 0;
   height: 100%;
   min-height:100%;
+  font-family: RobotoDraft,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .btn {
@@ -80,10 +81,6 @@ body {
 }
 .btn-link:hover {
   color: @mbuOrangeDark;
-}
-
-h1 small {
-  // color: @mbuBlue;
 }
 
 .btn-link:hover, .btn-link:focus, a:hover, a:focus {
@@ -103,6 +100,7 @@ h1 small {
 header.navbar {
   border: 0;
   background: rgba(0, 0, 0, 0.75);
+  .MaterialBoxShadow(2);
 
   div.container-fluid {
     height: 100%;
@@ -203,6 +201,7 @@ div#dynamic-header {
   background-size: cover;
   background-position: center center;
   z-index: 1;
+  .MaterialBoxShadow();
 
   .main-title {
     background: none transparent;
@@ -250,7 +249,7 @@ section {
     color: @mbuOrange;
 
     small {
-      color: #222;
+      color: #313131;
     }
   }
 }
@@ -258,7 +257,8 @@ section {
 .page-header {
   margin: 20px 0 20px;
   position: relative;
-  border-bottom: 1px solid #e1e1e1;
+  /* border-bottom: 1px solid #e1e1e1; */
+  border-bottom: none;
 }
 
 
@@ -284,9 +284,10 @@ section.jumbotron.main {
 
   h1 {
     font-family: @sectionHeaderFont;
+    color: @mbuOrange;
 
     small {
-      color: #222;
+      color: #313131;
     }
   }
 
@@ -301,6 +302,8 @@ section.jumbotron.main {
     width: 320px;
     margin-left: 10px;
     position: relative;
+    /* .box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26)); */
+    .MaterialBoxShadow();
 
     &:after {
       padding-bottom: 66.666%; // 3:2
@@ -316,7 +319,6 @@ section.jumbotron.main {
       left: 0;
       right: 0;
       background: #fff;
-      border: 1px solid #e1e1e1;
       overflow: hidden;
     }
 
@@ -330,6 +332,7 @@ section#creations {
   .creations-slider-container {
     width: 100%;
     position: relative;
+    .MaterialBoxShadow();
 
     &:after {
       /* padding-bottom: 66.666%; */ // 3:2
@@ -345,7 +348,6 @@ section#creations {
       left: 0;
       right: 0;
       background: #fff;
-      border: 1px solid #e1e1e1;
       overflow: hidden;
 
       .carousel-inner {
@@ -360,8 +362,8 @@ section#creations {
       }
 
       .carousel-control {
-        background: none;
-        border: none;
+        /* background: none; */
+        /* border: none; */
 
         i {
           position: absolute;
@@ -380,6 +382,7 @@ section#resume {
   .resume-view-container {
     width: 100%;
     position: relative;
+    .MaterialBoxShadow();
 
     &:after {
       /* padding-bottom: 66.666%; */ // 3:2
@@ -395,8 +398,8 @@ section#resume {
       left: 0;
       right: 0;
       background: #fff;
-      border: 1px solid #e1e1e1;
       overflow: hidden;
+
     }
   }
 }
@@ -408,7 +411,7 @@ section#blog {
     .post {
       background: #fff;
       padding: 10px;
-      border: 1px solid #e1e1e1;
+      .MaterialBoxShadow();
 
       .title {
         padding-bottom: 6px;
@@ -439,6 +442,7 @@ section#photos {
   .photos-slider-container {
     width: 100%;
     position: relative;
+    .MaterialBoxShadow();
 
     &:after {
       /* padding-bottom: 66.666%; */ // 3:2
@@ -454,7 +458,6 @@ section#photos {
       left: 0;
       right: 0;
       background: #fff;
-      border: 1px solid #e1e1e1;
       overflow: hidden;
 
       .carousel-inner {
@@ -557,30 +560,25 @@ div#contact-modal {
 }
 
 .btn-mbu,
+.btn-mbu:focus,
 .btn-mbu:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   color: #ffffff;
 }
 .btn-mbu {
   background-color: #FF8000;
-  /* background-image: -moz-linear-gradient(top, #FF8000, #CF6800);
-  background-image: -ms-linear-gradient(top, #FF8000, #CF6800);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF8000), to(#CF6800));
-  background-image: -webkit-linear-gradient(top, #FF8000, #CF6800);
-  background-image: -o-linear-gradient(top, #FF8000, #CF6800);
-  background-image: linear-gradient(top, #FF8000, #CF6800); */
-  /* background-repeat: repeat-x; */
-  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8000', endColorstr='#CF6800', GradientType=0); */
-  border-color: #CF6800 #CF6800 #CF6800;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-.btn-mbu:hover,
-.btn-mbu:active,
-.btn-mbu.active,
+
 .btn-mbu.disabled,
 .btn-mbu[disabled] {
   background-color: #CF6800;
+}
+
+.btn-mbu:focus,
+.btn-mbu:hover,
+.btn-mbu:active,
+.btn-mbu.active {
+  .MaterialBoxShadow(2);
 }
 
 .carousel-indicators {
