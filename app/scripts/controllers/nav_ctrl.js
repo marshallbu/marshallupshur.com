@@ -8,7 +8,7 @@ var NavCtrl = ['$scope', '$log',
     };
 
     // $scope.$apply();
-    $log.info('NavCtrl initialized');
+    $log.info('NavCtrl:initialized');
   }
 ];
 

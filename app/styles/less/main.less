@@ -244,6 +244,15 @@ div#content.container, footer.container {
 
 section {
   padding-top: 50px;
+
+  h2 {
+    font-family: @sectionHeaderFont;
+    color: @mbuOrange;
+
+    small {
+      color: #222;
+    }
+  }
 }
 
 .page-header {
@@ -315,13 +324,6 @@ section.jumbotron.main {
 }
 
 section#creations {
-  h2 {
-    font-family: @sectionHeaderFont;
-
-    small {
-      color: #222;
-    }
-  }
 
   // ever clever aspect ratio
   // http://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio
@@ -374,13 +376,6 @@ section#creations {
 }
 
 section#resume {
-  h2 {
-    font-family: @sectionHeaderFont;
-
-    small {
-      color: #222;
-    }
-  }
 
   .resume-view-container {
     width: 100%;
@@ -407,13 +402,6 @@ section#resume {
 }
 
 section#blog {
-  h2 {
-    font-family: @sectionHeaderFont;
-
-    small {
-      color: #222;
-    }
-  }
 
   .blog-updates-container {
 
@@ -447,13 +435,6 @@ section#blog {
 }
 
 section#photos {
-  h2 {
-    font-family: @sectionHeaderFont;
-
-    small {
-      color: #222;
-    }
-  }
 
   .photos-slider-container {
     width: 100%;
@@ -667,10 +648,7 @@ div#tux-egg {
     }
   }
 
-  section#creations h2,
-  section#resume h2,
-  section#blog h2,
-  section#photos h2 {
+  section h2 {
     small {
       display: block;
     }

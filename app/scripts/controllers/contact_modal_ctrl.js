@@ -37,7 +37,7 @@ function ($rootScope, $scope, $window, $http, $log, uiGmapGoogleMapApi) {
     $scope.$apply();
   });
 
-  $log.info('ContactModalCtrl initialized');
+  $log.info('ContactModalCtrl:initialized');
 }];
 
 module.exports = ContactModalCtrl;

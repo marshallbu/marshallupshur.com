@@ -12,7 +12,7 @@ var ResumeCtrl = ['$scope', '$http', '$log',
     resumeViewer.load();
     $scope.showResumeContainer = true;
 
-    $log.info('ResumeCtrl initialized');
+    $log.info('ResumeCtrl:initialized');
   }
 ];
 
