@@ -1,6 +1,7 @@
 var lodash = require('lodash'),
-    rAF = require('./rAF'),
+    rAF = require('../vendor/rAF'),
     jquery = require('jquery'),
+    jqueryEasing = require('jquery.easing/js/jquery.easing.min.js'),
     scrollTo = require('scrollTo'),
     bootstrap = require('bootstrap'),
     angular = require('angular'),
@@ -11,6 +12,7 @@ var lodash = require('lodash'),
     angularGoogleMaps = require('angularGoogleMaps'),
     tweenLite = require('gsap/src/minified/TweenLite.min.js'),
     easePack = require('gsap/src/minified/easing/EasePack.min.js'),
+    angularFamous = require('angularFamous'),
     viewer = require('viewer');
 
 // lodash.noConflict();

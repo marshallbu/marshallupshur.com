@@ -5,6 +5,7 @@
 @import "mixins";
 @import "custom-fonts";
 @import (less) "../../../bower_modules/viewer/dist/crocodoc.viewer.min.css";
+@import (less) "../../../bower_modules/famous-angular/dist/famous-angular.min.css";
 
 @bkgColor: #fff;
 @textColor: #313131;
@@ -494,6 +495,37 @@ section#photos {
         }
 
       }
+    }
+
+  }
+}
+
+section#experiments {
+
+  .experiments-container {
+    width: 100%;
+    position: relative;
+    /* border: 1px solid #eee; */
+    /* .box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26)); */
+    .MaterialBoxShadow();
+
+    &:after {
+      /* padding-bottom: 66.666%; */ // 3:2
+      padding-bottom: 56.25%; // 16:9
+      display: block;
+      content: '';
+    }
+
+    .experiments {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      overflow: hidden;
+
+
     }
 
   }

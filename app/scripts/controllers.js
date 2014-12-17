@@ -5,6 +5,7 @@ var angular = require('angular'),
     ResumeCtrl = require('./controllers/resume_ctrl'),
     PhotosCtrl = require('./controllers/photos_ctrl'),
     FooterCtrl = require('./controllers/footer_ctrl'),
+    ExperimentsCtrl = require('./controllers/experiments_ctrl'),
     ContactModalCtrl = require('./controllers/contact_modal_ctrl');
 
 var controllers = angular.module('myApp.controllers', ['myApp.services']);
@@ -37,6 +38,10 @@ controllers.controller('PhotosCtrl', ['$scope', function($scope) {
 
 controllers.controller('FooterCtrl', ['$scope', function($scope) {
   angular.injector(['ng', 'myApp.services']).invoke(FooterCtrl, this, {'$scope': $scope});
+}]);
+
+controllers.controller('ExperimentsCtrl', ['$scope', function($scope) {
+  angular.injector(['ng', 'myApp.services']).invoke(ExperimentsCtrl, this, {'$scope': $scope});
 }]);
 
 controllers.controller('ContactModalCtrl', ['$scope', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi) {

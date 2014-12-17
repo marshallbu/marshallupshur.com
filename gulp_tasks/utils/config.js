@@ -20,6 +20,9 @@ module.exports = {
         './app/scripts/**/*.js',
         '!./app/scripts/vendor/**'
       ],
+      vendorScripts: [
+        './app/scripts/vendor/**'
+      ],
       styles: [
         './app/styles/less/main.less',
         // '!./app/styles/**/*.less'
@@ -62,6 +65,7 @@ module.exports = {
       styles: distRootDir + 'mincss/',
       font: distRootDir + 'fonts/',
       scripts: distRootDir + 'minjs/',
+      vendorScripts: distRootDir + 'vendor/',
       json: distRootDir + 'json/',
       config: distRootDir + 'config/',
       images: distRootDir + 'images/',

@@ -39,6 +39,7 @@ module.exports = {
       angularSanitize: 'angular-sanitize/angular-sanitize.min',
       angularTranslate: 'angular-translate/angular-translate.min',
       angularGoogleMaps: 'angular-google-maps/dist/angular-google-maps.min',
+      angularFamous: 'famous-angular/dist/famous-angular.min',
       viewer: "viewer/dist/crocodoc.viewer"
     }
   },
@@ -51,7 +52,7 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery',
+      jQuery: 'jquery'
     }),
     new webpack.optimize.DedupePlugin()
 

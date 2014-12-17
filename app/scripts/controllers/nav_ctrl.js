@@ -6,10 +6,11 @@ var NavCtrl = ['$scope', '$log', '$window',
       e.preventDefault();
 
       function afterScroll() {
+        $log.info('NavCtrl:afterScroll');
         
       }
 
-      $('body').stop().scrollTo(anchor, 500, { onAfter: afterScroll });
+      $('body').stop().scrollTo(anchor, 500, { easing: 'easeOutCubic', onAfter: afterScroll });
 
       // TODO: this is dirty, Bootstrap should provide a better way to check if
       // navbar is in hamburger mode

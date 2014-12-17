@@ -17,7 +17,8 @@ var app = angular.module('myApp', [
   'myApp.services',
   'myApp.directives',
   'myApp.controllers',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'famous.angular'
   // 'adaptive.speech'
 ])
 .config(routes)

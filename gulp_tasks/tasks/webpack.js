@@ -2,14 +2,14 @@ var gulp = require('gulp'),
     isProduction = process.env.NODE_ENV === 'production',
     plugins = require('gulp-load-plugins')(),
     webpack = require('webpack'),
-    webpackConfig = require("./../../webpack.config.js");
+    webpackConfig = require('./../../webpack.config.js');
     config = require('./../utils/config');
 
-gulp.task("webpack:build", function(callback) {
+gulp.task('webpack:build', function(callback) {
   var myConfig = Object.create(webpackConfig);
   var webpackCallback = function(err, stats) {
-    if(err) throw new plugins.util.PluginError("webpack:build", err);
-    plugins.util.log("[webpack:build]", stats.toString({
+    if(err) throw new plugins.util.PluginError('webpack:build', err);
+    plugins.util.log('[webpack:build]', stats.toString({
       colors: true
     }));
   };

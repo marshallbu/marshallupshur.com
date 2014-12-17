@@ -74,6 +74,8 @@
     "angularSanitize": "./bower_modules/angular-sanitize/angular-sanitize.min.js",
     "angularTranslate": "./bower_modules/angular-translate/angular-translate.min",
     "angularGoogleMaps": "./bower_modules/angular-google-maps/dist/angular-google-maps.min",
+    "famous": "./bower_modules/famous/dist/famous-global.min",
+    "angularFamous": "./bower_modules/famous-angular/dist/famous-angular.min",
     "viewer": "./bower_modules/viewer/dist/crocodoc.viewer.js"
   }
 }
