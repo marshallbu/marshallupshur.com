@@ -39,12 +39,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-right" id="mbu_main_navbar">
         <ul class="nav navbar-nav">
-          <li><a href="#about" tabindex="0" ng-click="scroll('#about')" title="About">About</a></li>
-          <li><a href="#creations" tabindex="0" ng-click="scroll('#creations')" title="Creations">Creations</a></li>
-          <li><a href="#resume" tabindex="0" ng-click="scroll('#resume')" title="Resume">Resume</a></li>
-          <li><a href="#blog" tabindex="0" ng-click="scroll('#blog')" title="Blog">Blog</a></li>
-          <li><a href="#photos" tabindex="0" ng-click="scroll('#photos')" title="Photos"><i class="fa fa-camera-retro"></i></a></li>
-          <li><a href="#experiments" tabindex="0" ng-click="scroll('#experiments')" title="Experiments"><i class="fa fa-flask"></i></a></li>
+          <li><a href="#about" tabindex="0" ng-click="scroll('#about', $event)" title="About">About</a></li>
+          <li><a href="#creations" tabindex="0" ng-click="scroll('#creations', $event)" title="Creations">Creations</a></li>
+          <li><a href="#resume" tabindex="0" ng-click="scroll('#resume', $event)" title="Resume">Resume</a></li>
+          <li><a href="#blog" tabindex="0" ng-click="scroll('#blog', $event)" title="Blog">Blog</a></li>
+          <li><a href="#photos" tabindex="0" ng-click="scroll('#photos', $event)" title="Photos"><i class="fa fa-camera-retro"></i></a></li>
+          <li><a href="#experiments" tabindex="0" ng-click="scroll('#experiments', $event)" title="Experiments"><i class="fa fa-flask"></i></a></li>
           <li><a href="#" data-toggle="modal" data-target="#contact-modal" tabindex="0" title="Contact"><i class="fa fa-envelope"></i></a></li>
           <li class="social"><a target="_self" href="https://github.com/marshallbu" title="github"><i class="fa fa-github-alt"></i></a></li>
           <li class="social"><a target="_self" href="http://www.linkedin.com/in/marshallupshur" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
@@ -183,6 +183,13 @@
       <section id="experiments">
         <div class="page-header">
           <h2 class="">Experiments <small>tinker tinker tinker...</small></h1>
+        </div>
+        <div class="experiments-container">
+          <div class="experiments">
+            <fa-app ng-controller="ExperimentsCtrl">
+              <!-- other fa- scene graph components -->
+            </fa-app>
+          </div>
         </div>
       </section>
 
