@@ -16,13 +16,13 @@ flaskBubble = ['$timeout', '$log', function ($timeout, $log) {
         // on animation end, schedule another bubble at a random time
         flask.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
           flask.removeClass(lastUsed);
-          --count;
+          // --count;
           // $log.debug('count: ', count);
-          if (count > 0) {
+          // if (count > 0) {
             // $log.debug(rand*1000);
             // re-bubble every 1-15 seconds
             $timeout(bubble, (Math.floor(Math.random()*10)+1)*1000);
-          }
+          // }
         });
 
         // pick random animation to use

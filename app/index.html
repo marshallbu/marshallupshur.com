@@ -114,6 +114,9 @@
           </div>
           <div id="resume-view" class="" ng-show="showResumeContainer" ng-cloak>
             @@include('./partials/resume_template.html')
+            <div class="scroll-blocker" ng-hide="scrollBlockerDisabled" ng-click="disableScrollBlocker()">
+              <div class="scroll-blocker-title">click to view</div>
+            </div>
           </div> <!-- resume-view -->
         </div> <!-- resume-view-container -->
       </section>
