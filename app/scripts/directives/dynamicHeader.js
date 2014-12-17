@@ -1,23 +1,37 @@
-var width, height, largeHeader, canvas, context, points, target, animateHeader = true;
+var width, height, dynHeader, canvas, context, points, target, animateHeader = true;
 
-function initHeader() {
-  width = window.innerWidth;
-  height = window.innerHeight;
-  target = { x: width/2, y: height/2 };
+/**
+* Circle 'class'
+* @param {Object} pos   position object
+* @param {Number} rad   radius of circle
+* @param {String} color rgb color
+*/
+function Circle(pos,rad,color) {
+  var self = this;
 
-  dynHeader = document.getElementById('dynamic-header');
-  // dynHeader.style.height = height + 'px';
+  // constructor
+  (function() {
+    self.pos = pos || null;
+    self.radius = rad || null;
+    self.color = color || null;
+  })();
 
-  canvas = document.getElementById('dynamic-header-canvas');
-  canvas.width = width;
-  canvas.height = height;
-  context = canvas.getContext('2d');
+  self.draw = function() {
+    if (!self.active) { return; }
+    context.beginPath();
+    context.arc(self.pos.x, self.pos.y, self.radius, 0, 2 * Math.PI, false);
+    context.fillStyle = 'rgba(156,217,249,' + self.active + ')';
+    context.fill();
+  };
+}
 
-  // generate our points
-  generatePoints();
-
-  // visually connect points
-  linkPoints();
+/**
+* utility function to get distance between 2 points
+* @param {Object} p1
+* @param {Object} p2
+*/
+function getDistance(p1, p2) {
+  return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
 }
 
 /**
@@ -82,9 +96,60 @@ function linkPoints() {
   }
 }
 
+function initHeader() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  target = { x: width/2, y: height/2 };
+
+  dynHeader = document.getElementById('dynamic-header');
+  // dynHeader.style.height = height + 'px';
+
+  canvas = document.getElementById('dynamic-header-canvas');
+  canvas.width = width;
+  canvas.height = height;
+  context = canvas.getContext('2d');
+
+  // generate our points
+  generatePoints();
+
+  // visually connect points
+  linkPoints();
+}
+
 /**
- * animation function to run on each animation frame
+ * shift points to random locations using a tween
+ * @param {object} p   a point
  */
+function shiftPoint(p) {
+  TweenLite.to(p, 1+1*Math.random(), {
+      x: p.originX-50+Math.random()*100,
+      y: p.originY-50+Math.random()*100,
+      ease: Circ.easeInOut,
+      onComplete: function() {
+        shiftPoint(p);
+      }
+    }
+  );
+}
+
+/**
+ * draw line between point and closest neighbors
+ * @param {Object} p   a point
+ */
+function drawLines(p) {
+  if (!p.active) { return; }
+  for (var i in p.closest) {
+    context.beginPath();
+    context.moveTo(p.x, p.y);
+    context.lineTo(p.closest[i].x, p.closest[i].y);
+    context.strokeStyle = 'rgba(156,217,249,' + p.active + ')';
+    context.stroke();
+  }
+}
+
+/**
+* animation function to run on each animation frame
+*/
 function animate() {
   if (animateHeader) {
     context.clearRect(0,0,width,height);
@@ -109,71 +174,6 @@ function animate() {
     }
   }
   requestAnimationFrame(animate);
-}
-
-/**
- * shift points to random locations using a tween
- * @param {object} p   a point
- */
-function shiftPoint(p) {
-  TweenLite.to(p, 1+1*Math.random(), {
-      x: p.originX-50+Math.random()*100,
-      y: p.originY-50+Math.random()*100,
-      ease: Circ.easeInOut,
-      onComplete: function() {
-        shiftPoint(p);
-      }
-    }
-  );
-}
-
-/**
- * draw line between point and closest neighbors
- * @param {Object} p   a point
- */
-function drawLines(p) {
-  if (!p.active) return;
-  for (var i in p.closest) {
-    context.beginPath();
-    context.moveTo(p.x, p.y);
-    context.lineTo(p.closest[i].x, p.closest[i].y);
-    context.strokeStyle = 'rgba(156,217,249,' + p.active + ')';
-    context.stroke();
-  }
-}
-
-/**
- * Circle 'class'
- * @param {Object} pos   position object
- * @param {Number} rad   radius of circle
- * @param {String} color rgb color
- */
-function Circle(pos,rad,color) {
-  var self = this;
-
-  // constructor
-  (function() {
-    self.pos = pos || null;
-    self.radius = rad || null;
-    self.color = color || null;
-  })();
-
-  self.draw = function() {
-    if (!self.active) return;
-    context.beginPath();
-    context.arc(self.pos.x, self.pos.y, self.radius, 0, 2 * Math.PI, false);
-    context.fillStyle = 'rgba(156,217,249,' + self.active + ')';
-    context.fill();
-  };
-}
-
-/**
- * utility function to get distance between 2 points
- * @param {Object} p1
- * @param {Object} p2
- */
-function getDistance(p1, p2) {
-  return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
 }
 
 /**
@@ -240,7 +240,7 @@ function addListeners() {
  * define dynamic header directive
  *
  */
-dynamicHeader = ['$timeout', '$log', function ($timeout, $log) {
+var dynamicHeader = ['$timeout', '$log', function ($timeout, $log) {
   return {
     restrict: 'A',
     link: function postLink(scope, element, attrs, controller) {

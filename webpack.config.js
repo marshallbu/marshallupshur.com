@@ -40,7 +40,7 @@ module.exports = {
       angularTranslate: 'angular-translate/angular-translate.min',
       angularGoogleMaps: 'angular-google-maps/dist/angular-google-maps.min',
       angularFamous: 'famous-angular/dist/famous-angular.min',
-      viewer: "viewer/dist/crocodoc.viewer"
+      viewer: "viewer/dist/crocodoc.viewer.min"
     }
   },
   externals: [

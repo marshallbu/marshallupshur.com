@@ -3,7 +3,7 @@
  * define flask bubble directive
  *
  */
-flaskBubble = ['$timeout', '$log', function ($timeout, $log) {
+var flaskBubble = ['$timeout', '$log', function ($timeout, $log) {
   return {
     restrict: 'A',
     link: function postLink(scope, element, attrs, controller) {

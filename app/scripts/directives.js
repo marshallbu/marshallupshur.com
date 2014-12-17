@@ -35,7 +35,7 @@ directives.directive('onFinishRender', ['$timeout', '$log', function ($timeout, 
       if (scope.$last === true) {
         $log.log('onFinishRender: ', attrs.onFinishRender);
         $timeout(function () {
-          scope.$emit(attrs.onFinishRender, {"element": element});
+          scope.$emit(attrs.onFinishRender, {'element': element});
         }, 0);
       }
     }

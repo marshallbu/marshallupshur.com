@@ -8,8 +8,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Marshall Upshur - Hi!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Me in a nutshell">
+  <meta name="author" content="Marshall Upshur">
+  <meta property="og:title" content="Marshall Upshur">
+  <meta property="og:site_name" content="Marshall Upshur">
+  <meta property="og:url" content="http://www.marshallupshur.com">
+  <meta property="og:image" content="http://www.marshallupshur.com/images/og_image.jpg" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="450" />
+  <meta property="og:description" content="Me in a nutshell">
+  <meta property="fb:app_id" content="">
+  <meta property="og:type" content="website">
 
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="author" href="humans.txt" />
@@ -72,7 +81,9 @@
           <h1>Me <small>in a nutshell</small></h1>
         </div>
         <div class="portrait pull-right">
-          <div class="portrait-image"></div>
+          <div class="portrait-image">
+            <img ng-src="images/profiles/bitstrip_001.jpg"/>
+          </div>
         </div>
         <p>Hi, I'm a progressive web technologist focused on creating beautiful, easy to use, goal oriented web applications using cutting edge technologies across all devices.  I am not just a "web developer", I love working in the full stack. Making sure that some pesky Javascript is not causing too many repaints, and that some RESTful service is performing at scale is my passion.</p>
 
@@ -202,7 +213,7 @@
   <footer ng-controller="FooterCtrl">
     <div class="container">
       <p class="pull-left">
-        <i class="fa fa-html5"></i>&nbsp;<i class="fa fa-css3"></i>&nbsp;<i class="fa fa-apple"></i><span class="site-version">version<!-- @echo APP_VERSION --></span>
+        <i class="fa fa-html5"></i>&nbsp;<i class="fa fa-css3"></i>&nbsp;<i class="fa fa-apple"></i><span class="site-version">v<!-- @echo APP_VERSION --></span>
       </p>
       <p class="pull-right">
         &copy;<!-- @echo COPY_YEAR --> Marshall Upshur | <a href="http://mbucreations.com" tabindex="0" class="btn-link" target="_self" title="Go to mbu Creations">mbu Creations</a>

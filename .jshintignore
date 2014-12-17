@@ -1,0 +1,3 @@
+node_modules/**.js
+bower_modules/**.js
+app/scripts/vendor/**.js

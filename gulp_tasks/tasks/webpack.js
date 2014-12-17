@@ -17,9 +17,17 @@ gulp.task('webpack:build', function(callback) {
   if (isProduction) {
     myConfig.plugins = myConfig.plugins.concat(
       new webpack.optimize.UglifyJsPlugin({
-          // mangle: false
-      })
-      // new webpack.optimize.OccurenceOrderPlugin()
+        // http://lisperator.net/uglifyjs/compress
+        compress: {
+          warnings: false
+        },
+        mangle: false,
+        exclude: [
+          // /libs\.min\.js($|\?)/i
+        ]
+      }),
+      new webpack.optimize.OccurenceOrderPlugin()
+      // new webpack.optimize.DedupePlugin()
     );
   }
 

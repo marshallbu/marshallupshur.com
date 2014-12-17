@@ -1,4 +1,5 @@
-var app = require('app');
+var app = require('app'),
+    _ = require('lodash');
 
 var PhotosCtrl = ['$scope', '$http', '$log', 'FeedService',
   function ($scope, $http, $log, Feed) {
@@ -30,7 +31,7 @@ var PhotosCtrl = ['$scope', '$http', '$log', 'FeedService',
         $scope.showPhotosError = true;
       });
 
-    $scope.$on('startCarousel', function(ngRepeatFinishedEvent) {
+    $scope.$on('startCarousel', function(/*ngRepeatFinishedEvent*/) {
       $log.log('PhotosCtrl:startCarousel photos loaded');
       $('#photos-slider').carousel();
     });

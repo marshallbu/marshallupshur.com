@@ -1,6 +1,6 @@
 {
   "name": "identity",
-  "version": "0.9.23",
+  "version": "0.9.26",
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
@@ -76,6 +76,6 @@
     "angularGoogleMaps": "./bower_modules/angular-google-maps/dist/angular-google-maps.min",
     "famous": "./bower_modules/famous/dist/famous-global.min",
     "angularFamous": "./bower_modules/famous-angular/dist/famous-angular.min",
-    "viewer": "./bower_modules/viewer/dist/crocodoc.viewer.js"
+    "viewer": "./bower_modules/viewer/dist/crocodoc.viewer.min.js"
   }
 }
