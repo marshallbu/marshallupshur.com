@@ -1,11 +1,12 @@
-@import "../../../bower_modules/bootstrap/less/bootstrap";
+/* @import "../../../bower_modules/bootstrap/less/bootstrap"; */
+@import "custom-bootstrap";
 @import "../../../bower_modules/font-awesome/less/font-awesome";
 @import "../../../bower_modules/lesshat/build/lesshat";
 @import (less) "../../../bower_modules/animate.css/animate.min.css";
 @import "mixins";
 @import "custom-fonts";
 @import (less) "../../../bower_modules/viewer/dist/crocodoc.viewer.min.css";
-@import (less) "../../../bower_modules/famous-angular/dist/famous-angular.min.css";
+/* @import (less) "../../../bower_modules/famous-angular/dist/famous-angular.min.css"; */
 
 @bkgColor: #fff;
 @textColor: #313131;
@@ -225,7 +226,7 @@ div#dynamic-header {
     text-align: center;
     letter-spacing: .05em;
     /* line-height: 1.5em; */
-    /* .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.45)) */;
+    /* .text-shadow(0em, 0em, 0.071em, rgba(0, 0, 0, 0.45)); */
 
     p {
 
@@ -522,10 +523,44 @@ section#experiments {
       bottom: 0;
       left: 0;
       right: 0;
-      background: #fff;
+      background: #fa5c4f;
       overflow: hidden;
 
+      .exp-title {
+        background: none transparent;
+        position: absolute;
+        width: 100%;
+        padding: 30px 10px;
+        max-width: 1170px;
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        color: white;
+        font-family: CenturyGothicStd;
+        font-weight: 300;
+        font-size: 4em;
+        text-align: center;
+        letter-spacing: .05em;
 
+        #exp-flask {
+          .text-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.26));
+        }
+      }
+    }
+
+    #famo-experiment {
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
     }
 
   }

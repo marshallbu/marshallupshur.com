@@ -1,6 +1,6 @@
 
-var ExperimentsCtrl = ['$scope', '$log', '$window',
-function ($scope, $log, $window) {
+var ExperimentsCtrl = ['$scope', '$log', '$window', '$timeout',
+function ($scope, $log, $window, $timeout) {
 
 
 

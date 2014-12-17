@@ -1,6 +1,7 @@
 var angular = require('angular'),
     services = require('services'),
-    dynamicHeader = require('directives/dynamicHeader');
+    dynamicHeader = require('directives/dynamicHeader'),
+    flaskBubble = require('directives/flaskBubble');
 
 var directives = angular.module('myApp.directives', ['myApp.services']);
 
@@ -12,9 +13,13 @@ directives.directive('appVersion', ['version', function(version) {
 
 /**
  * controls the dynamic header coolness
- *
  */
 directives.directive('dynamicHeader', dynamicHeader);
+
+/**
+ * makes the flask bubble
+ */
+directives.directive('flaskBubble', flaskBubble);
 
 /**
  * Directive to help emit when an ngRepeat directive is complete, allowing
