@@ -7,7 +7,7 @@ var NavCtrl = ['$scope', '$log', '$window',
 
       function afterScroll() {
         $log.info('NavCtrl:afterScroll');
-        
+
       }
 
       $('body').stop().scrollTo(anchor, 500, { easing: 'easeOutCubic', onAfter: afterScroll });

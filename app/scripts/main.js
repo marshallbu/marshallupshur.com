@@ -1,5 +1,4 @@
-var $ = require('jquery'),
-    angular = require('angular'),
+var angular = require('angular'),
     app = require('app');
 
 window.name = 'NG_DEFER_BOOTSTRAP!';

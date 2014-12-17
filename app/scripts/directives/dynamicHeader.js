@@ -1,3 +1,4 @@
+/* global TweenLite, Circ */
 var width, height, dynHeader, canvas, context, points, target, animateHeader = true;
 
 /**
