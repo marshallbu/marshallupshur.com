@@ -76,7 +76,7 @@ module.exports = {
       app: 'app.min.js',
       libs: 'libs.min.js',
       bundle: '[name].min.js',
-      resume: 'downloads/Marshall_Upshur_2014a.pdf'
+      resume: 'downloads/Marshall_Upshur_2015a.pdf'
     }
   },
 

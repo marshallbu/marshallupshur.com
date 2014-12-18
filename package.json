@@ -1,6 +1,6 @@
 {
   "name": "identity",
-  "version": "0.9.29",
+  "version": "0.9.30",
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/marshallbu/marshallupshur.com",
   "devDependencies": {
+    "box-view": "^1.2.0",
     "del": "^1.1.0",
     "exports-loader": "^0.6.2",
     "expose-loader": "^0.6.0",
