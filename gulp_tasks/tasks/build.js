@@ -6,7 +6,7 @@ gulp.task('build', ['prep-build'], function (callback) {
     'bower',
     ['images', 'fonts', 'extras'],
     ['minhtml', 'mincss', 'lint'],
-    ['webpack:build'],
+    ['vendor', 'webpack:build'],
     callback
   );
 });
