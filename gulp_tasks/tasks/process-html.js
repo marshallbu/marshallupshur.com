@@ -13,6 +13,7 @@ gulp.task('process-html', ['partial-compile'], function() {
         'COPY_YEAR': moment().format('YYYY'),
         'APP_VERSION': pkgjson.version,
         'TARGET': process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
+        'OG_URL': process.env.NODE_ENV === 'production' ? 'www' : 'dev100',
         DEBUG: true
       }
     }))
