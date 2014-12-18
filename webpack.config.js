@@ -32,7 +32,6 @@ module.exports = {
     alias: {
       jquery: 'jquery/dist/jquery.min',
       lodash: 'lodash/dist/lodash.min',
-      bootstrap: 'bootstrap/dist/js/bootstrap.min',
       angular: 'angular/angular.min',
       angularResource: 'angular-resource/angular-resource.min',
       angularRoute: 'angular-route/angular-route.min',

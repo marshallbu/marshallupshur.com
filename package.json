@@ -1,6 +1,6 @@
 {
   "name": "identity",
-  "version": "0.9.26",
+  "version": "0.9.29",
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "gulp-imagemin": "^2.0.0",
     "gulp-jshint": "^1.9.0",
     "gulp-less": "^2.0.1",
-    "gulp-livereload": "^2.1.1",
+    "gulp-livereload": "^3.0.2",
     "gulp-load-plugins": "^0.8.0",
     "gulp-minify-css": "^0.3.7",
     "gulp-minify-html": "^0.1.7",
@@ -67,7 +67,6 @@
     "jquery": "./bower_modules/jquery/dist/jquery.min.js",
     "scrollTo": "./bower_modules/jquery.scrollTo/jquery.scrollTo.min.js",
     "lodash": "./bower_modules/lodash/dist/lodash.min.js",
-    "bootstrap": "./bower_modules/bootstrap/dist/js/bootstrap.min.js",
     "angular": "./bower_modules/angular/angular.min.js",
     "angularResource": "./bower_modules/angular-resource/angular-resource.min.js",
     "angularRoute": "./bower_modules/angular-route/angular-route.min.js",

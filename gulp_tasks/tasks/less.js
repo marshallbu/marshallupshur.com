@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 
 gulp.task('less', function () {
   return gulp.src(config.src.glob.styles)
+    // .pipe(plugins.debug(({verbose: true})))
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.less({
         paths: [ path.join(__dirname) ]
