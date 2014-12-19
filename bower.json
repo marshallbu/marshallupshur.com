@@ -1,6 +1,6 @@
 {
   "name": "mbu-identity",
-  "version": "0.9.32",
+  "version": "0.9.33",
   "main": "main.js",
   "ignore": [
     "**/.*",
