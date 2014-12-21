@@ -16,6 +16,8 @@ $(document).ready(function onDomReady() {
   $('[data-spy="scroll"]').each(function () {
     $(this).scrollspy('refresh');
   });
+
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {

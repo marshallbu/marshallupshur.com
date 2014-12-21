@@ -21,7 +21,7 @@ var flaskBubble = ['$timeout', '$log', function ($timeout, $log) {
           // if (count > 0) {
             // $log.debug(rand*1000);
             // re-bubble every 1-15 seconds
-            $timeout(bubble, (Math.floor(Math.random()*10)+1)*1000);
+            $timeout(bubble, (Math.floor(Math.random()*6)+1)*1000);
           // }
         });
 
