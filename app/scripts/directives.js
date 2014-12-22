@@ -1,7 +1,8 @@
 var angular = require('angular'),
     services = require('services'),
     dynamicHeader = require('directives/dynamicHeader'),
-    flaskBubble = require('directives/flaskBubble');
+    flaskBubble = require('directives/flaskBubble'),
+    resumeEgg = require('directives/resumeEgg');
 
 var directives = angular.module('myApp.directives', ['myApp.services']);
 
@@ -20,6 +21,11 @@ directives.directive('dynamicHeader', dynamicHeader);
  * makes the flask bubble
  */
 directives.directive('flaskBubble', flaskBubble);
+
+/**
+* makes a resume easter egg ;)
+*/
+directives.directive('resumeEgg', resumeEgg);
 
 /**
  * Directive to help emit when an ngRepeat directive is complete, allowing

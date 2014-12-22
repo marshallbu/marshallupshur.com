@@ -1,0 +1,24 @@
+.snackbar {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
+  font-size: 14px;
+  border-radius: 2px;
+  .MaterialBoxShadow(2);
+  padding: 14px 15px;
+  margin-bottom: 20px;
+  height: auto;
+  opacity: 1;
+  display: none;
+  &:extend(.animated);
+}
+.snackbar.snackbar-opened {
+  display: block;
+  &:extend(.bounceInUp);
+}
+.snackbar.snackbar-closed {
+  display: block;
+  &:extend(.bounceOutDown);
+}
+.snackbar.toast {
+  border-radius: 200px;
+}
