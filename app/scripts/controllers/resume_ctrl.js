@@ -7,7 +7,7 @@ var ResumeCtrl = ['$scope', '$http', '$log',
     $scope.scrollBlockerDisabled = false;
 
     var resumeViewer = viewer.createViewer('#resume-view .viewer', {
-      url: 'https://view-api.box.com/1/sessions/c50295f8aed5422ca1a13a0483688c00/assets/',
+      url: 'https://view-api.box.com/1/sessions/1b83331f34674580a888e7660d5761a7/assets/',
       // layout: viewer.LAYOUT_PRESENTATION
     });
     resumeViewer.load();
