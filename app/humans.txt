@@ -3,13 +3,13 @@ Front End Engineer: Marshall Upshur
 Contact: me [at] marshallupshur.com
 Twitter: @mbuCreations.
 Location: Portland.
-         
-/* THANKS */                            
+
+/* THANKS */
 Name: name or url
-                
+
 /* SITE */
-                            
-Last update: YYYY/MM/DD                             
-Standards: HTML5, CSS3      
-Components: Modernizr, jQuery, Angular, Bootstrap
-Software: Sublime Text, gulp, node, npm, bower, browserify
+
+Last update: 2015/06/01
+Standards: HTML5, CSS3
+Components: React, Bootstrap
+Software: gulp, node, bower, webpack, babel
