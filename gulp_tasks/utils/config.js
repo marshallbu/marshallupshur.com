@@ -1,6 +1,6 @@
 // Paths relative to 'gulpfile.js'
 var sourceRootDir = './app/',
-    distRootDir = './build/';
+    distRootDir = './dist/';
 
 module.exports = {
   sourceRoot: sourceRootDir,

@@ -1,34 +1,21 @@
-var angular = require('angular'),
-    routes = require('routes'),
-    // translate = require('translate'),
-    filters = require('filters'),
-    services = require('services'),
-    directives = require('directives'),
-    controllers = require('controllers');
+var React = require('react');
+var Router = require('react-router');
+var RouteHandler = Router.RouteHandler;
 
-// Declare app level module
-var app = angular.module('myApp', [
-  // 'myApp.config',
-  'ngRoute',
-  'ngResource',
-  'ngSanitize',
-  // 'pascalprecht.translate',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
-  'myApp.controllers',
-  'uiGmapgoogle-maps'
-  // 'famous.angular'
-  // 'adaptive.speech'
-])
-.config(routes)
-// .config(translate)
-.config(function(uiGmapGoogleMapApiProvider) {
-  uiGmapGoogleMapApiProvider.configure({
-    key: 'AIzaSyD1QWpO55KK2zhjKZ2gA9vnBie6GZvrqRE',
-    v: '3.18',
-    libraries: 'geometry,visualization,drawing'
-  });
+var App = React.createClass({
+
+    render() {
+
+        return (
+            <div id="content">
+                Oh hai!
+
+                <div className="container">
+                    <RouteHandler />
+                </div>
+            </div>
+        );
+    }
 });
 
-module.exports = app;
+module.exports = App;

@@ -1,7 +1,7 @@
-var webpack = require('webpack'),
-    isProduction = process.env.NODE_ENV === 'production',
-    path = require("path"),
-    config = require('./gulp_tasks/utils/config.js');
+var webpack = require('webpack');
+var isProduction = process.env.NODE_ENV === 'production';
+var path = require('path');
+var config = require('./gulp_tasks/utils/config.js');
 
 module.exports = {
   debug: true,
@@ -11,35 +11,25 @@ module.exports = {
     libs: config.src.file.lib,
   },
   output: {
-		path: path.join(__dirname, config.distRoot),
-		publicPath: config.distRoot,
-		filename: config.dist.file.bundle,
-		chunkFilename: '[chunkhash].js'
-	},
+    path: path.join(__dirname, config.distRoot),
+    publicPath: config.distRoot,
+    filename: config.dist.file.bundle,
+    chunkFilename: '[chunkhash].js'
+  },
   module: {
     preLoaders: [
-      { test: /\.js$/, loader: "source-map" }
+      { test: /\.js$/, loader: 'source-map' }
     ],
-  	loaders: [
+    loaders: [
       { test: /\.json$/, loader: 'json' },
-      { test: /[\/]angular\.js$/, loader: 'exports?angular' },
-      { test: /[\/]angular\.min\.js$/, loader: 'exports?angular' },
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader'}
     ]
   },
   resolve: {
     modulesDirectories: ['app/scripts', 'node_modules', 'bower_modules'],
     // packageAlias: false,
     alias: {
-      jquery: 'jquery/dist/jquery.min',
-      lodash: 'lodash/dist/lodash.min',
-      angular: 'angular/angular.min',
-      angularResource: 'angular-resource/angular-resource.min',
-      angularRoute: 'angular-route/angular-route.min',
-      angularSanitize: 'angular-sanitize/angular-sanitize.min',
-      angularTranslate: 'angular-translate/angular-translate.min',
-      angularGoogleMaps: 'angular-google-maps/dist/angular-google-maps.min',
-      angularFamous: 'famous-angular/dist/famous-angular.min',
-      viewer: "viewer/dist/crocodoc.viewer.min"
+
     }
   },
   externals: [

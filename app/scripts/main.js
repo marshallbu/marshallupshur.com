@@ -1,31 +1,43 @@
-var angular = require('angular'),
-    app = require('app');
+var React = require('react');
+var Router = require('react-router');
+var routes = require('./routes');
 
-// window.name = 'NG_DEFER_BOOTSTRAP!';
+var Main = {
+    start() {
+        React.initializeTouchEvents(true);
 
-// var $html = angular.element(document.getElementsByTagName('html')[0]);
+        Router.run(routes, Router.HashLocation, (Handler) => {
+            React.render(
+                <Handler />,
+                document.body
+            );
+        });
+    }
+};
 
-// angular.element().ready(function onAngularReady() {
-//   // angular.resumeBootstrap([app.name]);
+module.exports = Main;
+
+Main.start();
+
+
+
+// $(document).ready(function onDomReady() {
+//
+//   $('#creations-slider').carousel();
+//
+//   $('[data-spy="scroll"]').each(function () {
+//     $(this).scrollspy('refresh');
+//   });
+//
+//   $('[data-toggle="tooltip"]').tooltip();
 // });
-
-$(document).ready(function onDomReady() {
-
-  $('#creations-slider').carousel();
-
-  $('[data-spy="scroll"]').each(function () {
-    $(this).scrollspy('refresh');
-  });
-
-  $('[data-toggle="tooltip"]').tooltip();
-});
-
-if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-  var msViewportStyle = document.createElement('style');
-  msViewportStyle.appendChild(
-    document.createTextNode(
-      '@-ms-viewport{width:auto!important}'
-    )
-  );
-  document.querySelector('head').appendChild(msViewportStyle);
-}
+//
+// if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+//   var msViewportStyle = document.createElement('style');
+//   msViewportStyle.appendChild(
+//     document.createTextNode(
+//       '@-ms-viewport{width:auto!important}'
+//     )
+//   );
+//   document.querySelector('head').appendChild(msViewportStyle);
+// }
