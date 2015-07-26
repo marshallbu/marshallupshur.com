@@ -11,13 +11,49 @@ var Navigation = React.createClass({
                 { className: '', href: '#creations', title: 'About', value: 'Creations', onSelect: this.scrollTo },
                 { className: '', href: '#resume', title: 'About', value: 'Resume', onSelect: this.scrollTo },
                 { className: '', href: '#blog', title: 'About', value: 'Blog', onSelect: this.scrollTo },
-                { className: '', href: '#photos', title: 'Photos', value: <i className='fa fa-camera-retro' />, onSelect: this.scrollTo },
-                { className: '', href: '#photos', title: 'Experiments', value: <i className='fa fa-flask' />, onSelect: this.scrollTo },
+                {
+                    className: '',
+                    href: '#photos',
+                    title: 'Photos',
+                    value: <i className='fa fa-camera-retro' />,
+                    onSelect: this.scrollTo
+                },
+                {
+                    className: '',
+                    href: '#experiments',
+                    title: 'Experiments',
+                    value: <i className='fa fa-flask' />,
+                    onSelect: this.scrollTo
+                },
                 { className: '', href: '#', title: 'Contact', value: <i className='fa fa-envelope' /> },
-                { className: 'social', href: 'https://github.com/marshallbu', title: 'github', value: <i className='fa fa-github-alt' /> },
-                { className: 'social', href: 'http://www.linkedin.com/in/marshallupshur', title: 'LinkedIn', value: <i className='fa fa-linkedin' /> },
-                { className: 'social', href: 'http://twitter.com/mbuCreations', title: 'Twitter', value: <i className='fa fa-twitter' /> },
-                { className: 'social', href: 'https://www.facebook.com/marshallbu', title: 'Facebook', value: <i className='fa fa-facebook' /> }
+                {
+                    className: 'social',
+                    href: 'https://github.com/marshallbu',
+                    target: '_self',
+                    title: 'github',
+                    value: <i className='fa fa-github-alt' />
+                },
+                {
+                    className: 'social',
+                    href: 'http://www.linkedin.com/in/marshallupshur',
+                    target: '_self',
+                    title: 'LinkedIn',
+                    value: <i className='fa fa-linkedin' />
+                },
+                {
+                    className: 'social',
+                    href: 'http://twitter.com/mbuCreations',
+                    target: '_self',
+                    title: 'Twitter',
+                    value: <i className='fa fa-twitter' />
+                },
+                {
+                    className: 'social',
+                    href: 'https://www.facebook.com/marshallbu',
+                    target: '_self',
+                    title: 'Facebook',
+                    value: <i className='fa fa-facebook' />
+                }
             ]
         };
     },

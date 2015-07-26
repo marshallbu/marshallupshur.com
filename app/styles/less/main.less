@@ -76,6 +76,14 @@ body {
     font-family: RobotoDraft,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+#app {
+    height: 100%;
+}
+
+#page {
+    height: 100%;
+}
+
 .btn {
     /* border-radius: 0; */
 }
@@ -172,63 +180,14 @@ section {
 
 }
 
-section.jumbotron.main {
-    background-color:transparent;
-    padding-top: 50px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    color: @textColor;
-    // font-size: 18px;
+/**
+ * About section
+ */
+@import "about-section";
 
-    h1 {
-        font-family: @sectionHeaderFont;
-        color: @mbuOrange;
-
-        small {
-            color: #313131;
-        }
-    }
-
-    p {
-        font-size: 1.286em;
-        font-weight: normal;
-        // line-height: 1.6;
-    }
-
-    div.portrait {
-        background: #000;
-        width: 320px;
-        margin-left: 10px;
-        position: relative;
-        /* border: 1px solid #eee; */
-        /* .box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26)); */
-        .MaterialBoxShadow();
-
-        &:after {
-            padding-bottom: 66.666%; // 3:2
-            // padding-bottom: 56.25%; // 16:9
-            display: block;
-            content: '';
-        }
-
-        .portrait-image {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #fff;
-            overflow: hidden;
-
-            img {
-                width: 100%;
-            }
-        }
-
-    }
-}
-
+/**
+ * Creations section
+ */
 section#creations {
 
     // ever clever aspect ratio
@@ -631,25 +590,6 @@ div#tux-egg {
 }
 
 @media (max-width: @screen-xs-max) {
-    div#dynamic-header {
-        background-image: url('@{imgBaseURL}mbu_waterfall_760.jpg');
-    }
-
-    section.jumbotron.main {
-        h1 {
-            small {
-                display: block;
-            }
-        }
-
-        div.portrait {
-            float: none !important;
-            width: 280px;
-            margin-right: auto;
-            margin-left: auto;
-            margin-bottom: 10px;
-        }
-    }
 
     section h2 {
         small {
@@ -676,9 +616,7 @@ div#tux-egg {
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-    div#dynamic-header {
-        background-image: url('@{imgBaseURL}mbu_waterfall_960.jpg');
-    }
+
 
     div.post {
         margin-bottom: 20px;
@@ -687,9 +625,7 @@ div#tux-egg {
 }
 
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-    div#dynamic-header {
-        background-image: url('@{imgBaseURL}mbu_waterfall_1024.jpg');
-    }
+
 
 }
 

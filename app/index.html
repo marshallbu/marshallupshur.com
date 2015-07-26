@@ -20,8 +20,18 @@
     <link rel="author" href="humans.txt" />
 
     <!--[if lt IE 9]>
+    <script>
+        (function(){
+          var ef = function(){};
+          window.console = window.console || {log:ef,warn:ef,error:ef,dir:ef};
+        }());
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-sham.js"></script>
     <![endif]-->
+
 
     <link rel="stylesheet" href="mincss/main.css?v<!-- @echo APP_VERSION -->">
 
@@ -32,27 +42,8 @@
 
     <div id="app">@@include('./../tmp/partials/components/app.html')</div>
 
-    <div id="content">
+    <div id="content" style="display: none;">
         <div class="container">
-
-            <section id="about" class="jumbotron main">
-                <div class="page-header">
-                    <h1>Me <small>in a nutshell</small></h1>
-                </div>
-                <div class="portrait pull-right">
-                    <div class="portrait-image">
-                        <img ng-src="images/profiles/bitstrip_001.jpg"/>
-                    </div>
-                </div>
-                <p>Hi, I'm a progressive web technologist focused on creating beautiful, easy to use, goal oriented web applications using cutting edge technologies across all devices.  I am not just a "web developer", I love working in the full stack. Making sure that some pesky Javascript is not causing too many repaints, and that some RESTful service is performing at scale is my passion.</p>
-
-                <p>That said, I also understand that great stacks are best created by great teams.  I love working with others to help create a positive and winning user experience. Creating positive working relationships, collaborations with my peers, and helping increase the overall productivity of my working environment is something I strive for in any setting.</p>
-
-                <p>Forever learning, forever evolving, that's me in a nutshell.</p>
-
-                <p>Find out more about me, the `projects.status === 'done' ? 'I've worked on' : 'I'm working on'`, and some of my hobbies below.</p>
-
-            </section>
 
             <section id="creations">
                 <div class="page-header">
@@ -180,16 +171,6 @@
         </div>
     </div>
 
-    <footer ng-controller="FooterCtrl">
-        <div class="container">
-            <p class="pull-left">
-                <i class="fa fa-html5"></i>&nbsp;<i class="fa fa-css3"></i>&nbsp;<i class="fa fa-apple"></i><span class="site-version">v<!-- @echo APP_VERSION --></span>
-            </p>
-            <p class="pull-right">
-                &copy;<!-- @echo COPY_YEAR --> Marshall Upshur | <a href="http://mbucreations.com" tabindex="0" class="btn-link" target="_self" title="Go to mbu Creations">mbu Creations</a>
-            </p>
-        </div>
-    </footer>
 
     <div id="resumeSnackbar" class="snackbar"></div>
 

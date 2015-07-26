@@ -80,5 +80,6 @@
     "viewer": "^0.10.7"
   },
   "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.min.js"
   }
 }
