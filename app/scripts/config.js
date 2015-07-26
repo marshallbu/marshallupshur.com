@@ -27,5 +27,5 @@ var config = angular.module('myApp.config', []);
  * create a constant value in the module name space for each config option
  */
 angular.forEach(configData, function(value, key){
-config.constant(key, value);
+    config.constant(key, value);
 });

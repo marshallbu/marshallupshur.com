@@ -1,21 +1,14 @@
-var React = require('react');
-var Router = require('react-router');
-var routes = require('./routes');
+import React from 'react';
+
+import App from './app.jsx';
 
 var Main = {
     start() {
         React.initializeTouchEvents(true);
 
-        Router.run(routes, Router.HashLocation, (Handler) => {
-            React.render(
-                <Handler />,
-                document.body
-            );
-        });
+        React.render(<App />, document.getElementById('app'));
     }
 };
-
-module.exports = Main;
 
 Main.start();
 

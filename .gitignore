@@ -9,5 +9,6 @@ codekit-config.json
 *.sublime-workspace
 google*.html
 dist
+tmp
 .ftppass
 .deploypaths
