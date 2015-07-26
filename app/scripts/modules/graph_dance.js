@@ -3,9 +3,7 @@
  * 15 minute phone screen to write Styles and PHP.
  */
 /* eslint-disable max-depth, max-statements */
-var { TweenLite } = global.com.greensock;
-var { Circ } = global.com.greensock.easing;
-var { requestAnimationFrame } = global;
+/* global TweenLite, Circ, requestAnimationFrame */
 
 var width, height, canvas, context, points = [], target, animateHeader = true;
 
@@ -63,9 +61,9 @@ function generatePoints() {
 }
 
 /**
-* thinking of our display as a "graph", create edges and vertices on points,
-* with each vertex connecting to it's 5 nearest neighbors
-*/
+ * thinking of our display as a "graph", create edges and vertices on points,
+ * with each vertex connecting to it's 5 nearest neighbors
+ */
 function linkPoints() {
     var closest, p1, p2, placed;
 
@@ -110,7 +108,7 @@ function linkPoints() {
     }
 }
 
-function init(canvasId) {
+function init(canvasNode) {
     width = window.innerWidth;
     height = window.innerHeight;
     target = {
@@ -118,7 +116,7 @@ function init(canvasId) {
         y: height / 2
     };
 
-    canvas = document.getElementById(canvasId);
+    canvas = canvasNode;
     canvas.width = width;
     canvas.height = height;
     context = canvas.getContext('2d');
@@ -130,9 +128,9 @@ function init(canvasId) {
 }
 
 /**
-* shift points to random locations using a tween
-* @param {object} p   a point
-*/
+ * shift points to random locations using a tween
+ * @param {object} p   a point
+ */
 function shiftPoint(p) {
     TweenLite.to(
         p,
@@ -147,9 +145,9 @@ function shiftPoint(p) {
 }
 
 /**
-* draw line between point and closest neighbors
-* @param {Object} p   a point
-*/
+ * draw line between point and closest neighbors
+ * @param {Object} p   a point
+ */
 function drawLines(p) {
     if (!p.active) { return; }
     for (var i in p.closest) {
@@ -193,8 +191,8 @@ function animate() {
 }
 
 /**
-* initialize dynamic header animation
-*/
+ * initialize dynamic header animation
+ */
 function initAnimation() {
     animate();
     for(var i in points) {
@@ -203,9 +201,9 @@ function initAnimation() {
 }
 
 /**
-* callback for mousemove event
-* @param {Event} e
-*/
+ * callback for mousemove event
+ * @param {Event} e
+ */
 function mouseMove(e) {
     var posX = 0, posY = 0;
     if (e.pageX || e.pageY) {
@@ -220,8 +218,8 @@ function mouseMove(e) {
 }
 
 /**
-* callback for scroll event, turning off header animation if it is not in view
-*/
+ * callback for scroll event, turning off header animation if it is not in view
+ */
 function scrollCheck() {
     if (document.body.scrollTop > height) {
         animateHeader = false;
@@ -251,16 +249,30 @@ function addListeners() {
     window.addEventListener('resize', resize);
 }
 
+function removeListeners() {
+    if(!('ontouchstart' in window)) {
+        window.removeEventListener('mousemove', mouseMove);
+    }
+    window.removeEventListener('scroll', scrollCheck);
+    window.removeEventListener('resize', resize);
+}
+
 /**
  * Main Module
  * @type {Object}
  */
 var GraphDance = {
-    animateOnCanvas(canvasId) {
-        init(canvasId);
+    /**
+     * start the animation on given canvas DOM Node
+     * @param  {DOMNode} canvas - the canvas DOM node
+     */
+    animateOnCanvas(canvasNode) {
+        init(canvasNode);
         initAnimation();
         addListeners();
-    }
+    },
+
+    removeListeners
 };
 
 export default GraphDance;
