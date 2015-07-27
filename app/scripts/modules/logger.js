@@ -8,6 +8,9 @@ console = window.console || {
     info() {
         return void 0;
     },
+    debug() {
+        return void 0;
+    },
     warn() {
         return void 0;
     },
@@ -23,6 +26,7 @@ console = window.console || {
 };
 
 console.info = console.info || console.log;
+console.debug = console.debug || console.log;
 console.warn = console.warn || console.log;
 console.error = console.error || console.log;
 console.dir = console.dir || console.log;
@@ -31,6 +35,9 @@ console.table = console.table || console.log;
 Logger = {
     info() {
         console.info.apply(console, arguments);
+    },
+    debug() {
+        console.debug.apply(console, arguments);
     },
     warn() {
         console.warn.apply(console, arguments);

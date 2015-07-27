@@ -1,5 +1,7 @@
 import React from 'react';
 
+import logger from './../modules/logger';
+
 var Footer = React.createClass({
     getInitialState() {
         return {
@@ -18,6 +20,7 @@ var Footer = React.createClass({
             copyYear: global.__DATA__.copyYear,
         });
 
+        logger.debug('Sniffing around? Email me(at)marshallupshur.com if you find any foobars!');
     },
 
     render() {
