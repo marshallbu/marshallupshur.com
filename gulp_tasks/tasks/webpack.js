@@ -34,6 +34,7 @@ gulp.task('webpack:build', function(callback) {
   }
 
   return gulp.src(config.src.file.app)
+    
     .pipe(plugins.webpack(myConfig, null, webpackCallback))
     .pipe(gulp.dest(config.dist.dir.scripts));
 });
