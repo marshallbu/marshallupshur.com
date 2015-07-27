@@ -30,7 +30,8 @@ module.exports = {
             // packageAlias: false,
             alias: {
                 // jquery: 'jquery/dist/jquery.min',
-                react: isProduction ? 'react/dist/react.min' : 'react',
+                // react: isProduction ? 'react/dist/react.min' : 'react',
+                react: 'react',
                 // 'react-bootstrap': isProduction ? 'react-bootstrap/dist/react-bootstrap.min' : 'react-bootstrap',
                 tweenlite: 'gsap/src/minified/TweenLite.min',
                 easepack: 'gsap/src/minified/easing/EasePack.min',
