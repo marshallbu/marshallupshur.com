@@ -124,10 +124,21 @@ body {
 }
 
 .section-loader {
+    position: absolute;
     font-size: 60px;
     line-height: 150px;
     text-align: center;
     height: 150px;
+
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 /**
