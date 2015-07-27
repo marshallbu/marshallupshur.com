@@ -83,7 +83,8 @@ module.exports = {
             app: 'app.min.js',
             libs: 'libs.min.js',
             bundle: '[name].min.js',
-            resume: 'downloads/Marshall_Upshur_2015a.pdf'
+            boxResumeUrl: 'https://view-api.box.com/1/sessions/3e9892576aa84c5f84c193204e053c77/assets/',
+            resume: 'downloads/Marshall_Upshur_2015c.pdf'
         }
     },
 

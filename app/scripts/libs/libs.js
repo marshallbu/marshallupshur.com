@@ -7,6 +7,8 @@ import 'react-bootstrap/lib/NavItem';
 import 'react-bootstrap/lib/Jumbotron';
 import 'react-bootstrap/lib/Carousel';
 import 'react-bootstrap/lib/CarouselItem';
+import 'react-bootstrap/lib/Tooltip';
+import 'react-bootstrap/lib/OverlayTrigger';
 import './../vendor/rAF';
 
 // custom greensock namespace

@@ -6,7 +6,7 @@
 @import "mixins";
 @import "custom-fonts";
 // @import "snackbar";
-// @import (less) "../../../bower_modules/viewer/dist/crocodoc.viewer.min.css";
+@import (less) "../../../node_modules/viewer/dist/crocodoc.viewer.min.css";
 /* @import (less) "../../../bower_modules/famous-angular/dist/famous-angular.min.css"; */
 
 @bkgColor: #fff;
@@ -201,59 +201,10 @@ section {
  */
 @import "creations-section";
 
-section#resume {
-
-    .resume-view-container {
-        background: #fff;
-        width: 100%;
-        position: relative;
-        /* border: 1px solid #eee; */
-        /* .box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26)); */
-        .MaterialBoxShadow();
-
-        &:after {
-            /* padding-bottom: 66.666%; */ // 3:2
-            padding-bottom: 56.25%; // 16:9
-            display: block;
-            content: '';
-        }
-
-        #resume-view {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #fff;
-            overflow: hidden;
-
-            .scroll-blocker {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: rgba(0, 0, 0, 0.25);
-            }
-
-            .scroll-blocker-title {
-                background: none transparent;
-                position: absolute;
-                max-width: 1170px;
-                top: 10px;
-                right: 10px;
-                z-index: 99;
-                color: white;
-                font-family: @sectionHeaderFont;
-                font-weight: 300;
-                font-size: 1.4em;
-                text-align: center;
-                letter-spacing: .05em;
-                .text-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.26));
-            }
-        }
-    }
-}
+/**
+ * Resume section
+ */
+@import "resume-section";
 
 section#blog {
 

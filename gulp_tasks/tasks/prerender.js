@@ -11,6 +11,8 @@ gulp.task('prerender', function() {
             context: {
                 'APP_VERSION': pkgjson.version,
                 'COPY_YEAR': moment().format('YYYY'),
+                'RESUME_URL': config.dist.file.resumeUrl,
+                'BOX_RESUME_URL': config.dist.file.boxResumeUrl,
                 DEBUG: true
             }
         }))

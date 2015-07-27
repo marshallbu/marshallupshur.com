@@ -67,6 +67,10 @@ var Creations = React.createClass({
         return carousel;
     },
 
+    componentWillMount() {
+
+    },
+
     componentDidMount() {
         this.setState({
             items: global.__DATA__.creations || []

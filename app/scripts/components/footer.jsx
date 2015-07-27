@@ -8,11 +8,16 @@ var Footer = React.createClass({
         };
     },
 
+    componentWillMount() {
+
+    },
+
     componentDidMount() {
         this.setState({
             version: global.__DATA__.version,
             copyYear: global.__DATA__.copyYear,
         });
+
     },
 
     render() {

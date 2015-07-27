@@ -8,7 +8,7 @@ gulp.task('prep-build', function (callback) {
     Object.keys(config.tmp.dir).forEach(function(key){
         var dir = config.tmp.dir[key];
 
-        mkdirp(dir, function (mkdirErr) {
+        mkdirp(dir, { mode: '0777' }, function (mkdirErr) {
             if (mkdirErr) {
                 log.error('Cannot create directory:', plugins.util.colors.magenta(dir), plugins.util.colors.red(mkdirErr));
                 throw mkdirErr;
@@ -19,7 +19,7 @@ gulp.task('prep-build', function (callback) {
     Object.keys(config.dist.dir).forEach(function(key){
         var dir = config.dist.dir[key];
 
-        mkdirp(dir, function (mkdirErr) {
+        mkdirp(dir, { mode: '0777' }, function (mkdirErr) {
             if (mkdirErr) {
                 log.error('Cannot create directory:', plugins.util.colors.magenta(dir), plugins.util.colors.red(mkdirErr));
                 throw mkdirErr;

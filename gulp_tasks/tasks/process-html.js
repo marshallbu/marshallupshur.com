@@ -20,7 +20,9 @@ gulp.task('process-html', ['partial-compile', 'prerender'], function() {
                     type: 'img',
                     path: 'images/port/' + name
                 };
-            })
+            }),
+        boxResumeUrl: config.dist.file.boxResumeUrl,
+        resumeUrl: config.dist.file.resume
     };
 
     return gulp
@@ -29,8 +31,8 @@ gulp.task('process-html', ['partial-compile', 'prerender'], function() {
             context: {
                 '__DATA__': '<script>var __DATA__ = ' + JSON.stringify(data) + '</script>',
                 'APP_VERSION': pkgjson.version,
-                'TARGET': process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
                 'OG_URL': process.env.NODE_ENV === 'production' ? 'www' : 'dev100',
+                'TARGET': process.env.NODE_ENV ? process.env.NODE_ENV : 'development',
                 DEBUG: true
             }
         }))

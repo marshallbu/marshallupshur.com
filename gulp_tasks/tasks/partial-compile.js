@@ -10,13 +10,7 @@ gulp.task('partial-compile', function() {
         .pipe(plugins.template())
         .pipe(gulp.dest(config.tmp.dir.partials));
 
-    gulp.src(config.src.dir.partials + 'contact_modal_template.html')
+    return gulp.src(config.src.dir.partials + 'contact_modal_template.html')
         .pipe(plugins.template())
-        .pipe(gulp.dest(config.tmp.dir.partials));
-
-    return gulp.src(config.src.dir.partials + 'resume_template.html')
-        .pipe(plugins.template({
-            downloadUrl: config.dist.file.resume
-        }))
         .pipe(gulp.dest(config.tmp.dir.partials));
 });
