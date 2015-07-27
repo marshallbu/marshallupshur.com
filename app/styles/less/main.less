@@ -1,12 +1,12 @@
 @import "custom-bootstrap";
-@import "../../../bower_modules/font-awesome/less/font-awesome";
-@import "../../../bower_modules/lesshat/build/lesshat";
-@import (less) "../../../bower_modules/animate.css/animate.min.css";
-@import (less) "../../../bower_modules/snackbarjs/dist/snackbar.min.css";
+@import "../../../node_modules/font-awesome/less/font-awesome";
+@import "../../../node_modules/lesshat/build/lesshat";
+// @import (less) "../../../bower_modules/animate.css/animate.min.css";
+// @import (less) "../../../bower_modules/snackbarjs/dist/snackbar.min.css";
 @import "mixins";
 @import "custom-fonts";
-@import "snackbar";
-@import (less) "../../../bower_modules/viewer/dist/crocodoc.viewer.min.css";
+// @import "snackbar";
+// @import (less) "../../../bower_modules/viewer/dist/crocodoc.viewer.min.css";
 /* @import (less) "../../../bower_modules/famous-angular/dist/famous-angular.min.css"; */
 
 @bkgColor: #fff;
@@ -188,59 +188,7 @@ section {
 /**
  * Creations section
  */
-section#creations {
-
-    // ever clever aspect ratio
-    // http://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio
-    .creations-slider-container {
-        background: #fff;
-        width: 100%;
-        position: relative;
-        /* border: 1px solid #eee; */
-        .MaterialBoxShadow();
-
-        &:after {
-            /* padding-bottom: 66.666%; */ // 3:2
-            padding-bottom: 56.25%; // 16:9
-            display: block;
-            content: '';
-        }
-
-        #creations-slider {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #fff;
-            overflow: hidden;
-
-            .carousel-inner {
-                .item {
-                    width: 100%;
-                    /* max-height: 600px; */
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-
-            .carousel-control {
-                /* background: none; */
-                /* border: none; */
-
-                i {
-                    position: absolute;
-                    top: 50%;
-                    z-index: 5;
-                    display: inline-block;
-                }
-
-            }
-        }
-    }
-}
+@import "creations-section";
 
 section#resume {
 
@@ -459,22 +407,10 @@ p.match-view {
     margin-right: auto;
 }
 
-footer {
-    color: #dedede;
-    margin-top: 50px;
-    padding: 15px 0;
-    background: rgba(0, 0, 0, 0.75);
-
-    span.site-version {
-        margin-left: 10px;
-        font-style: italic;
-    }
-
-    p {
-        margin-bottom: 0;
-        line-height: 20px;
-    }
-}
+/**
+ * footer
+ */
+@import "footer";
 
 div#contact-modal {
 
@@ -601,17 +537,6 @@ div#tux-egg {
         margin-bottom: 20px;
     }
 
-    footer {
-
-        p {
-            text-align: right;
-            display: block;
-
-            &.pull-right, &.pull-left {
-                float: none !important;
-            }
-        }
-    }
 
 }
 

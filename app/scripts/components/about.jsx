@@ -7,12 +7,12 @@ var About = React.createClass({
 
         return (
             <Jumbotron id='about' componentClass='section'>
-                <div className="page-header">
+                <div className='page-header'>
                     <h1>Me <small>in a nutshell</small></h1>
                 </div>
-                <div className="portrait pull-right">
-                    <div className="portrait-image">
-                        <img src="images/profiles/bitstrip_001.jpg"/>
+                <div className='portrait pull-right'>
+                    <div className='portrait-image'>
+                        <img src='images/profiles/bitstrip_001.jpg'/>
                     </div>
                 </div>
                 <p>Hi, I'm a progressive web technologist focused on creating beautiful, easy to use, goal oriented web applications using cutting edge technologies across all devices.  I am not just a "web developer", I love working in the full stack. Making sure that some pesky Javascript is not causing too many repaints, and that some RESTful service is performing at scale is my passion.</p>

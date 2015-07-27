@@ -35,8 +35,8 @@ module.exports = {
                 './app/images/**/*'
             ],
             fonts: [
-                './app/fonts/**/*.{eot,svg,ttf,woff}',
-                './bower_modules/font-awesome/fonts/*.{eot,svg,ttf,woff}'
+                './app/fonts/**/*.{eot,svg,ttf,woff,woff2}',
+                './node_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
             ],
             json: ['./app/json/**/*.json'],
             html: ['./app/*.html', './app/*.php'],

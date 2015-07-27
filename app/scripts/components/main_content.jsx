@@ -1,6 +1,8 @@
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 
 import About from './about.jsx';
+import Creations from './creations.jsx';
 import Footer from './footer.jsx';
 
 var MainContent = React.createClass({
@@ -11,6 +13,7 @@ var MainContent = React.createClass({
             <div id="content">
                 <div className="container">
                     <About />
+                    <Creations />
                 </div>
 
                 <Footer />
