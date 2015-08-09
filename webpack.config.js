@@ -35,6 +35,7 @@ module.exports = {
                 // 'react-bootstrap': isProduction ? 'react-bootstrap/dist/react-bootstrap.min' : 'react-bootstrap',
                 tweenlite: 'gsap/src/minified/TweenLite.min',
                 easepack: 'gsap/src/minified/easing/EasePack.min',
+                moment: 'moment/min/moment.min.js'
             }
         },
         externals: [

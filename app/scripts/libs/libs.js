@@ -9,6 +9,7 @@ import 'react-bootstrap/lib/Carousel';
 import 'react-bootstrap/lib/CarouselItem';
 import 'react-bootstrap/lib/Tooltip';
 import 'react-bootstrap/lib/OverlayTrigger';
+import 'moment';
 import './../vendor/rAF';
 
 // custom greensock namespace

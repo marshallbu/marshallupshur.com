@@ -70,25 +70,31 @@ var Resume = React.createClass({
             resumeURL: global.__DATA__.resumeUrl,
         });
 
-        this.viewer = crocodoc($).createViewer(viewerNode, {
-            url: global.__DATA__.boxResumeUrl,
-            // layout: viewer.LAYOUT_PRESENTATION
-        });
-        this.viewer.load();
-
-        this.viewer.on('ready', () => {
-            this.setState({
-                showResume: true
+        if ($) {
+            this.viewer = crocodoc($).createViewer(viewerNode, {
+                url: global.__DATA__.boxResumeUrl,
+                // layout: viewer.LAYOUT_PRESENTATION
             });
-        });
+            this.viewer.load();
+
+            this.viewer.on('ready', () => {
+                this.setState({
+                    showResume: true
+                });
+            });
+        }
+
     },
 
     componentWillUnmount() {
-        this.viewer.off('ready', () => {
-            this.setState({
-                showResume: true
+        if (this.viewer) {
+            this.viewer.off('ready', () => {
+                this.setState({
+                    showResume: true
+                });
             });
-        });
+        }
+
     },
 
     render() {

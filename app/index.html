@@ -45,37 +45,6 @@
     <div id="content" style="display: none;">
         <div class="container">
 
-        <section id="blog">
-            <div class="page-header">
-                <h2 class="">Blog <small>ramblings of a geek</small></h1>
-                    <a href="http://blog.marshallupshur.com" target="_self" tabindex="0"
-                    class="btn btn-primary btn-lg btn-link launch" title="Blog"
-                    data-toggle="tooltip" data-placement="left">
-                    blog <i class="fa fa-chevron-circle-right"></i>
-                </a>
-                <div class="clearfix"></div>
-            </div>
-            <div class="blog-updates-container" ng-controller="FeedCtrl">
-                <div class="span12 section-loader" ng-hide="feeds.length > 0">
-                    <i class="fa fa-spinner fa-spin"></i>
-                </div>
-                <div class="row">
-                    <div ng-repeat="feed in feeds" class="col-md-4" ng-cloak>
-                        <div class="post">
-                            <h4 class="title">{{feed.title}}</h4>
-                            <p class="meta"><small>{{feed.publishedDateObject | date:'MM/dd/yyyy @ h:mma'}}</small></p>
-                            <p class="text" ng-bind-html="feed.contentSnippet"></p>
-                            <p class="controls">
-                                <a href="{{feed.link}}" tabindex="0" class="btn btn-sm btn-mbu" title="View blog post titled {{feed.title}}">
-                                    View post <i class="icon-double-angle-right"></i>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="photos">
             <div class="page-header">
                 <h2 class="">Photos <small>the world through my eyes</small></h1>
@@ -136,9 +105,10 @@
     <!-- DATA -->
     <!-- @echo __DATA__ -->
     <!-- VENDOR -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <!-- App -->
-    <script src="minjs/libs.min.js?v<!-- @echo APP_VERSION -->"></script>
-    <script src="minjs/app.min.js?v<!-- @echo APP_VERSION -->"></script>
+    <script type="text/javascript" src="minjs/libs.min.js?v<!-- @echo APP_VERSION -->"></script>
+    <script type="text/javascript" src="minjs/app.min.js?v<!-- @echo APP_VERSION -->"></script>
 </body>
 </html>

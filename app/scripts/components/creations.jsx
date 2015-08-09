@@ -82,7 +82,7 @@ var Creations = React.createClass({
         return (
             <section id='creations'>
                 <div className='page-header'>
-                    <h2 className=''>Creations <small>think it. dream it. create it.</small></h2>
+                    <h2>Creations <small>think it. dream it. create it.</small></h2>
                     <a href='http://www.mbucreations.com' target='_self' tabIndex='0'
                     className='btn btn-primary btn-lg btn-link launch' title='mbu Creations Portfolio'
                     data-toggle='tooltip' data-placement='left'>

@@ -1,7 +1,7 @@
 var console, Logger;
 
 // make using console safe if it doesn't exist (IE....)
-console = window.console || {
+console = global.console || {
     log() {
         return void 0;
     },
