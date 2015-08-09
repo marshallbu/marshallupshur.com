@@ -1,0 +1,80 @@
+section#experiments {
+
+    .experiments-container {
+        width: 100%;
+        position: relative;
+        /* border: 1px solid #eee; */
+        /* .box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26)); */
+        .MaterialBoxShadow();
+
+        &:after {
+            /* padding-bottom: 66.666%; */ // 3:2
+            padding-bottom: 56.25%; // 16:9
+            display: block;
+            content: '';
+        }
+
+        .experiments {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fa5c4f;
+            overflow: hidden;
+
+            .exp-title {
+                background: none transparent;
+                position: absolute;
+                width: 100%;
+                padding: 30px 10px;
+                max-width: 1170px;
+                left: 50%;
+                top: 50%;
+                bottom: auto;
+                right: auto;
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -ms-transform: translateX(-50%) translateY(-50%);
+                -o-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+                color: white;
+                font-family: @sectionHeaderFont;
+                font-weight: 300;
+                font-size: 4em;
+                text-align: center;
+                letter-spacing: .05em;
+
+                #exp-flask {
+                    .text-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.26));
+                }
+            }
+        }
+
+        #famo-experiment {
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+}
+
+@media (min-width: @screen-lg-min) {
+
+}

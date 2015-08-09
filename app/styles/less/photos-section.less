@@ -1,12 +1,11 @@
-#creations {
+section#photos {
 
-    // ever clever aspect ratio
-    // http://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio
-    .creations-slider-container {
+    .photos-slider-container {
         background: #fff;
         width: 100%;
         position: relative;
         /* border: 1px solid #eee; */
+        /* .box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26)); */
         .MaterialBoxShadow();
 
         &:after {
@@ -16,7 +15,7 @@
             content: '';
         }
 
-        #creations-slider {
+        #photos-slider {
             position: absolute;
             top: 0;
             bottom: 0;
@@ -26,19 +25,22 @@
             overflow: hidden;
 
             .carousel-inner {
+                width: 100%;
+
                 .item {
                     width: 100%;
-                    /* max-height: 600px; */
 
                     img {
                         width: 100%;
                     }
                 }
+
+                .img-responsive {
+                    // width: 100%;
+                }
             }
 
             .carousel-control {
-                /* background: none; */
-                /* border: none; */
 
                 i {
                     position: absolute;
@@ -49,6 +51,7 @@
 
             }
         }
+
     }
 }
 

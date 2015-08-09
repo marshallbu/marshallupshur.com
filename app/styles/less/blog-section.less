@@ -1,0 +1,55 @@
+#blog {
+
+    .blog-updates-container {
+        position: relative;
+
+        .post {
+            background: #fff;
+            padding: 10px;
+            /* border: 1px solid #eee; */
+            /* .box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26)); */
+            .MaterialBoxShadow();
+
+            .title {
+                padding-bottom: 6px;
+                margin-top: 0;
+                margin-bottom: 0;
+                border-bottom: 1px solid #e1e1e1;
+            }
+
+            .meta {
+                text-align: right;
+            }
+
+            .text {
+                word-wrap: break-word;
+                word-break: break-word;
+            }
+
+            .controls {
+                margin: 0;
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    div.post {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    div.post {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+}
+
+@media (min-width: @screen-lg-min) {
+
+}
