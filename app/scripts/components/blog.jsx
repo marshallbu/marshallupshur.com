@@ -102,14 +102,15 @@ var Blog = React.createClass({
 
     render() {
         var linkTitle = 'Blog';
-        var tooltip = <Tooltip>{linkTitle}</Tooltip>;
+        var tooltip = <Tooltip id='blogTooltip'>{linkTitle}</Tooltip>;
+        var { blogUrl } = this.props;
 
         return (
             <section id='blog'>
                 <div className='page-header'>
                     <h2>Blog <small>ramblings of a geek</small></h2>
                     <OverlayTrigger placement='left' overlay={tooltip}>
-                        <a href={this.state.blogUrl}
+                        <a href={blogUrl}
                             target='_self'
                             tabIndex='0'
                             className='btn btn-primary btn-lg btn-link launch'

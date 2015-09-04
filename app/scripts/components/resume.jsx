@@ -99,7 +99,7 @@ var Resume = React.createClass({
 
     render() {
         var linkTitle = 'Download Resume';
-        var tooltip = <Tooltip>{linkTitle}</Tooltip>;
+        var tooltip = <Tooltip id='resumeTooltip'>{linkTitle}</Tooltip>;
         var { resumeURL } = this.state;
 
         return (

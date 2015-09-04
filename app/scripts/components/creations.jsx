@@ -3,6 +3,8 @@ import React from 'react';
 
 import Carousel from 'react-bootstrap/lib/Carousel';
 import CarouselItem from 'react-bootstrap/lib/CarouselItem';
+import Tooltip from 'react-bootstrap/lib/Tooltip';
+import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 
 var Creations = React.createClass({
     getInitialState() {
@@ -13,7 +15,8 @@ var Creations = React.createClass({
             controls: true,
             indicators: true,
             slide: true,
-            items: []
+            items: [],
+            portfolioUrl: 'http://www.mbucreations.com'
         };
     },
 
@@ -78,22 +81,31 @@ var Creations = React.createClass({
     },
 
     render() {
+        var linkTitle = 'mbu Creations Portfolio';
+        var tooltip = <Tooltip id='creationsTooltip'>{linkTitle}</Tooltip>;
+        var { portfolioUrl } = this.state;
 
         return (
             <section id='creations'>
                 <div className='page-header'>
                     <h2>Creations <small>think it. dream it. create it.</small></h2>
-                    <a href='http://www.mbucreations.com' target='_self' tabIndex='0'
-                    className='btn btn-primary btn-lg btn-link launch' title='mbu Creations Portfolio'
-                    data-toggle='tooltip' data-placement='left'>
-                    portfolio <i className='fa fa-chevron-circle-right'></i>
-                </a>
-                <div className='clearfix'></div>
-            </div>
-            <p className='lead match-view'>Along with some of the cool stuff I work on at work, I do projects on the side to keep my healthy appetite for latest technology and trends up to date.  Check some of these out below and by going to my portfolio.</p>
-            <div className='creations-slider-container'>
-                {this.renderCarousel()}
-            </div>
+                    <OverlayTrigger placement='left' overlay={tooltip}>
+                        <a href={portfolioUrl}
+                            target='_self'
+                            tabIndex='0'
+                            className='btn btn-primary btn-lg btn-link launch'
+                            title='mbu Creations Portfolio'>
+                            portfolio <i className='fa fa-chevron-circle-right' />
+                        </a>
+                    </OverlayTrigger>
+                    <div className='clearfix'></div>
+                </div>
+                <p className='lead match-view'>
+                    Along with some of the cool stuff I work on at work, I do projects on the side to keep my healthy appetite for latest technology and trends up to date.  Check some of these out below and by going to my portfolio.
+                </p>
+                <div className='creations-slider-container'>
+                    {this.renderCarousel()}
+                </div>
             </section>
         );
     }
