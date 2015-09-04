@@ -1,0 +1,127 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+$.fn.snackbar	app/scripts/vendor/snackbar.js	/^  };$/;"	f
+$.snackbar	app/scripts/vendor/snackbar.js	/^  }$/;"	f
+Circle	app/scripts/modules/graph_dance.js	/^function Circle(pos, rad, color) {$/;"	c
+__webpack_require__	dist/minjs/libs.min.js	/^\/******\/ 	function __webpack_require__(moduleId) {$/;"	f
+__webpack_require__.e	dist/minjs/libs.min.js	/^\/******\/ 	}$/;"	f
+addListeners	app/scripts/modules/graph_dance.js	/^function addListeners() {$/;"	f
+angular-google-maps	needs.json	/^    "angular-google-maps": "~2.0.11",$/;"	f
+animate	app/scripts/modules/graph_dance.js	/^function animate() {$/;"	f
+animate.css	needs.json	/^    "animate.css": "~3.2.0",$/;"	f
+animate.css	package.json	/^    "animate.css": "^3.4.0",$/;"	f
+author	package.json	/^  "author": "Marshall Upshur",$/;"	f
+babel	package.json	/^    "babel": "^5.8.23",$/;"	f
+babel-core	package.json	/^    "babel-core": "^5.8.23",$/;"	f
+babel-loader	package.json	/^    "babel-loader": "^5.3.2",$/;"	f
+bootstrap	package.json	/^    "bootstrap": "^3.3.5",$/;"	f
+box-view	package.json	/^    "box-view": "^2.0.0",$/;"	f
+browser	package.json	/^  "browser": {$/;"	f
+bugs	package.json	/^  "bugs": {$/;"	f
+classnames	package.json	/^    "classnames": "^2.1.3",$/;"	f
+del	package.json	/^    "del": "^2.0.0",$/;"	f
+dependencies	needs.json	/^  "dependencies": {$/;"	f
+dependencies	package.json	/^  "dependencies": {$/;"	f
+description	package.json	/^  "description": "my profile \/ online resume",$/;"	f
+devDependencies	package.json	/^  "devDependencies": {$/;"	f
+drawLines	app/scripts/modules/graph_dance.js	/^function drawLines(p) {$/;"	f
+eslint	package.json	/^    "eslint": "^1.3.1",$/;"	f
+eslint-plugin-react	package.json	/^    "eslint-plugin-react": "^3.3.1",$/;"	f
+exports-loader	package.json	/^    "exports-loader": "^0.6.2",$/;"	f
+expose-loader	package.json	/^    "expose-loader": "^0.7.0",$/;"	f
+font-awesome	package.json	/^    "font-awesome": "^4.4.0",$/;"	f
+function.scrollCheck	app/scripts/directives/resumeEgg.js	/^            function scrollCheck() {$/;"	f
+generatePoints	app/scripts/modules/graph_dance.js	/^function generatePoints() {$/;"	f
+getDistance	app/scripts/modules/graph_dance.js	/^function getDistance(p1, p2) {$/;"	f
+gsap	package.json	/^    "gsap": "^1.17.0",$/;"	f
+gulp	package.json	/^    "gulp": "^3.9.0",$/;"	f
+gulp-bower	package.json	/^    "gulp-bower": "0.0.10",$/;"	f
+gulp-bump	package.json	/^    "gulp-bump": "^0.3.1",$/;"	f
+gulp-changed	package.json	/^    "gulp-changed": "^1.3.0",$/;"	f
+gulp-debug	package.json	/^    "gulp-debug": "^2.1.0",$/;"	f
+gulp-eslint	package.json	/^    "gulp-eslint": "^1.0.0",$/;"	f
+gulp-file-include	package.json	/^    "gulp-file-include": "^0.13.7",$/;"	f
+gulp-filesize	package.json	/^    "gulp-filesize": "0.0.6",$/;"	f
+gulp-flatten	package.json	/^    "gulp-flatten": "0.2.0",$/;"	f
+gulp-if	package.json	/^    "gulp-if": "^1.2.5",$/;"	f
+gulp-ignore	package.json	/^    "gulp-ignore": "^1.2.1",$/;"	f
+gulp-imagemin	package.json	/^    "gulp-imagemin": "^2.3.0",$/;"	f
+gulp-jshint	package.json	/^    "gulp-jshint": "^1.11.2",$/;"	f
+gulp-less	package.json	/^    "gulp-less": "^3.0.3",$/;"	f
+gulp-livereload	package.json	/^    "gulp-livereload": "^3.8.0",$/;"	f
+gulp-load-plugins	package.json	/^    "gulp-load-plugins": "^1.0.0-rc.1",$/;"	f
+gulp-minify-css	package.json	/^    "gulp-minify-css": "^1.2.1",$/;"	f
+gulp-minify-html	package.json	/^    "gulp-minify-html": "^1.0.4",$/;"	f
+gulp-notify	package.json	/^    "gulp-notify": "^2.2.0",$/;"	f
+gulp-preprocess	package.json	/^    "gulp-preprocess": "^1.2.0",$/;"	f
+gulp-print	package.json	/^    "gulp-print": "^1.1.0",$/;"	f
+gulp-render-react	package.json	/^    "gulp-render-react": "marshallbu\/gulp-render-react",$/;"	f
+gulp-rev	package.json	/^    "gulp-rev": "^6.0.1",$/;"	f
+gulp-sftp	package.json	/^    "gulp-sftp": "^0.1.4",$/;"	f
+gulp-sourcemaps	package.json	/^    "gulp-sourcemaps": "^1.5.2",$/;"	f
+gulp-template	package.json	/^    "gulp-template": "^3.0.0",$/;"	f
+gulp-uglify	package.json	/^    "gulp-uglify": "^1.4.0",$/;"	f
+gulp-util	package.json	/^    "gulp-util": "^3.0.6",$/;"	f
+gulp-webpack	package.json	/^    "gulp-webpack": "^1.5.0",$/;"	f
+highlight	needs.json	/^    "highlight": "~7.0.1",$/;"	f
+homepage	package.json	/^  "homepage": "https:\/\/github.com\/marshallbu\/marshallupshur.com",$/;"	f
+ignore	needs.json	/^  "ignore": [$/;"	f
+imagemin-pngcrush	package.json	/^    "imagemin-pngcrush": "^4.1.0",$/;"	f
+init	app/scripts/modules/graph_dance.js	/^function init(canvasNode) {$/;"	f
+initAnimation	app/scripts/modules/graph_dance.js	/^function initAnimation() {$/;"	f
+isset	app/scripts/vendor/snackbar.js	/^  function isset(variable) {$/;"	f
+jquery	package.json	/^    "jquery": ".\/node_modules\/jquery\/dist\/jquery.min.js"$/;"	f
+jquery	package.json	/^    "jquery": "^2.1.4",$/;"	f
+jquery.scrollTo	needs.json	/^    "jquery.scrollTo": "~1.4.7",$/;"	f
+json-loader	package.json	/^    "json-loader": "^0.5.2",$/;"	f
+less	package.json	/^    "less": "^2.5.1",$/;"	f
+lesshat	package.json	/^    "lesshat": "^3.0.2",$/;"	f
+license	package.json	/^  "license": "none",$/;"	f
+linkPoints	app/scripts/modules/graph_dance.js	/^function linkPoints() {$/;"	f
+lodash	package.json	/^    "lodash": "^3.10.1",$/;"	f
+main	needs.json	/^  "main": "main.js",$/;"	f
+main	package.json	/^  "main": "app\/main.js",$/;"	f
+mkdirp	package.json	/^    "mkdirp": "^0.5.1",$/;"	f
+modernizr	needs.json	/^    "modernizr": "~2.8.3",$/;"	f
+module.exports	gulp_tasks/utils/handleErrors.js	/^var notify = require("gulp-notify");$/;"	c
+module.exports	gulp_tasks/utils/imageFilter.js	/^var path = require("path");$/;"	f
+module.exports	gulp_tasks/utils/scriptFilter.js	/^var path = require("path");$/;"	f
+moment	package.json	/^    "moment": "^2.10.6",$/;"	f
+mouseMove	app/scripts/modules/graph_dance.js	/^function mouseMove(e) {$/;"	f
+name	needs.json	/^  "name": "mbu-identity",$/;"	f
+name	package.json	/^  "name": "identity",$/;"	f
+pretty-hrtime	package.json	/^    "pretty-hrtime": "^1.0.0",$/;"	f
+react	package.json	/^    "react": "^0.13.3",$/;"	f
+react-bootstrap	package.json	/^    "react-bootstrap": "^0.25.1",$/;"	f
+react-router	package.json	/^    "react-router": "^0.13.3",$/;"	f
+react-scroll	package.json	/^    "react-scroll": "^0.27.0",$/;"	f
+removeListeners	app/scripts/modules/graph_dance.js	/^function removeListeners() {$/;"	f
+repository	package.json	/^  "repository": {$/;"	f
+requireEnsure	dist/minjs/libs.min.js	/^\/******\/ 	__webpack_require__.e = function requireEnsure(chunkId, callback) {$/;"	f
+resize	app/scripts/modules/graph_dance.js	/^function resize() {$/;"	f
+run-sequence	package.json	/^    "run-sequence": "^1.1.2",$/;"	f
+scripts	package.json	/^  "scripts": {$/;"	f
+scrollCheck	app/scripts/modules/graph_dance.js	/^function scrollCheck() {$/;"	f
+shiftPoint	app/scripts/modules/graph_dance.js	/^function shiftPoint(p) {$/;"	f
+snackbarjs	needs.json	/^    "snackbarjs": "~1.0.0"$/;"	f
+source-map-loader	package.json	/^    "source-map-loader": "^0.1.5",$/;"	f
+test	package.json	/^    "test": "node .\/node_modules\/gulp\/bin\/gulp.js unit-test"$/;"	f
+type	package.json	/^    "type": "git",$/;"	f
+url	package.json	/^    "url": "https:\/\/github.com\/marshallbu\/marshallupshur.com\/issues"$/;"	f
+url	package.json	/^    "url": "https:\/\/marshallbu@github.com\/marshallbu\/marshallupshur.com.git"$/;"	f
+version	needs.json	/^  "version": "0.11.1",$/;"	f
+version	package.json	/^  "version": "0.15.1",$/;"	f
+viewer	package.json	/^    "viewer": "^0.10.10"$/;"	f
+vinyl-paths	package.json	/^    "vinyl-paths": "^2.0.0",$/;"	f
+vinyl-source-stream	package.json	/^    "vinyl-source-stream": "^1.1.0",$/;"	f
+webpack	package.json	/^    "webpack": "^1.12.1",$/;"	f
+webpackJsonpCallback	dist/minjs/libs.min.js	/^\/******\/ 	window["webpackJsonp"] = function webpackJsonpCallback(chunkIds, moreModules) {$/;"	f
+window	dist/minjs/libs.min.js	/^\/******\/ 	var parentJsonpFunction = window["webpackJsonp"];$/;"	f
+window.cancelAnimationFrame	app/scripts/vendor/rAF.js	/^    if (!window.cancelAnimationFrame) {$/;"	f
+window.requestAnimationFrame	app/scripts/vendor/rAF.js	/^    if (!window.requestAnimationFrame) {$/;"	f
+yargs	package.json	/^    "yargs": "^3.23.0",$/;"	f
+zepto	package.json	/^    "zepto": "0.0.4"$/;"	f

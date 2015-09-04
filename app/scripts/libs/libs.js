@@ -12,6 +12,7 @@ import 'react-bootstrap/lib/OverlayTrigger';
 import 'moment';
 // import 'react-scroll';
 import './../vendor/rAF';
+import './../vendor/scrollspy.jsx';
 
 // custom greensock namespace
 global.gs = global.GreenSockGlobals = {};

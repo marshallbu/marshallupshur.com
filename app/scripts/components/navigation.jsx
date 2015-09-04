@@ -1,29 +1,67 @@
+/* eslint-disable max-len */
 import React from 'react';
 import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
+import Scrollspy from './../vendor/scrollspy.jsx';;
 
 var Navigation = React.createClass({
     getInitialState() {
         return {
             navItems: [
-                { className: '', href: '#about', title: 'About', value: 'About', onSelect: this.scrollTo },
-                { className: '', href: '#creations', title: 'About', value: 'Creations', onSelect: this.scrollTo },
-                { className: '', href: '#resume', title: 'About', value: 'Resume', onSelect: this.scrollTo },
-                { className: '', href: '#blog', title: 'About', value: 'Blog', onSelect: this.scrollTo },
+                {
+                    className: '',
+                    href: '#about',
+                    title: 'About',
+                    value: 'About',
+                    eventKey: 'about',
+                    onClick: this.scrollTo,
+                    sectionId: 'about'
+                },
+                {
+                    className: '',
+                    href: '#creations',
+                    title: 'Creations',
+                    value: 'Creations',
+                    eventKey: 'creations',
+                    onClick: this.scrollTo,
+                    sectionId: 'creations'
+                },
+                {
+                    className: '',
+                    href: '#resume',
+                    title: 'Resume',
+                    value: 'Resume',
+                    eventKey: 'resume',
+                    onClick: this.scrollTo,
+                    sectionId: 'resume'
+                },
+                {
+                    className: '',
+                    href: '#blog',
+                    title: 'Blog',
+                    value: 'Blog',
+                    eventKey: 'blog',
+                    onClick: this.scrollTo,
+                    sectionId: 'blog'
+                },
                 {
                     className: '',
                     href: '#photos',
                     title: 'Photos',
                     value: <i className='fa fa-camera-retro' />,
-                    onSelect: this.scrollTo
+                    eventKey: 'photos',
+                    onClick: this.scrollTo,
+                    sectionId: 'photos'
                 },
                 {
                     className: '',
                     href: '#experiments',
                     title: 'Experiments',
                     value: <i className='fa fa-flask' />,
-                    onSelect: this.scrollTo
+                    eventKey: 'experiments',
+                    onClick: this.scrollTo,
+                    sectionId: 'experiments'
                 },
                 { className: '', href: '#', title: 'Contact', value: <i className='fa fa-envelope' /> },
                 {
@@ -60,7 +98,7 @@ var Navigation = React.createClass({
 
     scrollTo(eventKey, href, target) {
         // TODO: make this do the smooth scroll
-        console.log(eventKey, href, target);
+        // console.log(eventKey, href, target);
     },
 
     generateNavItems() {
