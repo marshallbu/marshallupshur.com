@@ -27,7 +27,7 @@ var Photos = React.createClass({
         return {
             photosUrl: 'http://photos.marshallupshur.com',
             photosFeedUrl: 'http://testphotos.marshallupshur.com/feed/albums/1/recent.rss',
-            numberOfPosts: 10
+            numberOfPosts: 3
         };
     },
 
