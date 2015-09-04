@@ -2,14 +2,14 @@ var React = require('react');
 
 var RouteNotFound = React.createClass({
 
-  render() {
+    render() {
 
-    return (
-      <div className="not-found">
-        404 World
-      </div>
-    );
-  }
+        return (
+            <div className="not-found">
+                404 World
+            </div>
+        );
+    }
 });
 
 module.exports = RouteNotFound;

@@ -1,4 +1,4 @@
-/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-underscore-dangle, max-len */
 import React from 'react';
 
 import Carousel from 'react-bootstrap/lib/Carousel';
