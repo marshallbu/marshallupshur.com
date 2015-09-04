@@ -44,44 +44,6 @@
 
     <div id="content" style="display: none;">
         <div class="container">
-
-        <section id="photos">
-            <div class="page-header">
-                <h2 class="">Photos <small>the world through my eyes</small></h1>
-                    <a href="http://photos.marshallupshur.com" target="_self" tabindex="0"
-                    class="btn btn-primary btn-lg btn-link launch" title="View Photos"
-                    data-toggle="tooltip" data-placement="left">
-                    photos <i class="fa fa-chevron-circle-right"></i>
-                </a>
-                <div class="clearfix"></div>
-            </div>
-            <div class="photos-slider-container" ng-controller="PhotosCtrl">
-                <div class="section-loader" ng-hide="showPhotosContainer">
-                    <i class="fa fa-spinner fa-spin"></i>
-                </div>
-                <div id="photos-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000" ng-show="showPhotosContainer" ng-cloak>
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#photos-slider" ng-repeat="photo in photos" data-slide-to="{{$index}}" ng-class="{active: $index === 0}"></li>
-                    </ol>
-
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="item" ng-repeat="photo in photos" ng-class="{active: $index === 0}" on-finish-render="startCarousel">
-                            <img class="img-responsive" ng-src="{{photo.src}}" alt="{{photo.alt}}">
-                        </div>
-                    </div>
-
-                    <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#creations-slider" data-slide="prev" title="Previous Slide" tabindex="0">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
-                    <a class="carousel-control right" href="#creations-slider" data-slide="next" title="Next Slide" tabindex="0">
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
             <!-- contact-modal -->
             @@include('./../tmp/partials/contact_modal_template.html')
         </div>

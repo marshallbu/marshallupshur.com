@@ -5,6 +5,7 @@ import About from './about.jsx';
 import Creations from './creations.jsx';
 import Resume from './resume.jsx';
 import Blog from './blog.jsx';
+import Photos from './photos.jsx';
 import Experiments from './experiments.jsx';
 import Footer from './footer.jsx';
 
@@ -19,6 +20,7 @@ var MainContent = React.createClass({
                     <Creations />
                     <Resume />
                     <Blog />
+                    <Photos />
                     <Experiments />
                 </div>
 

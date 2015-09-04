@@ -17,18 +17,19 @@ var Blog = React.createClass({
 
     getDefaultProps: function() {
         return {
-            blogUrl: 'http://blog.marshallupshur.com/feed/',
+            blogUrl: 'http://blog.marshallupshur.com',
+            blogFeedUrl: 'http://blog.marshallupshur.com/feed/',
             numberOfPosts: 3
         };
     },
 
     parseFeed() {
-        var { blogUrl, numberOfPosts } = this.props;
+        var { blogFeedUrl, numberOfPosts } = this.props;
         if (google && google.load) {
             google.load('feeds', '1');
 
             google.setOnLoadCallback(() => {
-                var feed = new google.feeds.Feed(blogUrl);
+                var feed = new google.feeds.Feed(blogFeedUrl);
                 feed.setNumEntries(numberOfPosts);
                 feed.load((result) => {
                     if (!result.error) {
@@ -65,7 +66,7 @@ var Blog = React.createClass({
         var { posts } = this.state;
         var component = null, postComponents;
 
-        if (this.state.posts.length !== 0) {
+        if (posts.length !== 0) {
             postComponents = posts.map((post, index) => {
                 var date = new Date(post.publishedDate);
                 var formattedDate = moment(date).format('MM/DD/YY @ h:mma');
@@ -114,7 +115,7 @@ var Blog = React.createClass({
                             target='_self'
                             tabIndex='0'
                             className='btn btn-primary btn-lg btn-link launch'
-                            title='Blog'>
+                            title={linkTitle}>
                             blog <i className='fa fa-chevron-circle-right' />
                         </a>
                     </OverlayTrigger>

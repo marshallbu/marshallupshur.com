@@ -94,7 +94,7 @@ var Creations = React.createClass({
                             target='_self'
                             tabIndex='0'
                             className='btn btn-primary btn-lg btn-link launch'
-                            title='mbu Creations Portfolio'>
+                            title={linkTitle}>
                             portfolio <i className='fa fa-chevron-circle-right' />
                         </a>
                     </OverlayTrigger>
