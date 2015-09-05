@@ -16,15 +16,15 @@ var MainContent = React.createClass({
         return (
             <div id='content'>
                 <div className='container'>
-                    <About />
-                    <Creations />
-                    <Resume />
-                    <Blog />
-                    <Photos />
-                    <Experiments />
+                    <About/>
+                    <Creations/>
+                    <Resume/>
+                    <Blog/>
+                    <Photos/>
+                    <Experiments/>
                 </div>
 
-                <Footer />
+                <Footer/>
             </div>
         );
     }

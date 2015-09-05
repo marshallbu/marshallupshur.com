@@ -26,7 +26,7 @@ var Resume = React.createClass({
     renderLoader() {
         var loader = (
             <div className='section-loader'>
-                <i className='fa fa-spinner fa-spin' />
+                <i className='fa fa-spinner fa-spin'/>
             </div>
         );
 
@@ -112,10 +112,10 @@ var Resume = React.createClass({
                             tabIndex='0'
                             className='btn btn-primary btn-lg btn-link launch'
                             title='Download Resume'>
-                            resume <i className='fa fa-chevron-circle-right' />
+                            resume <i className='fa fa-chevron-circle-right'/>
                         </a>
                     </OverlayTrigger>
-                    <div className='clearfix' />
+                    <div className='clearfix'/>
                 </div>
                 <div className='resume-view-container'>
                     {this.renderLoader()}

@@ -15,7 +15,7 @@ var Blog = React.createClass({
         };
     },
 
-    getDefaultProps: function() {
+    getDefaultProps() {
         return {
             blogUrl: 'http://blog.marshallupshur.com',
             blogFeedUrl: 'http://blog.marshallupshur.com/feed/',
@@ -52,7 +52,7 @@ var Blog = React.createClass({
     renderLoader() {
         var loader = (
             <div className='section-loader'>
-                <i className='fa fa-spinner fa-spin' />
+                <i className='fa fa-spinner fa-spin'/>
             </div>
         );
 
@@ -77,13 +77,13 @@ var Blog = React.createClass({
                             <p className='meta'>
                                 <small>{formattedDate}</small>
                             </p>
-                            <p className='text' dangerouslySetInnerHTML={{__html: post.contentSnippet}} />
+                            <p className='text' dangerouslySetInnerHTML={{__html: post.contentSnippet}}/>
                             <p className='controls'>
                                 <a href='{post.link}'
                                     className='btn btn-sm btn-mbu'
                                     tabIndex='0'
                                     title='View blog post titled {post.title}'>
-                                    View post <i className='icon-double-angle-right' />
+                                    View post <i className='icon-double-angle-right'/>
                                 </a>
                             </p>
                         </div>
@@ -116,7 +116,7 @@ var Blog = React.createClass({
                             tabIndex='0'
                             className='btn btn-primary btn-lg btn-link launch'
                             title={linkTitle}>
-                            blog <i className='fa fa-chevron-circle-right' />
+                            blog <i className='fa fa-chevron-circle-right'/>
                         </a>
                     </OverlayTrigger>
                     <div className='clearfix'></div>

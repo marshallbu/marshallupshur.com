@@ -5,7 +5,7 @@ var RouteNotFound = React.createClass({
     render() {
 
         return (
-            <div className="not-found">
+            <div className='not-found'>
                 404 World
             </div>
         );

@@ -47,7 +47,7 @@ var Experiments = React.createClass({
                 <div className='experiments-container'>
                     <div className='experiments'>
                         <div className='exp-title'>
-                            coming soon <i id='exp-flask' className='fa fa-flask animated' ref='flask' />
+                            coming soon <i id='exp-flask' className='fa fa-flask animated' ref='flask'/>
                         </div>
                     </div>
                 </div>

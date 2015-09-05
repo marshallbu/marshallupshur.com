@@ -35,10 +35,10 @@ var Footer = React.createClass({
                         <i className='fa fa-html5'></i>&nbsp;
                         <i className='fa fa-css3'></i>&nbsp;
                         <i className='fa fa-apple'></i>
-                        <span className='site-version'>v<span dangerouslySetInnerHTML={{__html: version}} /></span>
+                        <span className='site-version'>v<span dangerouslySetInnerHTML={{__html: version}}/></span>
                     </p>
                     <p className='pull-right'>
-                        &copy; <span dangerouslySetInnerHTML={{__html: copyYear}} /> Marshall Upshur | <a href='http://mbucreations.com' tabIndex='0' className='btn-link' target='_self' title='Go to mbu Creations'>mbu Creations</a>
+                        &copy; <span dangerouslySetInnerHTML={{__html: copyYear}}/> Marshall Upshur | <a href='http://mbucreations.com' tabIndex='0' className='btn-link' target='_self' title='Go to mbu Creations'>mbu Creations</a>
                     </p>
                 </div>
             </footer>

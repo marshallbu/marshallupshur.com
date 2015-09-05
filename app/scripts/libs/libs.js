@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions, no-unused-vars */
 
 import 'react';
+import 'react-bootstrap/lib/Button';
 import 'react-bootstrap/lib/Navbar';
 import 'react-bootstrap/lib/Nav';
 import 'react-bootstrap/lib/NavItem';
@@ -9,6 +10,7 @@ import 'react-bootstrap/lib/Carousel';
 import 'react-bootstrap/lib/CarouselItem';
 import 'react-bootstrap/lib/Tooltip';
 import 'react-bootstrap/lib/OverlayTrigger';
+import 'react-bootstrap/lib/Modal';
 import 'moment';
 // import 'react-scroll';
 import './../vendor/rAF';

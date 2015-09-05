@@ -23,7 +23,7 @@ var Photos = React.createClass({
         };
     },
 
-    getDefaultProps: function() {
+    getDefaultProps() {
         return {
             photosUrl: 'http://photos.marshallupshur.com',
             photosFeedUrl: 'http://testphotos.marshallupshur.com/feed/albums/1/recent.rss',
@@ -60,7 +60,7 @@ var Photos = React.createClass({
     renderLoader() {
         var loader = (
             <div className='section-loader'>
-                <i className='fa fa-spinner fa-spin' />
+                <i className='fa fa-spinner fa-spin'/>
             </div>
         );
 
@@ -81,7 +81,7 @@ var Photos = React.createClass({
                     <img
                         className='img-responsive'
                         alt={contents.title}
-                        src={contents.url.replace('medium_large', 'huge')} />
+                        src={contents.url.replace('medium_large', 'huge')}/>
                 </CarouselItem>
             );
 
@@ -92,11 +92,11 @@ var Photos = React.createClass({
 
     renderCarousel() {
         var { indicators, slide, interval, controls } = this.state;
-        var prevIcon = <i className='fa fa-chevron-left' />;
-        var nextIcon = <i className='fa fa-chevron-right' />;
+        var prevIcon = <i className='fa fa-chevron-left'/>;
+        var nextIcon = <i className='fa fa-chevron-right'/>;
         var carousel = (
-            <div className="section-loader">
-                <i className="fa fa-spinner fa-spin" />
+            <div className='section-loader'>
+                <i className='fa fa-spinner fa-spin'/>
             </div>
         );
 
@@ -132,7 +132,7 @@ var Photos = React.createClass({
                             tabIndex='0'
                             className='btn btn-primary btn-lg btn-link launch'
                             title={linkTitle}>
-                            photos <i className='fa fa-chevron-circle-right' />
+                            photos <i className='fa fa-chevron-circle-right'/>
                         </a>
                     </OverlayTrigger>
                     <div className='clearfix'></div>

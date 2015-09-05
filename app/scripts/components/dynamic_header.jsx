@@ -19,7 +19,7 @@ var DynamicHeader = React.createClass({
     render() {
         return (
             <div id='dynamic-header'>
-                <canvas ref='dynamicHeaderCanvas' />
+                <canvas ref='dynamicHeaderCanvas'/>
                 <div className='jumbotron main-title'>
                     <h1>Marshall Upshur</h1>
                     <p>Software Engineer</p>

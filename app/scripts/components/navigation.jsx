@@ -1,9 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
+import Button from 'react-bootstrap/lib/Button';
 import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
-import Scrollspy from './../vendor/scrollspy.jsx';;
+import Modal from 'react-bootstrap/lib/Modal';
+import Scrollspy from './../vendor/scrollspy.jsx';
 
 var Navigation = React.createClass({
     getInitialState() {
@@ -49,7 +51,7 @@ var Navigation = React.createClass({
                     className: '',
                     href: '#photos',
                     title: 'Photos',
-                    value: <i className='fa fa-camera-retro' />,
+                    value: <i className='fa fa-camera-retro'/>,
                     eventKey: 'photos',
                     onClick: this.scrollTo,
                     sectionId: 'photos'
@@ -58,42 +60,70 @@ var Navigation = React.createClass({
                     className: '',
                     href: '#experiments',
                     title: 'Experiments',
-                    value: <i className='fa fa-flask' />,
+                    value: <i className='fa fa-flask'/>,
                     eventKey: 'experiments',
                     onClick: this.scrollTo,
                     sectionId: 'experiments'
                 },
-                { className: '', href: '#', title: 'Contact', value: <i className='fa fa-envelope' /> },
+                {
+                    className: '',
+                    href: '#',
+                    title: 'Contact',
+                    value: <i className='fa fa-envelope'/>,
+                    onClick: this.showContactModal
+                },
                 {
                     className: 'social',
                     href: 'https://github.com/marshallbu',
                     target: '_self',
                     title: 'github',
-                    value: <i className='fa fa-github-alt' />
+                    value: <i className='fa fa-github-alt'/>
                 },
                 {
                     className: 'social',
                     href: 'http://www.linkedin.com/in/marshallupshur',
                     target: '_self',
                     title: 'LinkedIn',
-                    value: <i className='fa fa-linkedin' />
+                    value: <i className='fa fa-linkedin'/>
                 },
                 {
                     className: 'social',
                     href: 'http://twitter.com/mbuCreations',
                     target: '_self',
                     title: 'Twitter',
-                    value: <i className='fa fa-twitter' />
+                    value: <i className='fa fa-twitter'/>
                 },
                 {
                     className: 'social',
                     href: 'https://www.facebook.com/marshallbu',
                     target: '_self',
                     title: 'Facebook',
-                    value: <i className='fa fa-facebook' />
+                    value: <i className='fa fa-facebook'/>
                 }
             ]
         };
+    },
+
+    showContactModal() {
+        var header = (
+            <Modal.Header closeButton key='modalHeader'>
+                <Modal.Title>Contact Me!</Modal.Title>
+            </Modal.Header>
+        );
+        var body = (
+            <Modal.Body key='modalBody'>
+                <p style={{ textAlign: 'center' }}>
+                    Send an email to <strong><a href='mailto:me@marshallupshur.com?subject=Hi Marshall!'>me(at)marshallupshur.com</a></strong>
+                </p>
+            </Modal.Body>
+        );
+        var footer = (
+            <Modal.Footer key='modalFooter'>
+                <Button onClick={this.props.hideModal}>Close</Button>
+            </Modal.Footer>
+        );
+
+        this.props.showModal([header, body, footer]);
     },
 
     scrollTo(eventKey, href, target) {

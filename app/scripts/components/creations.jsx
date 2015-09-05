@@ -34,7 +34,7 @@ var Creations = React.createClass({
             if (item.type === 'img') {
                 component = (
                     <CarouselItem key={index}>
-                        <img className='img-responsive' alt='' src={item.path} />
+                        <img className='img-responsive' alt='' src={item.path}/>
                     </CarouselItem>
                 );
             }
@@ -45,11 +45,11 @@ var Creations = React.createClass({
 
     renderCarousel() {
         var { indicators, slide, interval, controls } = this.state;
-        var prevIcon = <i className='fa fa-chevron-left' />;
-        var nextIcon = <i className='fa fa-chevron-right' />;
+        var prevIcon = <i className='fa fa-chevron-left'/>;
+        var nextIcon = <i className='fa fa-chevron-right'/>;
         var carousel = (
-            <div className="section-loader">
-                <i className="fa fa-spinner fa-spin" />
+            <div className='section-loader'>
+                <i className='fa fa-spinner fa-spin'/>
             </div>
         );
 
@@ -95,7 +95,7 @@ var Creations = React.createClass({
                             tabIndex='0'
                             className='btn btn-primary btn-lg btn-link launch'
                             title={linkTitle}>
-                            portfolio <i className='fa fa-chevron-circle-right' />
+                            portfolio <i className='fa fa-chevron-circle-right'/>
                         </a>
                     </OverlayTrigger>
                     <div className='clearfix'></div>
