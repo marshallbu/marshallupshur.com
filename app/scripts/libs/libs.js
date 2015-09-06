@@ -14,6 +14,7 @@ import 'react-bootstrap/lib/Modal';
 import 'moment';
 // import 'react-scroll';
 import './../vendor/rAF';
+import 'viewer';
 import './../vendor/scrollspy.jsx';
 
 // custom greensock namespace
