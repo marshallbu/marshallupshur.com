@@ -79,10 +79,10 @@ var Blog = React.createClass({
                             </p>
                             <p className='text' dangerouslySetInnerHTML={{__html: post.contentSnippet}}/>
                             <p className='controls'>
-                                <a href='{post.link}'
+                                <a href={post.link}
                                     className='btn btn-sm btn-mbu'
                                     tabIndex='0'
-                                    title='View blog post titled {post.title}'>
+                                    title={`View blog post titled ${post.title}`}>
                                     View post <i className='icon-double-angle-right'/>
                                 </a>
                             </p>
