@@ -140,17 +140,18 @@ var Navigation = React.createClass({
     render() {
 
         return (
-            <Navbar
-                brand={<a href='/'>Marshall Upshur</a>}
-                fixedTop
-                inverse
-                fluid
-                role='navigation'
-                componentClass={'header'}
-                toggleNavKey={0}>
-                <Nav right eventKey={0} componentClass={'div'}>
-                    {this.generateNavItems()}
-                </Nav>
+            <Navbar inverse fixedTop fluid componentClass={'header'}>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <a href='/'>Marshall Upshur</a>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
+                </Navbar.Header>
+                <Navbar.Collapse>
+                    <Nav pullRight>
+                        {this.generateNavItems()}
+                    </Nav>
+                </Navbar.Collapse>
             </Navbar>
         );
     }

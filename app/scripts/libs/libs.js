@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-expressions, no-unused-vars */
 
 import 'react';
+import 'react-dom';
 import 'react-bootstrap/lib/Button';
 import 'react-bootstrap/lib/Navbar';
 import 'react-bootstrap/lib/Nav';

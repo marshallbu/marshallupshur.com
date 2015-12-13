@@ -63,7 +63,7 @@ var Resume = React.createClass({
     },
 
     componentDidMount() {
-        var viewerNode = React.findDOMNode(this.refs.resumeViewer);
+        var viewerNode = this.refs.resumeViewer;
 
         this.setState({
             boxResumeUrl: global.__DATA__.boxResumeUrl,

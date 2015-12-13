@@ -35,7 +35,6 @@ var App = React.createClass({
                 <Navigation showModal={this.openModal} hideModal={this.closeModal}/>
                 <DynamicHeader/>
                 <MainContent/>
-
                 <Modal id='mbu-modal' show={showModal} onHide={this.closeModal}>
                     {modalContent}
                 </Modal>

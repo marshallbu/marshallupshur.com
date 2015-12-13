@@ -18,20 +18,30 @@ module.exports = {
     },
     module: {
         preLoaders: [
-            { test: /\.(js|jsx)$/, loader: 'source-map-loader' }
+            { test: /\.jsx?$/, loader: 'source-map-loader' }
         ],
         loaders: [
             { test: /\.json$/, loader: 'json' },
-            { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader'}
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    // https://github.com/babel/babel-loader#options
+                    cacheDirectory: true,
+                    presets: ['es2015', 'stage-0', 'react']
+                }
+            }
         ]
     },
     resolve: {
-        modulesDirectories: ['app/scripts', 'node_modules', 'bower_modules'],
+        modulesDirectories: ['app/scripts', 'node_modules'],
         // packageAlias: false,
         alias: {
             // jquery: 'jquery/dist/jquery.min',
             // react: isProduction ? 'react/dist/react.min' : 'react',
             react: 'react',
+            'react-dom': 'react-dom',
             // 'react-bootstrap': isProduction ? 'react-bootstrap/dist/react-bootstrap.min' : 'react-bootstrap',
             tweenlite: 'gsap/src/minified/TweenLite.min',
             easepack: 'gsap/src/minified/easing/EasePack.min',

@@ -9,7 +9,7 @@ var Experiments = React.createClass({
         var rand = 0,
             lastUsed = '',
             count = 100,
-            flask = $(React.findDOMNode(this.refs.flask)),
+            flask = $(this.refs.flask),
             animations = ['flip', 'bounce', 'rubberBand', 'shake', 'swing', 'tada'],
             length = animations.length;
 

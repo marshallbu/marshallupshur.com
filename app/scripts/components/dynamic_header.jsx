@@ -8,7 +8,7 @@ var DynamicHeader = React.createClass({
     },
 
     componentDidMount() {
-        var canvas = React.findDOMNode(this.refs.dynamicHeaderCanvas);
+        var canvas = this.refs.dynamicHeaderCanvas;
         GraphDance.animateOnCanvas(canvas);
     },
 
