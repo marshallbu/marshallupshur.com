@@ -6,11 +6,7 @@ var config = require('./../utils/config');
 
 gulp.task('partial-compile', function() {
 
-    gulp.src(config.src.dir.partials + 'analytics.html')
-        .pipe(plugins.template())
-        .pipe(gulp.dest(config.tmp.dir.partials));
-
-    return gulp.src(config.src.dir.partials + 'contact_modal_template.html')
+    return gulp.src(config.src.dir.partials + 'analytics.html')
         .pipe(plugins.template())
         .pipe(gulp.dest(config.tmp.dir.partials));
 });

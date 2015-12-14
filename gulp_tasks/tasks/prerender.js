@@ -1,14 +1,15 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var renderReact = require('./../utils/renderReact');
 var pkgjson = require('./../../package.json');
 var moment = require('moment');
 var config = require('./../utils/config');
 
 gulp.task('prerender', function() {
-    return gulp.src(config.src.dir.scripts + 'app.jsx')
-        // .pipe(plugins.renderReact({
-        //     type: 'markup'
-        // }))
+    return gulp.src(config.src.dir.scripts + 'app.jsx', { read: false })
+        .pipe(renderReact({
+            type: 'string'
+        }))
         .pipe(plugins.preprocess({
             context: {
                 'APP_VERSION': pkgjson.version,
