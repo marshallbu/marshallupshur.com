@@ -38,13 +38,11 @@ module.exports = {
         modulesDirectories: ['app/scripts', 'node_modules'],
         // packageAlias: false,
         alias: {
-            // jquery: 'jquery/dist/jquery.min',
             // react: isProduction ? 'react/dist/react.min' : 'react',
-            react: 'react',
-            'react-dom': 'react-dom',
+            // react: 'react',
+            // 'react-dom': isProduction ? 'react-dom/dist/react-dom.min' : 'react-dom',
+            // 'react-dom': 'react-dom',
             // 'react-bootstrap': isProduction ? 'react-bootstrap/dist/react-bootstrap.min' : 'react-bootstrap',
-            tweenlite: 'gsap/src/minified/TweenLite.min',
-            easepack: 'gsap/src/minified/easing/EasePack.min',
             moment: 'moment/min/moment.min.js'
         }
     },

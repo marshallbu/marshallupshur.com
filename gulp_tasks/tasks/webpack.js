@@ -17,15 +17,19 @@ gulp.task('webpack:build', function(callback) {
     };
 
     if (isProduction) {
-        webpackConfig.plugins.concat(
+        webpackConfig.plugins = webpackConfig.plugins.concat(
+            new webpack.DefinePlugin({
+                'process.env': {
+                    NODE_ENV: JSON.stringify('production')
+                }
+            }),
             new webpack.optimize.UglifyJsPlugin({
                 // http://lisperator.net/uglifyjs/compress
                 compress: {
                     warnings: false
                 },
-                mangle: false,
+                mangle: true,
                 exclude: [
-                    // /libs\.min\.js($|\?)/i
                 ]
             }),
             new webpack.optimize.OccurenceOrderPlugin()
