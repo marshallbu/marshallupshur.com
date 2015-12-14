@@ -1,13 +1,12 @@
-var fs = require('fs'),
-    gulp = require('gulp'),
-    plugins = require('gulp-load-plugins')(),
-    onlyScripts = require('./utils/scriptFilter');
+import fs from 'fs';
+import gulp from 'gulp';
+import gulpLoadPlugins from 'gulp-load-plugins';
+import onlyScripts from './utils/scriptFilter';
 
-var tasks = fs.readdirSync(__dirname + '/tasks/').filter(onlyScripts);
+const plugins = gulpLoadPlugins();
+const tasks = fs.readdirSync(__dirname + '/tasks/').filter(onlyScripts);
 
-tasks.forEach(function(task) {
-  require('./tasks/' + task);
-});
+tasks.forEach(task => require(`./tasks/${task}`));
 
 /**
  * gulp help - show available gulp commands
