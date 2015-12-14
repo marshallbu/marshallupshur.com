@@ -3,7 +3,7 @@
  * 15 minute phone screen to write Styles and PHP.
  */
 /* eslint-disable max-depth, max-statements */
-/* global TweenLite, Circ, requestAnimationFrame */
+/* global gs, requestAnimationFrame */
 
 var width, height, canvas, context, points = [], target, animateHeader = true;
 
@@ -80,7 +80,7 @@ function linkPoints() {
 
                 for (var k = 0; k < 5; k++) {
                     if (!placed) {
-                        if (closest[k] === undefined) {
+                        if (typeof closest[k] === 'undefined') {
                             closest[k] = p2;
                             placed = true;
                         }
@@ -132,13 +132,13 @@ function init(canvasNode) {
  * @param {object} p   a point
  */
 function shiftPoint(p) {
-    TweenLite.to(
+    gs.TweenLite.to(
         p,
         1 + (1 * Math.random()),
         {
             x: p.originX - 50 + (Math.random() * 100),
             y: p.originY - 50 + (Math.random() * 100),
-            ease: Circ.easeInOut,
+            ease: gs.Circ.easeInOut,
             onComplete: () => shiftPoint(p)
         }
     );

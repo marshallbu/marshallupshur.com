@@ -16,9 +16,4 @@ import 'moment';
 // import 'react-scroll';
 import './../vendor/rAF';
 import 'viewer';
-import './../vendor/scrollspy.jsx';
-
-// custom greensock namespace
-global.gs = global.GreenSockGlobals = {};
-import 'tweenlite';
-import 'easepack';
+// import './../vendor/scrollspy.jsx';
