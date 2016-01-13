@@ -1,6 +1,6 @@
 {
   "name": "identity",
-  "version": "0.15.2",
+  "version": "0.15.3",
   "description": "my profile / online resume",
   "main": "app/main.js",
   "scripts": {
@@ -46,6 +46,7 @@
     "gulp-file-include": "^0.13.7",
     "gulp-filesize": "0.0.6",
     "gulp-flatten": "0.2.0",
+    "gulp-help": "^1.6.1",
     "gulp-if": "^2.0.0",
     "gulp-ignore": "^2.0.1",
     "gulp-imagemin": "^2.4.0",
