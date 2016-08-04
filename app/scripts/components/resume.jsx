@@ -1,20 +1,24 @@
 /* eslint-disable no-underscore-dangle */
-/* global $ */
 import React from 'react';
 
 import Tooltip from 'react-bootstrap/lib/Tooltip';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-import crocodoc from 'viewer';
+import ResponsiveEmbed from 'react-bootstrap/lib/ResponsiveEmbed';
+
 import classnames from 'classnames';
 
 var Resume = React.createClass({
     getInitialState() {
         return {
-            boxResumeUrl: '',
+            boxResumeUrl: 'https://app.box.com/embed/preview/7uaub4pvc0dvhlh0nk7xccx093l80cms?direction=ASC&theme=dark',
             resumeURL: 'downloads/Marshall_Upshur_2015c.pdf',
             blockScrolling: true,
             showResume: false
         };
+    },
+
+    componentWillMount() {
+
     },
 
     disableScrollBlocker() {
@@ -22,68 +26,11 @@ var Resume = React.createClass({
             blockScrolling: false
         });
     },
-
-    renderLoader() {
-        var loader = (
-            <div className='section-loader'>
-                <i className='fa fa-spinner fa-spin'/>
-            </div>
-        );
-
-        if (this.state.showResume) {
-            loader = null;
-        }
-        return loader;
-    },
-
-    renderResume() {
-        var view = classnames(
-            {
-                hide: !this.state.showResume
-            }
-        );
-        var blocker = classnames(
-            'scroll-blocker',
-            {
-                'hide': !this.state.blockScrolling
-            }
-        );
-        return (
-            <div id='resume-view' className={view}>
-                <div className='viewer' ref='resumeViewer'></div>
-                <div className={blocker} onClick={this.disableScrollBlocker}>
-                    <div className='scroll-blocker-title'>click to view</div>
-                </div>
-            </div>
-        );
-    },
-
-    componentWillMount() {
-
-    },
-
     componentDidMount() {
-        var viewerNode = this.refs.resumeViewer;
-
         this.setState({
             boxResumeUrl: global.__DATA__.boxResumeUrl,
             resumeURL: global.__DATA__.resumeUrl,
         });
-
-        if ($) {
-            this.viewer = crocodoc($).createViewer(viewerNode, {
-                url: global.__DATA__.boxResumeUrl,
-                // layout: viewer.LAYOUT_PRESENTATION
-            });
-            this.viewer.load();
-
-            this.viewer.on('ready', () => {
-                this.setState({
-                    showResume: true
-                });
-            });
-        }
-
     },
 
     componentWillUnmount() {
@@ -95,6 +42,29 @@ var Resume = React.createClass({
             });
         }
 
+    },
+
+    renderResume() {
+        var { boxResumeUrl } = this.state;
+        const blocker = classnames(
+            'scroll-blocker',
+            {
+                'hide': !this.state.blockScrolling
+            }
+        );
+
+        return (
+            <div id='resume-view' className={{}}>
+                <div className='viewer embed-responsive embed-responsive-16by9'>
+                    <ResponsiveEmbed a16by9>
+                        <iframe src={boxResumeUrl} className='embed-responsive-item' allowFullScreen />
+                    </ResponsiveEmbed>
+                    <div className={blocker} onClick={this.disableScrollBlocker}>
+                        <div className='scroll-blocker-title'>click to view</div>
+                    </div>
+                </div>
+            </div>
+        );
     },
 
     render() {
@@ -118,7 +88,6 @@ var Resume = React.createClass({
                     <div className='clearfix'/>
                 </div>
                 <div className='resume-view-container'>
-                    {this.renderLoader()}
                     {this.renderResume()}
                 </div>
             </section>
