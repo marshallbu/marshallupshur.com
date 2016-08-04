@@ -17,8 +17,7 @@ var Navigation = React.createClass({
                     title: 'About',
                     value: 'About',
                     eventKey: 'about',
-                    onClick: this.scrollTo,
-                    sectionId: 'about'
+                    onClick: this.scrollTo
                 },
                 {
                     className: '',
@@ -26,8 +25,7 @@ var Navigation = React.createClass({
                     title: 'Creations',
                     value: 'Creations',
                     eventKey: 'creations',
-                    onClick: this.scrollTo,
-                    sectionId: 'creations'
+                    onClick: this.scrollTo
                 },
                 {
                     className: '',
@@ -35,8 +33,7 @@ var Navigation = React.createClass({
                     title: 'Resume',
                     value: 'Resume',
                     eventKey: 'resume',
-                    onClick: this.scrollTo,
-                    sectionId: 'resume'
+                    onClick: this.scrollTo
                 },
                 {
                     className: '',
@@ -44,8 +41,7 @@ var Navigation = React.createClass({
                     title: 'Blog',
                     value: 'Blog',
                     eventKey: 'blog',
-                    onClick: this.scrollTo,
-                    sectionId: 'blog'
+                    onClick: this.scrollTo
                 },
                 {
                     className: '',
@@ -53,8 +49,7 @@ var Navigation = React.createClass({
                     title: 'Photos',
                     value: <i className='fa fa-camera-retro'/>,
                     eventKey: 'photos',
-                    onClick: this.scrollTo,
-                    sectionId: 'photos'
+                    onClick: this.scrollTo
                 },
                 {
                     className: '',
@@ -62,8 +57,7 @@ var Navigation = React.createClass({
                     title: 'Experiments',
                     value: <i className='fa fa-flask'/>,
                     eventKey: 'experiments',
-                    onClick: this.scrollTo,
-                    sectionId: 'experiments'
+                    onClick: this.scrollTo
                 },
                 {
                     className: '',
