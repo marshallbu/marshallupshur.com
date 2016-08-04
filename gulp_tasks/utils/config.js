@@ -83,7 +83,7 @@ module.exports = {
             app: 'app.min.js',
             libs: 'libs.min.js',
             bundle: '[name].min.js',
-            boxResumeUrl: 'https://view-api.box.com/1/sessions/3e9892576aa84c5f84c193204e053c77/assets/',
+            boxResumeUrl: 'https://app.box.com/embed/preview/7uaub4pvc0dvhlh0nk7xccx093l80cms?direction=ASC&theme=dark',
             resume: 'downloads/Marshall_Upshur_2015c.pdf'
         }
     },
