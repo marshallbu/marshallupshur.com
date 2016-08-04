@@ -86,7 +86,6 @@
     "react-scroll": "^1.0.2",
     "run-sequence": "^1.1.5",
     "source-map-loader": "^0.1.5",
-    "viewer": "^0.10.11",
     "vinyl-paths": "^2.1.0",
     "vinyl-source-stream": "^1.1.0",
     "webpack": "^1.12.13",

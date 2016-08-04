@@ -34,13 +34,6 @@ var Resume = React.createClass({
     },
 
     componentWillUnmount() {
-        if (this.viewer) {
-            this.viewer.off('ready', () => {
-                this.setState({
-                    showResume: true
-                });
-            });
-        }
 
     },
 
