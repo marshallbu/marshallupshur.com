@@ -1,7 +1,6 @@
-var console, Logger;
-
+/* eslint-disable no-console */
 // make using console safe if it doesn't exist (IE....)
-console = global.console || {
+const console = global.console || {
     log() {
         return void 0;
     },
@@ -32,7 +31,7 @@ console.error = console.error || console.log;
 console.dir = console.dir || console.log;
 console.table = console.table || console.log;
 
-Logger = {
+const Logger = {
     info() {
         console.info.apply(console, arguments);
     },
