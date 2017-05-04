@@ -5,7 +5,7 @@
 /* eslint-disable max-depth, max-statements */
 /* global gs, requestAnimationFrame */
 
-var width, height, canvas, context, points = [], target, animateHeader = true;
+let width, height, canvas, context, points = [], target, animateHeader = true;
 
 /**
  * Circle 'class'
@@ -13,23 +13,22 @@ var width, height, canvas, context, points = [], target, animateHeader = true;
  * @param {Number} rad   radius of circle
  * @param {String} color rgb color
  */
-function Circle(pos, rad, color) {
-    // constructor
-    (() => {
+class Circle {
+    constructor(pos, rad, color) {
         this.pos = pos || null;
         this.radius = rad || null;
         this.color = color || null;
-    })();
 
-    this.draw = () => {
-        if (!this.active) {
-            return;
-        }
-        context.beginPath();
-        context.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
-        context.fillStyle = `rgba(156, 217, 249, ${this.active})`;
-        context.fill();
-    };
+        this.draw = () => {
+            if (!this.active) {
+                return;
+            }
+            context.beginPath();
+            context.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
+            context.fillStyle = `rgba(156, 217, 249, ${this.active})`;
+            context.fill();
+        };
+    }
 }
 
 /**
@@ -45,11 +44,11 @@ function getDistance(p1, p2) {
  * generate an array of random points within the display boundaries
  */
 function generatePoints() {
-    for (var x = 0; x < width; x = x + (width / 20)) {
-        for (var y = 0; y < height; y = y + (height / 20)) {
-            var px = x + Math.random() * (width / 20);
-            var py = y + Math.random() * (height / 20);
-            var p = {
+    for (let x = 0; x < width; x = x + (width / 20)) {
+        for (let y = 0; y < height; y = y + (height / 20)) {
+            const px = x + Math.random() * (width / 20);
+            const py = y + Math.random() * (height / 20);
+            const p = {
                 x: px,
                 originX: px,
                 y: py,
@@ -65,20 +64,20 @@ function generatePoints() {
  * with each vertex connecting to it's 5 nearest neighbors
  */
 function linkPoints() {
-    var closest, p1, p2, placed;
+    let closest, p1, p2, placed;
 
     // for each point find the 5 closest points
-    for(var i = 0; i < points.length; i++) {
+    for(let i = 0; i < points.length; i++) {
         closest = [];
         p1 = points[i];
 
-        for (var j = 0; j < points.length; j++) {
+        for (let j = 0; j < points.length; j++) {
             p2 = points[j];
 
             if (p1 !== p2) {
                 placed = false;
 
-                for (var k = 0; k < 5; k++) {
+                for (let k = 0; k < 5; k++) {
                     if (!placed) {
                         if (typeof closest[k] === 'undefined') {
                             closest[k] = p2;
@@ -87,7 +86,7 @@ function linkPoints() {
                     }
                 }
 
-                for (k = 0; k < 5; k++) {
+                for (let k = 0; k < 5; k++) {
                     if (!placed) {
                         if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
                             closest[k] = p2;
@@ -102,7 +101,7 @@ function linkPoints() {
     }
 
     // assign a circle to each point
-    for (i in points) {
+    for (let i in points) {
         var c = new Circle(points[i], 2 + (Math.random() * 2), 'rgba(255,255,255,0.3)');
         points[i].circle = c;
     }
@@ -150,7 +149,7 @@ function shiftPoint(p) {
  */
 function drawLines(p) {
     if (!p.active) { return; }
-    for (var i in p.closest) {
+    for (let i in p.closest) {
         context.beginPath();
         context.moveTo(p.x, p.y);
         context.lineTo(p.closest[i].x, p.closest[i].y);
@@ -163,10 +162,10 @@ function drawLines(p) {
  * animation function to run on each animation frame
  */
 function animate() {
-    var distance;
+    let distance;
     if (animateHeader) {
         context.clearRect(0, 0, width, height);
-        for (var i in points) {
+        for (let i in points) {
             // detect points in range
             distance = Math.abs(getDistance(target, points[i]));
             if (distance < 4000) {
@@ -195,7 +194,7 @@ function animate() {
  */
 function initAnimation() {
     animate();
-    for(var i in points) {
+    for(let i in points) {
         shiftPoint(points[i]);
     }
 }
@@ -205,7 +204,7 @@ function initAnimation() {
  * @param {Event} e
  */
 function mouseMove(e) {
-    var posX = 0, posY = 0;
+    let posX = 0, posY = 0;
     if (e.pageX || e.pageY) {
         posX = e.pageX;
         posY = e.pageY;
