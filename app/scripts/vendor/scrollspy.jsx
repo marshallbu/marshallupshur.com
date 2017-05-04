@@ -1,5 +1,5 @@
 var React = require('react');
-
+var PropTypes = require('prop-types');
 
 var Scrollspy = {};
 
@@ -10,8 +10,8 @@ var win = global,
 Scrollspy = React.createClass({
 
     propTypes: {
-        items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-        currentClassName: React.PropTypes.string.isRequired
+        items: PropTypes.arrayOf(PropTypes.string).isRequired,
+        currentClassName: PropTypes.string.isRequired
     },
 
     getInitialState: function () {
