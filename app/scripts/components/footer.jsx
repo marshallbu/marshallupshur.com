@@ -3,17 +3,15 @@ import React from 'react';
 
 import logger from './../modules/logger';
 
-var Footer = React.createClass({
-    getInitialState() {
-        return {
+class Footer extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
             version: '<!-- @echo APP_VERSION -->',
             copyYear: '<!-- @echo COPY_YEAR -->'
         };
-    },
-
-    componentWillMount() {
-
-    },
+    }
 
     componentDidMount() {
         this.setState({
@@ -22,7 +20,7 @@ var Footer = React.createClass({
         });
 
         logger.debug('Sniffing around? Email me(at)marshallupshur.com if you find any foobars!');
-    },
+    }
 
     render() {
         var { version, copyYear } = this.state;
@@ -44,6 +42,6 @@ var Footer = React.createClass({
             </footer>
         );
     }
-});
+}
 
 export default Footer;

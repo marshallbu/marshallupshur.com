@@ -7,11 +7,10 @@ import CarouselItem from 'react-bootstrap/lib/CarouselItem';
 import Tooltip from 'react-bootstrap/lib/Tooltip';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 
-import moment from 'moment';
-
-var Photos = React.createClass({
-    getInitialState() {
-        return {
+class Photos extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             showPhotos: false,
             index: 0,
             direction: null,
@@ -21,15 +20,7 @@ var Photos = React.createClass({
             slide: true,
             photos: []
         };
-    },
-
-    getDefaultProps() {
-        return {
-            photosUrl: 'http://photos.marshallupshur.com',
-            photosFeedUrl: 'http://testphotos.marshallupshur.com/feed/albums/1/recent.rss',
-            numberOfPosts: 3
-        };
-    },
+    }
 
     parseFeed() {
         var { photosFeedUrl, numberOfPosts } = this.props;
@@ -51,11 +42,11 @@ var Photos = React.createClass({
                 });
             });
         }
-    },
+    }
 
     componentDidMount() {
         this.parseFeed();
-    },
+    }
 
     renderLoader() {
         var loader = (
@@ -68,7 +59,7 @@ var Photos = React.createClass({
             loader = null;
         }
         return loader;
-    },
+    }
 
     generateCarouselItems() {
         return this.state.photos.map((photo, index) => {
@@ -88,7 +79,7 @@ var Photos = React.createClass({
 
             return component;
         });
-    },
+    }
 
     renderCarousel() {
         var { indicators, slide, interval, controls } = this.state;
@@ -115,7 +106,7 @@ var Photos = React.createClass({
         }
 
         return carousel;
-    },
+    }
 
     render() {
         var linkTitle = 'View Photos';
@@ -144,6 +135,12 @@ var Photos = React.createClass({
             </section>
         );
     }
-});
+}
+
+Photos.defaultProps = {
+    photosUrl: 'http://photos.marshallupshur.com',
+    photosFeedUrl: 'http://testphotos.marshallupshur.com/feed/albums/1/recent.rss',
+    numberOfPosts: 3
+};
 
 export default Photos;

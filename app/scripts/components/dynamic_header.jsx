@@ -1,20 +1,16 @@
 import React from 'react';
 import GraphDance from './../modules/graph_dance';
 
-var DynamicHeader = React.createClass({
-    getInitialState() {
-        return {
-        };
-    },
+class DynamicHeader extends React.Component {
 
     componentDidMount() {
         var canvas = this.refs.dynamicHeaderCanvas;
         GraphDance.animateOnCanvas(canvas);
-    },
+    }
 
     componentWillUnmount() {
         GraphDance.removeListeners();
-    },
+    }
 
     render() {
         return (
@@ -27,6 +23,6 @@ var DynamicHeader = React.createClass({
             </div>
         );
     }
-});
+}
 
 export default DynamicHeader;

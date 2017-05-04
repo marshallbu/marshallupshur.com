@@ -7,35 +7,29 @@ import ResponsiveEmbed from 'react-bootstrap/lib/ResponsiveEmbed';
 
 import classnames from 'classnames';
 
-var Resume = React.createClass({
-    getInitialState() {
-        return {
+class Resume extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             boxResumeUrl: 'https://app.box.com/embed/preview/7uaub4pvc0dvhlh0nk7xccx093l80cms?direction=ASC&theme=dark',
             resumeURL: 'downloads/Marshall_Upshur_2015c.pdf',
             blockScrolling: true,
             showResume: false
         };
-    },
-
-    componentWillMount() {
-
-    },
+    }
 
     disableScrollBlocker() {
         this.setState({
             blockScrolling: false
         });
-    },
+    }
+
     componentDidMount() {
         this.setState({
             boxResumeUrl: global.__DATA__.boxResumeUrl,
             resumeURL: global.__DATA__.resumeUrl,
         });
-    },
-
-    componentWillUnmount() {
-
-    },
+    }
 
     renderResume() {
         var { boxResumeUrl } = this.state;
@@ -58,7 +52,7 @@ var Resume = React.createClass({
                 </div>
             </div>
         );
-    },
+    }
 
     render() {
         var linkTitle = 'Download Resume';
@@ -86,6 +80,6 @@ var Resume = React.createClass({
             </section>
         );
     }
-});
+}
 
 export default Resume;

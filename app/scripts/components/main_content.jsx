@@ -9,10 +9,9 @@ import Photos from './photos.jsx';
 import Experiments from './experiments.jsx';
 import Footer from './footer.jsx';
 
-var MainContent = React.createClass({
+class MainContent extends React.Component {
 
     render() {
-
         return (
             <div id='content'>
                 <div className='container'>
@@ -28,6 +27,6 @@ var MainContent = React.createClass({
             </div>
         );
     }
-});
+}
 
 export default MainContent;

@@ -1,17 +1,13 @@
 /* global $ */
 import React from 'react';
 
-import logger from '../modules/logger';
-
-var Experiments = React.createClass({
+class Experiments extends React.Component {
 
     bubble() {
-        var rand = 0,
-            lastUsed = '',
-            count = 100,
-            flask = $(this.refs.flask),
-            animations = ['flip', 'bounce', 'rubberBand', 'shake', 'swing', 'tada'],
-            length = animations.length;
+        let lastUsed = '';
+        const flask = $(this.refs.flask);
+        const animations = ['flip', 'bounce', 'rubberBand', 'shake', 'swing', 'tada'];
+        const length = animations.length;
 
         // animation function
         function animate() {
@@ -28,14 +24,14 @@ var Experiments = React.createClass({
         }
 
         animate();
-    },
+    }
 
     componentDidMount() {
         // TODO: rewrite this to not depend on jQuery
         if ($) {
             this.bubble();
         }
-    },
+    }
 
     render() {
 
@@ -54,6 +50,6 @@ var Experiments = React.createClass({
             </section>
         );
     }
-});
+}
 
 export default Experiments;

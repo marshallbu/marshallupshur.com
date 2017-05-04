@@ -1,6 +1,6 @@
 var React = require('react');
 
-var RouteNotFound = React.createClass({
+class RouteNotFound extends React.Component {
 
     render() {
 
@@ -10,6 +10,6 @@ var RouteNotFound = React.createClass({
             </div>
         );
     }
-});
+}
 
 module.exports = RouteNotFound;

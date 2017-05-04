@@ -6,9 +6,11 @@ import CarouselItem from 'react-bootstrap/lib/CarouselItem';
 import Tooltip from 'react-bootstrap/lib/Tooltip';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 
-var Creations = React.createClass({
-    getInitialState() {
-        return {
+class Creations extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
             index: 0,
             direction: null,
             interval: 5000,
@@ -18,14 +20,14 @@ var Creations = React.createClass({
             items: [],
             portfolioUrl: 'http://www.mbucreations.com'
         };
-    },
+    }
 
     handleSelect(selectedIndex, selectedDirection) {
         this.setState({
             index: selectedIndex,
             direction: selectedDirection
         });
-    },
+    }
 
     generateCarouselItems() {
         return this.state.items.map((item, index) => {
@@ -41,7 +43,7 @@ var Creations = React.createClass({
 
             return component;
         });
-    },
+    }
 
     renderCarousel() {
         var { indicators, slide, interval, controls } = this.state;
@@ -68,17 +70,17 @@ var Creations = React.createClass({
         }
 
         return carousel;
-    },
+    }
 
     componentWillMount() {
 
-    },
+    }
 
     componentDidMount() {
         this.setState({
             items: global.__DATA__.creations || []
         });
-    },
+    }
 
     render() {
         var linkTitle = 'mbu Creations Portfolio';
@@ -109,6 +111,6 @@ var Creations = React.createClass({
             </section>
         );
     }
-});
+}
 
 export default Creations;

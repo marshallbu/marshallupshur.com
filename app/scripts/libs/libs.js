@@ -16,4 +16,3 @@ import 'react-bootstrap/lib/ResponsiveEmbed';
 import 'moment';
 // import 'react-scroll';
 import './../vendor/rAF';
-// import './../vendor/scrollspy.jsx';

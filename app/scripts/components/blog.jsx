@@ -7,21 +7,15 @@ import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 
 import moment from 'moment';
 
-var Blog = React.createClass({
-    getInitialState() {
-        return {
+class Blog extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
             showPosts: false,
             posts: []
         };
-    },
-
-    getDefaultProps() {
-        return {
-            blogUrl: 'http://blog.marshallupshur.com',
-            blogFeedUrl: 'http://blog.marshallupshur.com/feed/',
-            numberOfPosts: 3
-        };
-    },
+    }
 
     parseFeed() {
         var { blogFeedUrl, numberOfPosts } = this.props;
@@ -43,11 +37,11 @@ var Blog = React.createClass({
                 });
             });
         }
-    },
+    }
 
     componentDidMount() {
         this.parseFeed();
-    },
+    }
 
     renderLoader() {
         var loader = (
@@ -60,7 +54,7 @@ var Blog = React.createClass({
             loader = null;
         }
         return loader;
-    },
+    }
 
     renderPosts() {
         var { posts } = this.state;
@@ -99,7 +93,7 @@ var Blog = React.createClass({
         }
 
         return component;
-    },
+    }
 
     render() {
         var linkTitle = 'Blog';
@@ -128,6 +122,12 @@ var Blog = React.createClass({
             </section>
         );
     }
-});
+}
+
+Blog.defaultProps = {
+    blogUrl: 'http://blog.marshallupshur.com',
+    blogFeedUrl: 'http://blog.marshallupshur.com/feed/',
+    numberOfPosts: 3
+};
 
 export default Blog;

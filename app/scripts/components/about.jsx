@@ -2,7 +2,7 @@
 import React from 'react';
 import Jumbotron from 'react-bootstrap/lib/Jumbotron';
 
-var About = React.createClass({
+class About extends React.Component {
 
     render() {
 
@@ -26,6 +26,6 @@ var About = React.createClass({
             </Jumbotron>
         );
     }
-});
+}
 
 export default About;

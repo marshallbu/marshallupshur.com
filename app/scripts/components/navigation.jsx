@@ -5,11 +5,12 @@ import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import Modal from 'react-bootstrap/lib/Modal';
-import Scrollspy from './../vendor/scrollspy.jsx';
 
-var Navigation = React.createClass({
-    getInitialState() {
-        return {
+class Navigation extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
             navItems: [
                 {
                     className: '',
@@ -96,7 +97,7 @@ var Navigation = React.createClass({
                 }
             ]
         };
-    },
+    }
 
     showContactModal() {
         var header = (
@@ -118,18 +119,18 @@ var Navigation = React.createClass({
         );
 
         this.props.showModal([header, body, footer]);
-    },
+    }
 
     scrollTo(eventKey, href, target) {
         // TODO: make this do the smooth scroll
         // console.log(eventKey, href, target);
-    },
+    }
 
     generateNavItems() {
         return this.state.navItems.map((item, index) => (
             <NavItem {...item} tabIndex='0' key={index}>{item.value}</NavItem>
         ));
-    },
+    }
 
     render() {
 
@@ -149,6 +150,6 @@ var Navigation = React.createClass({
             </Navbar>
         );
     }
-});
+}
 
 export default Navigation;
