@@ -34,10 +34,10 @@ class App extends React.Component {
 
         return (
             <div id='page'>
-                <Navigation showModal={this.openModal} hideModal={this.closeModal}/>
+                <Navigation showModal={this.openModal.bind(this)} hideModal={this.closeModal.bind(this)}/>
                 <DynamicHeader/>
                 <MainContent/>
-                <Modal id='mbu-modal' show={showModal} onHide={this.closeModal}>
+                <Modal id='mbu-modal' show={showModal} onHide={this.closeModal.bind(this)}>
                     {modalContent}
                 </Modal>
             </div>

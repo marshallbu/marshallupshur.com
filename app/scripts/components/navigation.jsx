@@ -18,7 +18,7 @@ class Navigation extends React.Component {
                     title: 'About',
                     value: 'About',
                     eventKey: 'about',
-                    onClick: this.scrollTo
+                    onClick: this.scrollTo.bind(this)
                 },
                 {
                     className: '',
@@ -26,7 +26,7 @@ class Navigation extends React.Component {
                     title: 'Creations',
                     value: 'Creations',
                     eventKey: 'creations',
-                    onClick: this.scrollTo
+                    onClick: this.scrollTo.bind(this)
                 },
                 {
                     className: '',
@@ -34,7 +34,7 @@ class Navigation extends React.Component {
                     title: 'Resume',
                     value: 'Resume',
                     eventKey: 'resume',
-                    onClick: this.scrollTo
+                    onClick: this.scrollTo.bind(this)
                 },
                 {
                     className: '',
@@ -42,7 +42,7 @@ class Navigation extends React.Component {
                     title: 'Blog',
                     value: 'Blog',
                     eventKey: 'blog',
-                    onClick: this.scrollTo
+                    onClick: this.scrollTo.bind(this)
                 },
                 {
                     className: '',
@@ -50,7 +50,7 @@ class Navigation extends React.Component {
                     title: 'Photos',
                     value: <i className='fa fa-camera-retro'/>,
                     eventKey: 'photos',
-                    onClick: this.scrollTo
+                    onClick: this.scrollTo.bind(this)
                 },
                 {
                     className: '',
@@ -58,14 +58,14 @@ class Navigation extends React.Component {
                     title: 'Experiments',
                     value: <i className='fa fa-flask'/>,
                     eventKey: 'experiments',
-                    onClick: this.scrollTo
+                    onClick: this.scrollTo.bind(this)
                 },
                 {
                     className: '',
                     href: '#',
                     title: 'Contact',
                     value: <i className='fa fa-envelope'/>,
-                    onClick: this.showContactModal
+                    onClick: this.showContactModal.bind(this)
                 },
                 {
                     className: 'social',
