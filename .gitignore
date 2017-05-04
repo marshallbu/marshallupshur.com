@@ -13,3 +13,4 @@ tmp
 .ftppass
 .deploypaths
 tags
+.DS_Store
