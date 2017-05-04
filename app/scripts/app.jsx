@@ -5,27 +5,29 @@ import DynamicHeader from './components/dynamic_header.jsx';
 import MainContent from './components/main_content.jsx';
 import Modal from 'react-bootstrap/lib/Modal';
 
-var App = React.createClass({
-    getInitialState() {
-        return {
+class App extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
             showModal: false,
             modalContent: []
         };
-    },
+    }
 
     openModal(content = []) {
         this.setState({
             showModal: true,
             modalContent: content
         });
-    },
+    }
 
     closeModal() {
         this.setState({
             showModal: false,
             modalContent: []
         });
-    },
+    }
 
     render() {
         var { showModal, modalContent } = this.state;
@@ -41,6 +43,6 @@ var App = React.createClass({
             </div>
         );
     }
-});
+}
 
 export default App;
