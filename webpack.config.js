@@ -4,7 +4,7 @@ var path = require('path');
 var config = require('./gulp_tasks/utils/config.js');
 
 module.exports = {
-    debug: true,
+    // debug: true,
     devtool: '#source-map',
     entry: {
         app: config.src.file.app,
@@ -17,11 +17,16 @@ module.exports = {
         chunkFilename: '[chunkhash].js'
     },
     module: {
-        preLoaders: [
-            { test: /\.jsx?$/, loader: 'source-map-loader' }
-        ],
-        loaders: [
-            { test: /\.json$/, loader: 'json' },
+        rules: [
+            {
+                enforce: 'pre',
+                test: /\.jsx?$/,
+                loader: 'source-map-loader'
+            },
+            {
+                test: /\.json$/,
+                loader: 'json'
+            },
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
@@ -35,7 +40,10 @@ module.exports = {
         ]
     },
     resolve: {
-        modulesDirectories: ['app/scripts', 'node_modules'],
+        modules: [
+            'app/scripts',
+            'node_modules'
+        ],
         // packageAlias: false,
         alias: {
             // react: isProduction ? 'react/dist/react.min' : 'react',
@@ -51,7 +59,7 @@ module.exports = {
     plugins: [
         // new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/)
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-        new webpack.optimize.CommonsChunkPlugin('libs', config.dist.file.libs),
+        new webpack.optimize.CommonsChunkPlugin({ name: 'libs', filename: config.dist.file.libs }),
         new webpack.DefinePlugin({
             PRODUCTION: !!isProduction
         }),
