@@ -11,7 +11,8 @@
 @textColor: #313131;
 @mbuOrange: #ff8000;
 @mbuOrangeDark: #cf6800;
-@mbuBlue: #006ed9;
+@mbuBlue: #3f88ff;
+@mbuBlueDark: #0263ff;
 @imgBaseURL: "../images/";
 @sectionHeaderFont: CenturyGothicStd,RobotoDraft,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
@@ -86,10 +87,10 @@ body {
     /* border-radius: 0; */
 }
 .btn-link {
-    color: @mbuOrange;
+    color: @mbuBlueDark;
 }
 .btn-link:hover {
-    color: @mbuOrangeDark;
+    color: @mbuBlue;
 }
 
 .btn-link:hover, .btn-link:focus, a:hover, a:focus {
@@ -127,7 +128,7 @@ body {
     line-height: 150px;
     text-align: center;
     height: 150px;
-
+    color: @mbuBlueDark;
     left: 50%;
     top: 50%;
     bottom: auto;
@@ -162,7 +163,7 @@ section {
 
     h2 {
         font-family: @sectionHeaderFont;
-        color: @mbuOrange;
+        color: @mbuBlueDark;
 
         small {
             color: #313131;
@@ -242,12 +243,12 @@ p.match-view {
     color: #ffffff;
 }
 .btn-mbu {
-    background-color: #FF8000;
+    background-color: @mbuBlueDark;
 }
 
 .btn-mbu.disabled,
 .btn-mbu[disabled] {
-    background-color: #CF6800;
+    background-color: @mbuBlue;
 }
 
 .btn-mbu:focus,
