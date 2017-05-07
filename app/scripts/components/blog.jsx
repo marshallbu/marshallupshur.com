@@ -6,6 +6,7 @@ import Tooltip from 'react-bootstrap/lib/Tooltip';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 
 import moment from 'moment';
+import 'whatwg-fetch';
 
 class Blog extends React.Component {
 
@@ -18,24 +19,21 @@ class Blog extends React.Component {
     }
 
     parseFeed() {
-        var { blogFeedUrl, numberOfPosts } = this.props;
-        if (google && google.load) {
-            google.load('feeds', '1');
+        const { blogFeedUrl, numberOfPosts } = this.props;
+        const self = this;
 
-            google.setOnLoadCallback(() => {
-                var feed = new google.feeds.Feed(blogFeedUrl);
-                feed.setNumEntries(numberOfPosts);
-                feed.load((result) => {
-                    if (!result.error) {
-                        this.setState({
-                            showPosts: true,
-                            posts: result.feed.entries
-                        });
-                    } else {
-                        // TODO: handle an error!
-                    }
+        if (fetch) {
+            fetch(`${blogFeedUrl}&per_page=${numberOfPosts}`)
+                .then((response) => {
+                    return response.json();
+                }).then((json) => {
+                    self.setState({
+                        showPosts: true,
+                        posts: json
+                    });
+                }).catch((ex) => {
+                    console.log('parsing failed', ex)
                 });
-            });
         }
     }
 
@@ -44,7 +42,7 @@ class Blog extends React.Component {
     }
 
     renderLoader() {
-        var loader = (
+        let loader = (
             <div className='section-loader'>
                 <i className='fa fa-spinner fa-spin'/>
             </div>
@@ -57,26 +55,27 @@ class Blog extends React.Component {
     }
 
     renderPosts() {
-        var { posts } = this.state;
-        var component = null, postComponents;
+        const { posts } = this.state;
+        let component = null;
+        let postComponents;
 
         if (posts.length !== 0) {
             postComponents = posts.map((post, index) => {
-                var date = new Date(post.publishedDate);
-                var formattedDate = moment(date).format('MM/DD/YY @ h:mma');
+                const date = new Date(post.date);
+                const formattedDate = moment(date).format('MM/DD/YY @ h:mma');
                 return (
                     <div className='col-md-4' key={index}>
                         <div className='post'>
-                            <h4 className='title'>{post.title}</h4>
+                            <h4 className='title'>{post.title.rendered}</h4>
                             <p className='meta'>
                                 <small>{formattedDate}</small>
                             </p>
-                            <p className='text' dangerouslySetInnerHTML={{__html: post.contentSnippet}}/>
+                            <p className='text' dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}/>
                             <p className='controls'>
                                 <a href={post.link}
                                     className='btn btn-sm btn-mbu'
                                     tabIndex='0'
-                                    title={`View blog post titled ${post.title}`}>
+                                    title={`View blog post titled ${post.title.rendered}`}>
                                     View post <i className='icon-double-angle-right'/>
                                 </a>
                             </p>
@@ -96,9 +95,9 @@ class Blog extends React.Component {
     }
 
     render() {
-        var linkTitle = 'Blog';
-        var tooltip = <Tooltip id='blogTooltip'>{linkTitle}</Tooltip>;
-        var { blogUrl } = this.props;
+        const linkTitle = 'Blog';
+        const tooltip = <Tooltip id='blogTooltip'>{linkTitle}</Tooltip>;
+        const { blogUrl } = this.props;
 
         return (
             <section id='blog'>
@@ -126,7 +125,7 @@ class Blog extends React.Component {
 
 Blog.defaultProps = {
     blogUrl: 'http://blog.marshallupshur.com',
-    blogFeedUrl: 'http://blog.marshallupshur.com/feed/',
+    blogFeedUrl: 'http://blog.marshallupshur.com/wp-json/wp/v2/posts?context=embed',
     numberOfPosts: 3
 };
 

@@ -14,5 +14,6 @@ import 'react-bootstrap/lib/OverlayTrigger';
 import 'react-bootstrap/lib/Modal';
 import 'react-bootstrap/lib/ResponsiveEmbed';
 import 'moment';
+import 'whatwg-fetch';
 // import 'react-scroll';
 import './../vendor/rAF';
