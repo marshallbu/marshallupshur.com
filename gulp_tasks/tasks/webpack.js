@@ -33,7 +33,6 @@ gulp.task('webpack:build', function(callback) {
                 ]
             }),
             new webpack.optimize.OccurenceOrderPlugin()
-            // new webpack.optimize.DedupePlugin()
         );
     }
 
