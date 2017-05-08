@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
-/* global google */
 import React from 'react';
+import logger from './../modules/logger';
 
 import Tooltip from 'react-bootstrap/lib/Tooltip';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
@@ -32,7 +32,7 @@ class Blog extends React.Component {
                         posts: json
                     });
                 }).catch((ex) => {
-                    console.log('parsing failed', ex)
+                    logger.info('parsing failed', ex)
                 });
         }
     }
