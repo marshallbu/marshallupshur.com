@@ -1,11 +1,13 @@
 /* eslint-disable no-underscore-dangle */
-/* global google */
 import React from 'react';
+import logger from './../modules/logger';
 
 import Carousel from 'react-bootstrap/lib/Carousel';
 import CarouselItem from 'react-bootstrap/lib/CarouselItem';
 import Tooltip from 'react-bootstrap/lib/Tooltip';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
+import { parseString } from 'xml2js';
+import _get from 'lodash/get';
 
 class Photos extends React.Component {
     constructor(props) {
@@ -24,23 +26,36 @@ class Photos extends React.Component {
 
     parseFeed() {
         var { photosFeedUrl, numberOfPosts } = this.props;
-        if (google && google.load) {
-            google.load('feeds', '1');
+        const self = this;
 
-            google.setOnLoadCallback(() => {
-                var feed = new google.feeds.Feed(photosFeedUrl);
-                feed.setNumEntries(numberOfPosts);
-                feed.load((result) => {
-                    if (!result.error) {
-                        this.setState({
-                            showPhotos: true,
-                            photos: result.feed.entries
+        if (fetch) {
+            fetch(photosFeedUrl)
+                .then((response) => {
+                    return response.text();
+                }).then((text) => {
+                    parseString(text, (err, result) => {
+                        const photos = [];
+
+                        if (err) {
+                            logger.info('parsing response failed');
+                        }
+
+                        const channels = _get(result, 'rss.channel', []);
+                        channels.forEach((item) => {
+                            photos.push({
+                                title: _get(item, 'item[0].title', ''),
+                                url: _get(item, 'item[0][\'media:content\'][0].$.url', '')
+                            });
                         });
-                    } else {
-                        // TODO: handle an error!
-                    }
+
+                        self.setState({
+                            showPhotos: true,
+                            photos
+                        });
+                    });
+                }).catch((ex) => {
+                    logger.info('fetching feed failed', ex);
                 });
-            });
         }
     }
 
@@ -49,7 +64,7 @@ class Photos extends React.Component {
     }
 
     renderLoader() {
-        var loader = (
+        let loader = (
             <div className='section-loader'>
                 <i className='fa fa-spinner fa-spin'/>
             </div>
@@ -62,17 +77,15 @@ class Photos extends React.Component {
     }
 
     generateCarouselItems() {
-        return this.state.photos.map((photo, index) => {
-            var component = null;
-            var contents = photo.mediaGroups[0].contents[0];
-            var pubDate = new Date(photo.publishedDate);
 
+        return this.state.photos.map((photo, index) => {
+            let component = null;
             component = (
                 <CarouselItem key={index}>
                     <img
                         className='img-responsive'
-                        alt={contents.title}
-                        src={contents.url.replace('medium_large', 'huge')}/>
+                        alt={photo.title}
+                        src={photo.url.replace('medium_large', 'huge')}/>
                 </CarouselItem>
             );
 
@@ -109,9 +122,9 @@ class Photos extends React.Component {
     }
 
     render() {
-        var linkTitle = 'View Photos';
-        var tooltip = <Tooltip id='photosTooltip'>{linkTitle}</Tooltip>;
-        var { photosUrl } = this.props;
+        const linkTitle = 'View Photos';
+        const tooltip = <Tooltip id='photosTooltip'>{linkTitle}</Tooltip>;
+        const { photosUrl } = this.props;
 
         return (
             <section id='photos'>

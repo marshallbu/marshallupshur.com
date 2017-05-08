@@ -92,6 +92,7 @@
     "webpack": "^2.4.1",
     "webpack-stream": "^3.2.0",
     "whatwg-fetch": "^2.0.3",
+    "xml2js": "^0.4.17",
     "yargs": "^7.1.0",
     "zepto": "1.2.0"
   },

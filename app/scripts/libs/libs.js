@@ -15,5 +15,6 @@ import 'react-bootstrap/lib/Modal';
 import 'react-bootstrap/lib/ResponsiveEmbed';
 import 'moment';
 import 'whatwg-fetch';
+import 'lodash/get';
 // import 'react-scroll';
 import './../vendor/rAF';
