@@ -122,7 +122,7 @@ class Navigation extends React.Component {
         this.props.showModal([header, body, footer]);
     }
 
-    scrollTo(eventKey, href, target) {
+    scrollTo(/*eventKey, href, target*/) {
         // TODO: make this do the smooth scroll
         // console.log(eventKey, href, target);
     }
