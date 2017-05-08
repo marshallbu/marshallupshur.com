@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
+import PropTypes from 'prop-types';
 import logger from './../modules/logger';
 
 import Tooltip from 'react-bootstrap/lib/Tooltip';
@@ -32,7 +33,7 @@ class Blog extends React.Component {
                         posts: json
                     });
                 }).catch((ex) => {
-                    logger.info('parsing failed', ex)
+                    logger.info('parsing failed', ex);
                 });
         }
     }
@@ -122,6 +123,12 @@ class Blog extends React.Component {
         );
     }
 }
+
+Blog.propTypes = {
+    blogFeedUrl: PropTypes.string.isRequired,
+    blogUrl: PropTypes.string.isRequired,
+    numberOfPosts: PropTypes.number.isRequired
+};
 
 Blog.defaultProps = {
     blogUrl: 'http://blog.marshallupshur.com',

@@ -32,7 +32,7 @@ gulp.task('webpack:build', function(callback) {
                 exclude: [
                 ]
             }),
-            new webpack.optimize.OccurenceOrderPlugin()
+            new webpack.optimize.OccurrenceOrderPlugin()
         );
     }
 

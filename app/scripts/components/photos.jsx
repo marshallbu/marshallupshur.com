@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
+import PropTypes from 'prop-types';
 import logger from './../modules/logger';
 
 import Carousel from 'react-bootstrap/lib/Carousel';
@@ -25,7 +26,7 @@ class Photos extends React.Component {
     }
 
     parseFeed() {
-        var { photosFeedUrl, numberOfPosts } = this.props;
+        var { photosFeedUrl } = this.props;
         const self = this;
 
         if (fetch) {
@@ -149,6 +150,12 @@ class Photos extends React.Component {
         );
     }
 }
+
+Photos.propTypes = {
+    photosFeedUrl: PropTypes.string.isRequired,
+    photosUrl: PropTypes.string.isRequired,
+    numberOfPosts: PropTypes.number.isRequired
+};
 
 Photos.defaultProps = {
     photosUrl: 'http://photos.marshallupshur.com',
