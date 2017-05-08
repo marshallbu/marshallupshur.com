@@ -11,8 +11,8 @@ class Resume extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            boxResumeUrl: 'https://app.box.com/embed/preview/7uaub4pvc0dvhlh0nk7xccx093l80cms?direction=ASC&theme=dark',
-            resumeURL: 'downloads/Marshall_Upshur_2015c.pdf',
+            boxResumeUrl: 'https://app.box.com/embed/preview/d5h2wjrv3tjhrednrd26jhyvbke1h4ax?direction=ASC&theme=dark',
+            resumeURL: 'downloads/Marshall_Upshur_2017a.pdf',
             blockScrolling: true,
             showResume: false
         };
@@ -44,9 +44,9 @@ class Resume extends React.Component {
             <div id='resume-view' className={{}}>
                 <div className='viewer embed-responsive embed-responsive-16by9'>
                     <ResponsiveEmbed a16by9>
-                        <iframe src={boxResumeUrl} className='embed-responsive-item' allowFullScreen />
+                        <iframe src={boxResumeUrl} className='embed-responsive-item' allowFullScreen frameBorder={0} />
                     </ResponsiveEmbed>
-                    <div className={blocker} onClick={this.disableScrollBlocker}>
+                    <div className={blocker} onClick={this.disableScrollBlocker.bind(this)}>
                         <div className='scroll-blocker-title'>click to view</div>
                     </div>
                 </div>
